@@ -91,7 +91,6 @@
             text-transform: uppercase;
         }
 
-        /* Mobile hamburger */
         .hamburger {
             display: none;
             flex-direction: column;
@@ -116,7 +115,6 @@
         .hamburger.open span:nth-child(2) { opacity: 0; }
         .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-        /* Desktop nav */
         nav {
             overflow-x: auto;
             scrollbar-width: none;
@@ -165,7 +163,16 @@
             transform: scale(1.05);
         }
 
-        /* Mobile nav overlay */
+        nav button.new-badge {
+            background: linear-gradient(135deg, #7C3AED, #DB2777);
+            color: var(--white);
+            position: relative;
+        }
+        nav button.new-badge:hover {
+            background: linear-gradient(135deg, #DB2777, #7C3AED);
+            transform: scale(1.05);
+        }
+
         .mobile-nav {
             display: none;
             position: fixed;
@@ -204,6 +211,10 @@
         }
         .mobile-nav button.highlight {
             background: linear-gradient(135deg, var(--gold), #FF6B35);
+            color: var(--white);
+        }
+        .mobile-nav button.new-badge {
+            background: linear-gradient(135deg, #7C3AED, #DB2777);
             color: var(--white);
         }
 
@@ -325,6 +336,16 @@
             border-color: var(--white);
         }
 
+        .btn-new {
+            background: linear-gradient(135deg, #7C3AED, #DB2777);
+            color: var(--white);
+        }
+        .btn-new:hover {
+            background: linear-gradient(135deg, #DB2777, #7C3AED);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(123,58,237,0.4);
+        }
+
         .hero-img {
             width: 340px;
             flex-shrink: 0;
@@ -363,6 +384,15 @@
             border-color: var(--red);
             transform: translateY(-4px);
             box-shadow: var(--shadow-md);
+        }
+
+        .cat-card.new-cat {
+            background: linear-gradient(135deg, #FAF5FF, #FDF2F8);
+            border: 2px solid rgba(123,58,237,0.2);
+        }
+
+        .cat-card.new-cat:hover {
+            border-color: #7C3AED;
         }
 
         .cat-icon {
@@ -411,6 +441,222 @@
             color: #7A5800;
         }
 
+        /* ── NEW SECTION HERO BANNER ── */
+        .new-hero-banner {
+            border-radius: 24px;
+            overflow: hidden;
+            margin-bottom: 36px;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .new-hero-banner:hover { transform: scale(1.01); }
+        .new-hero-banner img {
+            width: 100%;
+            max-height: 420px;
+            object-fit: cover;
+            display: block;
+        }
+        .new-hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(123,58,237,0.7) 0%, rgba(219,39,119,0.5) 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 32px;
+        }
+        .new-hero-overlay .new-label {
+            background: rgba(255,255,255,0.25);
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: 900;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            padding: 6px 20px;
+            border-radius: 50px;
+            margin-bottom: 16px;
+            border: 1.5px solid rgba(255,255,255,0.5);
+        }
+        .new-hero-overlay h2 {
+            font-family: 'Tajawal', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 900;
+            color: #fff;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 12px rgba(0,0,0,0.3);
+        }
+        .new-hero-overlay p {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.9);
+        }
+
+        /* ── RED POWER DEAL BANNER ── */
+        .power-deal-banner {
+            background: linear-gradient(135deg, #1a0030, #4a0080, #8B1A8B);
+            border-radius: 24px;
+            overflow: hidden;
+            margin-bottom: 36px;
+            position: relative;
+            display: flex;
+            align-items: stretch;
+            min-height: 260px;
+        }
+        .power-deal-banner::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .power-deal-content {
+            flex: 1;
+            padding: 36px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+        }
+        .power-deal-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,215,0,0.2);
+            border: 1.5px solid rgba(255,215,0,0.5);
+            color: #FFD700;
+            font-size: 0.8rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 6px 16px;
+            border-radius: 50px;
+            margin-bottom: 16px;
+            width: fit-content;
+        }
+        .power-deal-tag span { font-size: 1rem; }
+        .power-deal-content h2 {
+            font-family: 'Tajawal', sans-serif;
+            font-size: 2.4rem;
+            font-weight: 900;
+            color: #fff;
+            line-height: 1.2;
+            margin-bottom: 12px;
+            text-shadow: 0 2px 12px rgba(0,0,0,0.4);
+        }
+        .power-deal-content .deal-subtitle {
+            font-size: 1rem;
+            color: rgba(255,255,255,0.85);
+            margin-bottom: 24px;
+            line-height: 1.6;
+        }
+        .power-deal-price-row {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .power-deal-price {
+            background: linear-gradient(135deg, #FFD700, #FF8C00);
+            color: #1a0030;
+            font-family: 'Tajawal', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 900;
+            padding: 12px 28px;
+            border-radius: 50px;
+            line-height: 1;
+            box-shadow: 0 6px 24px rgba(255,200,0,0.4);
+        }
+        .power-deal-cta {
+            background: rgba(255,255,255,0.15);
+            color: #fff;
+            border: 2px solid rgba(255,255,255,0.4);
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-family: 'Cairo', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.25s;
+            text-decoration: none;
+        }
+        .power-deal-cta:hover {
+            background: rgba(255,255,255,0.25);
+            border-color: #fff;
+        }
+        .power-deal-img {
+            width: 320px;
+            flex-shrink: 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .power-deal-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            mix-blend-mode: luminosity;
+            opacity: 0.9;
+        }
+        .power-deal-glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(255,215,0,0.3), transparent 70%);
+            pointer-events: none;
+        }
+
+        /* Included items list in deal */
+        .deal-includes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+        .deal-tag-item {
+            background: rgba(255,255,255,0.12);
+            color: rgba(255,255,255,0.9);
+            font-size: 0.82rem;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 50px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        /* ── NEW ITEMS HEADER ── */
+        .new-items-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 24px;
+        }
+        .new-items-header h3 {
+            font-family: 'Tajawal', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 900;
+            color: var(--charcoal);
+        }
+        .new-pill {
+            background: linear-gradient(135deg, #7C3AED, #DB2777);
+            color: #fff;
+            font-size: 0.75rem;
+            font-weight: 900;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 4px 14px;
+            border-radius: 50px;
+        }
+        .new-items-header::after {
+            content: '';
+            flex: 1;
+            height: 2px;
+            background: linear-gradient(90deg, rgba(123,58,237,0.3), transparent);
+            border-radius: 2px;
+        }
+
         /* ── MENU GRID ── */
         .menu-grid {
             display: grid;
@@ -432,6 +678,29 @@
         .card:hover {
             transform: translateY(-6px);
             box-shadow: var(--shadow-lg);
+        }
+
+        .card.new-item {
+            border: 2px solid rgba(123,58,237,0.25);
+            position: relative;
+        }
+        .card.new-item::before {
+            content: '✨ جديد';
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: linear-gradient(135deg, #7C3AED, #DB2777);
+            color: #fff;
+            font-size: 0.72rem;
+            font-weight: 900;
+            padding: 4px 12px;
+            border-radius: 50px;
+            z-index: 10;
+            letter-spacing: 0.5px;
+        }
+        .card.new-item:hover {
+            border-color: #7C3AED;
+            box-shadow: 0 12px 40px rgba(123,58,237,0.2);
         }
 
         .card-img {
@@ -501,6 +770,10 @@
 
         .price-badge.gold {
             background: linear-gradient(135deg, var(--gold), #FF8C00);
+        }
+
+        .price-badge.purple {
+            background: linear-gradient(135deg, #7C3AED, #DB2777);
         }
 
         /* ── NASHVILLE ── */
@@ -903,6 +1176,11 @@
             }
 
             .hero-img img { height: 200px; }
+
+            .power-deal-banner { flex-direction: column; }
+            .power-deal-img { width: 100%; height: 220px; }
+            .power-deal-content { padding: 28px 24px; }
+            .power-deal-content h2 { font-size: 1.8rem; }
         }
 
         @media (max-width: 640px) {
@@ -915,6 +1193,8 @@
             .info-card { padding: 20px; }
             .category-grid { grid-template-columns: repeat(2, 1fr); }
             .nash-banner { padding: 24px 20px; }
+            .new-hero-overlay h2 { font-size: 1.8rem; }
+            .power-deal-price { font-size: 1.6rem; }
         }
     </style>
 </head>
@@ -934,6 +1214,7 @@
         <nav>
             <ul id="nav-list">
                 <li><button onclick="showSection('home')" class="active">الرئيسية</button></li>
+                <li><button onclick="showSection('new-items')" class="new-badge">✨ جديد</button></li>
                 <li><button onclick="showSection('offers')">العروض 🎉</button></li>
                 <li><button onclick="showSection('nashville')" class="highlight">🔥 ناشڤيل</button></li>
                 <li><button onclick="showSection('beef-sandwiches')">برجر اللحم</button></li>
@@ -947,7 +1228,6 @@
                 <li><button onclick="showSection('about')">عنّا</button></li>
                 <li><button onclick="showSection('branches')">الفروع</button></li>
                 <li><button onclick="showSection('notes')">ملحوظات</button></li>
-
             </ul>
         </nav>
 
@@ -961,6 +1241,7 @@
 <div class="mobile-nav" id="mobileNav" onclick="closeMobileNav()">
     <div class="mobile-nav-inner" onclick="event.stopPropagation()">
         <button onclick="showSection('home'); closeMobileNav()">🏠 الرئيسية</button>
+        <button class="new-badge" onclick="showSection('new-items'); closeMobileNav()">✨ جديد ريد روستر</button>
         <button onclick="showSection('offers'); closeMobileNav()">🎉 العروض الحصرية</button>
         <button class="highlight" onclick="showSection('nashville'); closeMobileNav()">🔥 منيو ناشڤيل</button>
         <button onclick="showSection('beef-sandwiches'); closeMobileNav()">🍔 برجر اللحم البقري</button>
@@ -974,7 +1255,6 @@
         <button onclick="showSection('about'); closeMobileNav()">ℹ️ عنّا</button>
         <button onclick="showSection('branches'); closeMobileNav()">📍 الفروع</button>
         <button onclick="showSection('notes'); closeMobileNav()">📝 ملحوظات هامة</button>
-
     </div>
 </div>
 
@@ -987,6 +1267,7 @@
                 <h1>أشهى دجاج<br>في مصر 🐓</h1>
                 <p>ساندوتشات وبرجر ووجبات بجودة لا مثيل لها وبأسعار تنافسية</p>
                 <div class="hero-cta-group">
+                    <button class="btn btn-new" onclick="showSection('new-items')">✨ الجديد عندنا</button>
                     <button class="btn btn-primary" onclick="showSection('offers')">🎉 شوف العروض</button>
                     <button class="btn btn-outline" onclick="showSection('about')">📞 اتصل بنا</button>
                 </div>
@@ -997,6 +1278,11 @@
         </div>
 
         <div class="category-grid">
+            <div class="cat-card new-cat" onclick="showSection('new-items')">
+                <span class="cat-icon">✨</span>
+                <h3>جديد ريد روستر</h3>
+                <p>أحدث الإضافات لمنيونا</p>
+            </div>
             <div class="cat-card" onclick="showSection('nashville')">
                 <span class="cat-icon">🔥</span>
                 <h3>ناشڤيل</h3>
@@ -1044,6 +1330,59 @@
             <div class="info-banner-text">
                 <h4>كومبو بـ 50 جنيه بس!</h4>
                 <p>أضف 50 ج.م فقط على أي ساندوتش وحوّله لوجبة كاملة (ساندوتش + بطاطس + مشروب)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ✨ NEW ITEMS -->
+    <section id="new-items" class="section">
+        <h2 class="section-title">✨ جديد ريد روستر</h2>
+
+        <!-- RED POWER DEAL BANNER -->
+        <div class="power-deal-banner">
+            <div class="power-deal-content">
+                <div class="power-deal-tag"><span>⚡</span> عرض حصري جديد</div>
+                <h2>Red Power Deal 🔥</h2>
+                <p class="deal-subtitle">الصفقة الأقوى في المنيو — وجبتك الكاملة بسعر مش هتصدقه!</p>
+                <div class="deal-includes">
+                    <span class="deal-tag-item">🍗 دجاج</span>
+                    <span class="deal-tag-item">🍟 فرايز</span>
+                    <span class="deal-tag-item">🥤 مشروب</span>
+                    <span class="deal-tag-item">🍞 خبز</span>
+                </div>
+                <div class="power-deal-price-row">
+                    <div class="power-deal-price">249 LE</div>
+                    <a class="power-deal-cta" href="https://wa.me/201023278000?text=عايز%20أطلب%20Red%20Power%20Deal" target="_blank">اطلب دلوقتي 🛒</a>
+                </div>
+            </div>
+            <div class="power-deal-img">
+                <img src="https://i.ibb.co/5WVz0vjT/image.png" alt="Red Power Deal">
+                <div class="power-deal-glow"></div>
+            </div>
+        </div>
+
+        <!-- NEW SANDWICHES -->
+        <div class="new-items-header">
+            <h3>ساندوتشات جديدة</h3>
+            <span class="new-pill">NEW</span>
+        </div>
+
+        <div class="menu-grid">
+            <div class="card new-item">
+                <img class="card-img" src="https://i.ibb.co/TMD1795L/mango-sandwich.jpg" alt="Mango Fire">
+                <div class="card-body">
+                    <div class="card-name">مانجو فاير <span class="card-name-en">Mango Fire</span></div>
+                    <p class="card-desc">خس + قطعة من صدور دجاج زنجر + صوص مانجو + أصابع موتزريلا</p>
+                    <div class="card-footer"><span class="price-badge purple">99 LE</span></div>
+                </div>
+            </div>
+            <div class="card new-item">
+                <img class="card-img" src="https://i.ibb.co/tP1BMZDR/mighty-zinger.jpg" alt="Mighty Zinger">
+                <div class="card-body">
+                    <div class="card-name">مايتي زينجر <span class="card-name-en">Mighty Zinger</span></div>
+                    <p class="card-desc">شريحة جبنة أمريكي + خس + قطعتين من صدور دجاج زينجر + مايونيز + تشيلي مايونيز</p>
+                    <div class="card-footer"><span class="price-badge purple">149 LE</span></div>
+                </div>
             </div>
         </div>
     </section>
@@ -1243,7 +1582,7 @@
                 <div class="card-body">
                     <div class="card-name">دابل راب</div>
                     <p class="card-desc">2 ساندوتش راب (تويستر عادي أو فاهيتا)</p>
-                    <div class="card-footer"><span class="price-badge">165 LE</span></div>
+                    <div class="card-footer"><span class="price-badge">169 LE</span></div>
                 </div>
             </div>
             <div class="card">
@@ -1380,7 +1719,7 @@
                     <div class="card-footer"><span class="price-badge">139 LE</span></div>
                 </div>
             </div>
-            <div class="card">
+            <div class="card new-item">
                 <img class="card-img" src="https://i.ibb.co/TMD1795L/mango-sandwich.jpg" alt="Mango Fire">
                 <div class="card-body">
                     <div class="card-name">مانجو فاير <span class="card-name-en">Mango Fire</span></div>
@@ -1388,7 +1727,7 @@
                     <div class="card-footer"><span class="price-badge">99 LE</span></div>
                 </div>
             </div>
-            <div class="card">
+            <div class="card new-item">
                 <img class="card-img" src="https://i.ibb.co/tP1BMZDR/mighty-zinger.jpg" alt="Mighty Zinger">
                 <div class="card-body">
                     <div class="card-name">مايتي زينجر <span class="card-name-en">Mighty Zinger</span></div>
@@ -1824,7 +2163,7 @@
         <h2 class="section-title">🥤 إضافات ومشروبات</h2>
         <div class="menu-grid">
             <div class="card">
-                <img class="card-img" src="https://i.postimg.cc/Bvkd2B1S/soda-can.jpg" alt="Soft Drink Can">
+                <img class="card-img" src="hhttps://i.ibb.co/GfNfvH32/image.avif" alt="Soft Drink Can">
                 <div class="card-body">
                     <div class="card-name">مشروب غازي (ماكسي كانز) <span class="card-name-en">Soft Drink Can</span></div>
                     <p class="card-desc">كولا / رمان / برتقال</p>
@@ -1832,7 +2171,7 @@
                 </div>
             </div>
             <div class="card">
-                <img class="card-img" src="https://i.postimg.cc/Bvkd2B1S/soda-can.jpg" alt="Soft Drink 1L">
+                <img class="card-img" src="https://i.ibb.co/zhnkKGFW/image.jpg" alt="Soft Drink 1L">
                 <div class="card-body">
                     <div class="card-name">مشروب غازي (لتر) <span class="card-name-en">Soft Drink 1L</span></div>
                     <p class="card-desc">بيبسي / سفن أب / ميرندا</p>
@@ -1840,7 +2179,7 @@
                 </div>
             </div>
             <div class="card">
-                <img class="card-img" src="https://i.postimg.cc/zGYg8n38/water.jpg" alt="Water">
+                <img class="card-img" src="https://i.ibb.co/Gf1CJcnC/image.webp" alt="Water">
                 <div class="card-body">
                     <div class="card-name">مياه معدنية <span class="card-name-en">Water</span></div>
                     <p class="card-desc">مياه معبأة</p>
@@ -1848,7 +2187,7 @@
                 </div>
             </div>
             <div class="card">
-                <img class="card-img" src="https://i.postimg.cc/rpvY9YV5/kaiser-bread.jpg" alt="Kaiser Bread">
+                <img class="card-img" src="https://i.ibb.co/hR7dVyN5/image.jpg" alt="Kaiser Bread">
                 <div class="card-body">
                     <div class="card-name">خبز كايزر <span class="card-name-en">Kaiser Bread</span></div>
                     <p class="card-desc">قطعة خبز كايزر طازج</p>
@@ -1933,7 +2272,6 @@
         </div>
     </section>
 
-
 </main>
 
 <!-- FLOATING WHATSAPP ORDER BUTTON -->
@@ -1952,7 +2290,6 @@
     <p>&copy; 2025 <strong>Red Roosters</strong> — جميع الحقوق محفوظة</p>
 </footer>
 
-<!-- Scroll to top -->
 <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="للأعلى">↑</button>
 
 <script>
@@ -1966,7 +2303,6 @@
             activeSection.id = id;
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
-        // Update desktop nav buttons
         document.querySelectorAll('#nav-list button').forEach(btn => {
             btn.classList.toggle('active', btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(`'${id}'`));
         });
@@ -1984,13 +2320,11 @@
         document.getElementById('hamburger').classList.remove('open');
     }
 
-    // Scroll to top button
     window.addEventListener('scroll', () => {
         const btn = document.getElementById('scrollTop');
         btn.classList.toggle('visible', window.scrollY > 400);
     });
 
-    // Init
     document.addEventListener('DOMContentLoaded', () => {
         showSection('home');
     });
