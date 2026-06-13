@@ -173,6 +173,17 @@
             transform: scale(1.05);
         }
 
+        nav button.wc-badge {
+            background: linear-gradient(135deg, #0B6E4F, #FFD700);
+            color: var(--white);
+            position: relative;
+        }
+        nav button.wc-badge:hover {
+            background: linear-gradient(135deg, #FFD700, #0B6E4F);
+            color: #0B3D2E;
+            transform: scale(1.05);
+        }
+
         .mobile-nav {
             display: none;
             position: fixed;
@@ -215,6 +226,10 @@
         }
         .mobile-nav button.new-badge {
             background: linear-gradient(135deg, #7C3AED, #DB2777);
+            color: var(--white);
+        }
+        .mobile-nav button.wc-badge {
+            background: linear-gradient(135deg, #0B6E4F, #FFD700);
             color: var(--white);
         }
 
@@ -346,6 +361,17 @@
             box-shadow: 0 8px 20px rgba(123,58,237,0.4);
         }
 
+        .btn-wc {
+            background: linear-gradient(135deg, #FFD700, #0B6E4F);
+            color: #0B3D2E;
+        }
+        .btn-wc:hover {
+            background: linear-gradient(135deg, #0B6E4F, #FFD700);
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(11,110,79,0.4);
+        }
+
         .hero-img {
             width: 340px;
             flex-shrink: 0;
@@ -393,6 +419,15 @@
 
         .cat-card.new-cat:hover {
             border-color: #7C3AED;
+        }
+
+        .cat-card.wc-cat {
+            background: linear-gradient(135deg, #E8FFF3, #FFFBE8);
+            border: 2px solid rgba(11,110,79,0.2);
+        }
+
+        .cat-card.wc-cat:hover {
+            border-color: #0B6E4F;
         }
 
         .cat-icon {
@@ -703,6 +738,29 @@
             box-shadow: 0 12px 40px rgba(123,58,237,0.2);
         }
 
+        .card.wc-item {
+            border: 2px solid rgba(11,110,79,0.25);
+            position: relative;
+        }
+        .card.wc-item::before {
+            content: '🏆 عرض كأس العالم';
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: linear-gradient(135deg, #0B6E4F, #FFD700);
+            color: #fff;
+            font-size: 0.72rem;
+            font-weight: 900;
+            padding: 4px 12px;
+            border-radius: 50px;
+            z-index: 10;
+            letter-spacing: 0.5px;
+        }
+        .card.wc-item:hover {
+            border-color: #0B6E4F;
+            box-shadow: 0 12px 40px rgba(11,110,79,0.2);
+        }
+
         .card-img {
             width: 100%;
             height: 200px;
@@ -776,6 +834,10 @@
             background: linear-gradient(135deg, #7C3AED, #DB2777);
         }
 
+        .price-badge.green {
+            background: linear-gradient(135deg, #0B6E4F, #1FAE74);
+        }
+
         /* ── NASHVILLE ── */
         .nash-banner {
             background: linear-gradient(135deg, #1A0A00, #3D1200, #7A2800);
@@ -827,6 +889,86 @@
         .heat-chip.mild { background: #27AE60; color: white; }
         .heat-chip.hot  { background: #E67E22; color: white; }
         .heat-chip.extra{ background: #C0392B; color: white; }
+
+        /* ── WORLD CUP ── */
+        .wc-banner {
+            background: linear-gradient(135deg, #0B3D2E 0%, #0B6E4F 55%, #1FAE74 100%);
+            border-radius: 24px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 36px;
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+        .wc-banner::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .wc-banner::after {
+            content: '🏆';
+            position: absolute;
+            font-size: 11rem;
+            opacity: 0.08;
+            top: -25px;
+            left: -25px;
+        }
+        .wc-banner-inner { position: relative; z-index: 1; }
+        .wc-flag-strip {
+            display: inline-flex;
+            gap: 4px;
+            margin-bottom: 16px;
+        }
+        .wc-flag-strip span {
+            width: 36px;
+            height: 6px;
+            border-radius: 3px;
+        }
+        .wc-flag-strip span:nth-child(1) { background: #CE1126; }
+        .wc-flag-strip span:nth-child(2) { background: #FFFFFF; }
+        .wc-flag-strip span:nth-child(3) { background: #000000; }
+        .wc-banner h2 {
+            font-family: 'Tajawal', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 900;
+            margin-bottom: 12px;
+            text-shadow: 0 2px 12px rgba(0,0,0,0.3);
+        }
+        .wc-banner p {
+            font-size: 1.05rem;
+            opacity: 0.92;
+            max-width: 640px;
+            margin: 0 auto;
+        }
+
+        .wc-card-price {
+            background: linear-gradient(135deg, #FFD700, #FFB800);
+            color: #0B3D2E;
+        }
+
+        .wc-cta {
+            background: linear-gradient(135deg, #0B6E4F, #1FAE74);
+            color: #fff;
+            border: none;
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-family: 'Cairo', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 700;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.25s;
+        }
+        .wc-cta:hover {
+            background: linear-gradient(135deg, #FFD700, #FFB800);
+            color: #0B3D2E;
+            transform: translateY(-2px);
+        }
 
         /* ── OFFERS ── */
         .offer-section-title {
@@ -1193,6 +1335,8 @@
             .info-card { padding: 20px; }
             .category-grid { grid-template-columns: repeat(2, 1fr); }
             .nash-banner { padding: 24px 20px; }
+            .wc-banner { padding: 28px 20px; }
+            .wc-banner h2 { font-size: 1.7rem; }
             .new-hero-overlay h2 { font-size: 1.8rem; }
             .power-deal-price { font-size: 1.6rem; }
         }
@@ -1214,6 +1358,7 @@
         <nav>
             <ul id="nav-list">
                 <li><button onclick="showSection('home')" class="active">الرئيسية</button></li>
+                <li><button onclick="showSection('world-cup')" class="wc-badge">🏆 كأس العالم</button></li>
                 <li><button onclick="showSection('new-items')" class="new-badge">✨ جديد</button></li>
                 <li><button onclick="showSection('offers')">العروض 🎉</button></li>
                 <li><button onclick="showSection('nashville')" class="highlight">🔥 ناشڤيل</button></li>
@@ -1241,6 +1386,7 @@
 <div class="mobile-nav" id="mobileNav" onclick="closeMobileNav()">
     <div class="mobile-nav-inner" onclick="event.stopPropagation()">
         <button onclick="showSection('home'); closeMobileNav()">🏠 الرئيسية</button>
+        <button class="wc-badge" onclick="showSection('world-cup'); closeMobileNav()">🏆 عروض كأس العالم</button>
         <button class="new-badge" onclick="showSection('new-items'); closeMobileNav()">✨ جديد ريد روستر</button>
         <button onclick="showSection('offers'); closeMobileNav()">🎉 العروض الحصرية</button>
         <button class="highlight" onclick="showSection('nashville'); closeMobileNav()">🔥 منيو ناشڤيل</button>
@@ -1267,6 +1413,7 @@
                 <h1>أشهى دجاج<br>في مصر 🐓</h1>
                 <p>ساندوتشات وبرجر ووجبات بجودة لا مثيل لها وبأسعار تنافسية</p>
                 <div class="hero-cta-group">
+                    <button class="btn btn-wc" onclick="showSection('world-cup')">🏆 عروض كأس العالم</button>
                     <button class="btn btn-new" onclick="showSection('new-items')">✨ الجديد عندنا</button>
                     <button class="btn btn-primary" onclick="showSection('offers')">🎉 شوف العروض</button>
                     <button class="btn btn-outline" onclick="showSection('about')">📞 اتصل بنا</button>
@@ -1278,6 +1425,11 @@
         </div>
 
         <div class="category-grid">
+            <div class="cat-card wc-cat" onclick="showSection('world-cup')">
+                <span class="cat-icon">🏆</span>
+                <h3>عروض كأس العالم</h3>
+                <p>عروض حصرية بمناسبة المونديال</p>
+            </div>
             <div class="cat-card new-cat" onclick="showSection('new-items')">
                 <span class="cat-icon">✨</span>
                 <h3>جديد ريد روستر</h3>
@@ -1330,6 +1482,77 @@
             <div class="info-banner-text">
                 <h4>كومبو بـ 50 جنيه بس!</h4>
                 <p>أضف 50 ج.م فقط على أي ساندوتش وحوّله لوجبة كاملة (ساندوتش + بطاطس + مشروب)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 🏆 WORLD CUP OFFERS -->
+    <section id="world-cup" class="section">
+        <h2 class="section-title">🏆 عروض كأس العالم</h2>
+
+        <div class="wc-banner">
+            <div class="wc-banner-inner">
+                <div class="wc-flag-strip"><span></span><span></span><span></span></div>
+                <h2>اتشجع وكل من Red Rooster 🇪🇬⚽</h2>
+                <p>بمناسبة كأس العالم 2026، جهزنا لك عروض ضخمة تكفي العيلة والصحاب وقت الماتشات — كل عرض مصمم خصيصًا لروقان حقيقي قدام الشاشة!</p>
+            </div>
+        </div>
+
+        <div class="menu-grid">
+            <div class="card wc-item">
+                <img class="card-img" src="https://img.sanishtech.com/u/43b2e35081e5084c0d6dd5ada72ae5df.jpeg" alt="عرض الريمونتادا">
+                <div class="card-body">
+                    <div class="card-name">عرض الريمونتادا <span class="card-name-en">Remontada Deal</span></div>
+                    <p class="card-desc"> خمس قطع دجاج + خمس قطع استريبس+ 3 قطع خبز كايزر + كول سلو حجم عائلي + بطاطس كبيرة + مشروب غازي لتر</p>
+                    <div class="card-footer">
+                        <span class="price-badge wc-card-price">499 LE</span>
+                        <a class="wc-cta" href="https://wa.me/201023278000?text=عايز%20أطلب%20عرض%20الريمونتادا" target="_blank">اطلب 🛒</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card wc-item">
+                <img class="card-img" src="https://img.sanishtech.com/u/5f610d3acbae8b36e90018c13b3fd90c.jpeg" alt="عرض كأس العالم">
+                <div class="card-body">
+                    <div class="card-name">عرض كأس العالم <span class="card-name-en">World Cup Deal</span></div>
+                    <p class="card-desc">اختيارك من اتنين ساندوتش ناشفيل (كوول ناش أو سويتي هيت ناش ) + 2 ريزو ناشفيل + ميكس بوكس قرمشة حجم كبير + مشروب غازي لتر </p>
+                    <div class="card-footer">
+                        <span class="price-badge wc-card-price">699 LE</span>
+                        <a class="wc-cta" href="https://wa.me/201023278000?text=عايز%20أطلب%20عرض%20كأس%20العالم" target="_blank">اطلب 🛒</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card wc-item">
+                <img class="card-img" src="https://img.sanishtech.com/u/4565715940bfe6e93087a91a31d005eb.jpeg" alt="عرض التشجيع">
+                <div class="card-body">
+                    <div class="card-name">عرض التشجيع <span class="card-name-en">Tashgee3 Deal</span></div>
+                    <p class="card-desc">ختيارك من اربع ساندوتشات تشيكن من قسم ساندوتشات الدجاج (عدا المايتي زينجر) + اثنين بطاطس حجم وسط + كول سلو عائلي +مشروب غازي لتر /p>
+                    <div class="card-footer">
+                        <span class="price-badge wc-card-price">599 LE</span>
+                        <a class="wc-cta" href="https://wa.me/201023278000?text=عايز%20أطلب%20عرض%20التشجيع" target="_blank">اطلب 🛒</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card wc-item">
+                <img class="card-img" src="https://img.sanishtech.com/u/0e90955d7064db998aaeedae590fa22a.jpeg" alt="عرض الهاتريك">
+                <div class="card-body">
+                    <div class="card-name">عرض الهاتريك <span class="card-name-en">Hattrick Deal</span></div>
+                    <p class="card-desc">ثلاثة ساندوتشات تويستر من اختيارك + 3 ريزو من اختيار +3 كول سلو فاميلي</p>
+                    <div class="card-footer">
+                        <span class="price-badge wc-card-price">499 LE</span>
+                        <a class="wc-cta" href="https://wa.me/201023278000?text=عايز%20أطلب%20عرض%20الهاتريك" target="_blank">اطلب 🛒</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-banner" style="margin-top: 28px; background: linear-gradient(135deg, #E8FFF3, #D4FFE9); border-color: #0B6E4F;">
+            <div class="info-banner-icon">⚽</div>
+            <div class="info-banner-text">
+                <h4 style="color:#0B6E4F;">عروض لفترة محدودة!</h4>
+                <p style="color:#0B6E4F;">عروض كأس العالم متاحة طول فترة البطولة فقط، اطلب وانت قاعد قدام التليفزيون واستمتع بالماتش 🔥</p>
             </div>
         </div>
     </section>
