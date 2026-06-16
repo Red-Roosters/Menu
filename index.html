@@ -27,9 +27,7 @@
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-
         html { scroll-behavior: smooth; }
-
         body {
             font-family: 'Cairo', 'Tajawal', sans-serif;
             background: var(--cream);
@@ -38,7 +36,6 @@
             min-height: 100vh;
         }
 
-        /* ── HEADER ── */
         header {
             background: var(--white);
             position: sticky;
@@ -47,7 +44,6 @@
             box-shadow: 0 2px 20px rgba(217,43,43,0.15);
             border-bottom: 3px solid var(--red);
         }
-
         .header-inner {
             max-width: 1280px;
             margin: 0 auto;
@@ -58,14 +54,12 @@
             gap: 16px;
             height: 70px;
         }
-
         .logo-wrap {
             display: flex;
             align-items: center;
             gap: 12px;
             flex-shrink: 0;
         }
-
         .logo-wrap img {
             height: 50px;
             width: 50px;
@@ -73,7 +67,6 @@
             object-fit: cover;
             border: 2px solid var(--red);
         }
-
         .brand {
             font-family: 'Tajawal', sans-serif;
             font-weight: 900;
@@ -90,7 +83,6 @@
             letter-spacing: 1px;
             text-transform: uppercase;
         }
-
         .hamburger {
             display: none;
             flex-direction: column;
@@ -114,13 +106,8 @@
         .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
         .hamburger.open span:nth-child(2) { opacity: 0; }
         .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-        nav {
-            overflow-x: auto;
-            scrollbar-width: none;
-        }
+        nav { overflow-x: auto; scrollbar-width: none; }
         nav::-webkit-scrollbar { display: none; }
-
         nav ul {
             list-style: none;
             display: flex;
@@ -129,7 +116,6 @@
             padding: 0;
             flex-wrap: nowrap;
         }
-
         nav button {
             background: transparent;
             color: var(--gray);
@@ -143,17 +129,8 @@
             transition: all 0.2s;
             white-space: nowrap;
         }
-
-        nav button:hover {
-            background: var(--red);
-            color: var(--white);
-        }
-
-        nav button.active {
-            background: var(--red);
-            color: var(--white);
-        }
-
+        nav button:hover { background: var(--red); color: var(--white); }
+        nav button.active { background: var(--red); color: var(--white); }
         nav button.highlight {
             background: linear-gradient(135deg, var(--gold), #FF6B35);
             color: var(--white);
@@ -162,28 +139,32 @@
             background: linear-gradient(135deg, #FF6B35, var(--gold));
             transform: scale(1.05);
         }
-
         nav button.new-badge {
             background: linear-gradient(135deg, #7C3AED, #DB2777);
             color: var(--white);
-            position: relative;
         }
         nav button.new-badge:hover {
             background: linear-gradient(135deg, #DB2777, #7C3AED);
             transform: scale(1.05);
         }
-
         nav button.wc-badge {
             background: linear-gradient(135deg, #0B6E4F, #FFD700);
             color: var(--white);
-            position: relative;
         }
         nav button.wc-badge:hover {
             background: linear-gradient(135deg, #FFD700, #0B6E4F);
             color: #0B3D2E;
             transform: scale(1.05);
         }
-
+        nav button.siniya-badge {
+            background: linear-gradient(135deg, #C0392B, #8B1A1A);
+            color: var(--white);
+            position: relative;
+        }
+        nav button.siniya-badge:hover {
+            background: linear-gradient(135deg, #8B1A1A, #C0392B);
+            transform: scale(1.05);
+        }
         .mobile-nav {
             display: none;
             position: fixed;
@@ -216,38 +197,19 @@
             color: var(--charcoal);
             transition: all 0.2s;
         }
-        .mobile-nav button:hover, .mobile-nav button.active {
-            background: var(--red);
-            color: var(--white);
-        }
-        .mobile-nav button.highlight {
-            background: linear-gradient(135deg, var(--gold), #FF6B35);
-            color: var(--white);
-        }
-        .mobile-nav button.new-badge {
-            background: linear-gradient(135deg, #7C3AED, #DB2777);
-            color: var(--white);
-        }
-        .mobile-nav button.wc-badge {
-            background: linear-gradient(135deg, #0B6E4F, #FFD700);
-            color: var(--white);
-        }
+        .mobile-nav button:hover, .mobile-nav button.active { background: var(--red); color: var(--white); }
+        .mobile-nav button.highlight { background: linear-gradient(135deg, var(--gold), #FF6B35); color: var(--white); }
+        .mobile-nav button.new-badge { background: linear-gradient(135deg, #7C3AED, #DB2777); color: var(--white); }
+        .mobile-nav button.wc-badge { background: linear-gradient(135deg, #0B6E4F, #FFD700); color: var(--white); }
+        .mobile-nav button.siniya-badge { background: linear-gradient(135deg, #C0392B, #8B1A1A); color: var(--white); }
 
-        /* ── MAIN ── */
-        main {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 32px 20px 60px;
-        }
-
+        main { max-width: 1280px; margin: 0 auto; padding: 32px 20px 60px; }
         .section { display: none; animation: fadeUp 0.4s ease; }
         .section.active { display: block; }
-
         @keyframes fadeUp {
             from { opacity: 0; transform: translateY(20px); }
             to   { opacity: 1; transform: translateY(0); }
         }
-
         .section-title {
             font-family: 'Tajawal', sans-serif;
             font-size: 2rem;
@@ -258,7 +220,6 @@
             align-items: center;
             gap: 12px;
         }
-
         .section-title::after {
             content: '';
             flex: 1;
@@ -280,42 +241,16 @@
             position: relative;
             min-height: 320px;
         }
-
         .hero::before {
             content: '';
             position: absolute;
             inset: 0;
             background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         }
-
-        .hero-text {
-            flex: 1;
-            color: var(--white);
-            z-index: 1;
-            padding-bottom: 48px;
-        }
-
-        .hero-text h1 {
-            font-family: 'Tajawal', sans-serif;
-            font-size: 2.8rem;
-            font-weight: 900;
-            line-height: 1.2;
-            margin-bottom: 12px;
-        }
-
-        .hero-text p {
-            font-size: 1.1rem;
-            opacity: 0.9;
-            margin-bottom: 28px;
-            font-weight: 400;
-        }
-
-        .hero-cta-group {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-
+        .hero-text { flex: 1; color: var(--white); z-index: 1; padding-bottom: 48px; }
+        .hero-text h1 { font-family: 'Tajawal', sans-serif; font-size: 2.8rem; font-weight: 900; line-height: 1.2; margin-bottom: 12px; }
+        .hero-text p { font-size: 1.1rem; opacity: 0.9; margin-bottom: 28px; font-weight: 400; }
+        .hero-cta-group { display: flex; gap: 12px; flex-wrap: wrap; }
         .btn {
             display: inline-flex;
             align-items: center;
@@ -330,71 +265,25 @@
             transition: all 0.25s;
             text-decoration: none;
         }
+        .btn-primary { background: var(--white); color: var(--red); }
+        .btn-primary:hover { background: var(--cream); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
+        .btn-outline { background: transparent; color: var(--white); border: 2px solid rgba(255,255,255,0.6); }
+        .btn-outline:hover { background: rgba(255,255,255,0.15); border-color: var(--white); }
+        .btn-new { background: linear-gradient(135deg, #7C3AED, #DB2777); color: var(--white); }
+        .btn-new:hover { background: linear-gradient(135deg, #DB2777, #7C3AED); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(123,58,237,0.4); }
+        .btn-wc { background: linear-gradient(135deg, #FFD700, #0B6E4F); color: #0B3D2E; }
+        .btn-wc:hover { background: linear-gradient(135deg, #0B6E4F, #FFD700); color: #fff; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(11,110,79,0.4); }
+        .btn-siniya { background: linear-gradient(135deg, #C0392B, #8B1A1A); color: var(--white); }
+        .btn-siniya:hover { background: linear-gradient(135deg, #8B1A1A, #C0392B); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(192,57,43,0.5); }
+        .hero-img { width: 340px; flex-shrink: 0; align-self: flex-end; z-index: 1; border-radius: 16px 16px 0 0; overflow: hidden; }
+        .hero-img img { width: 100%; height: 260px; object-fit: cover; display: block; }
 
-        .btn-primary {
-            background: var(--white);
-            color: var(--red);
-        }
-        .btn-primary:hover {
-            background: var(--cream);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-        }
-
-        .btn-outline {
-            background: transparent;
-            color: var(--white);
-            border: 2px solid rgba(255,255,255,0.6);
-        }
-        .btn-outline:hover {
-            background: rgba(255,255,255,0.15);
-            border-color: var(--white);
-        }
-
-        .btn-new {
-            background: linear-gradient(135deg, #7C3AED, #DB2777);
-            color: var(--white);
-        }
-        .btn-new:hover {
-            background: linear-gradient(135deg, #DB2777, #7C3AED);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(123,58,237,0.4);
-        }
-
-        .btn-wc {
-            background: linear-gradient(135deg, #FFD700, #0B6E4F);
-            color: #0B3D2E;
-        }
-        .btn-wc:hover {
-            background: linear-gradient(135deg, #0B6E4F, #FFD700);
-            color: #fff;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(11,110,79,0.4);
-        }
-
-        .hero-img {
-            width: 340px;
-            flex-shrink: 0;
-            align-self: flex-end;
-            z-index: 1;
-            border-radius: 16px 16px 0 0;
-            overflow: hidden;
-        }
-        .hero-img img {
-            width: 100%;
-            height: 260px;
-            object-fit: cover;
-            display: block;
-        }
-
-        /* Quick category cards */
         .category-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
             gap: 16px;
             margin-bottom: 40px;
         }
-
         .cat-card {
             background: var(--white);
             border-radius: var(--radius);
@@ -405,51 +294,16 @@
             border: 2px solid transparent;
             transition: all 0.25s;
         }
-
-        .cat-card:hover {
-            border-color: var(--red);
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-md);
-        }
-
-        .cat-card.new-cat {
-            background: linear-gradient(135deg, #FAF5FF, #FDF2F8);
-            border: 2px solid rgba(123,58,237,0.2);
-        }
-
-        .cat-card.new-cat:hover {
-            border-color: #7C3AED;
-        }
-
-        .cat-card.wc-cat {
-            background: linear-gradient(135deg, #E8FFF3, #FFFBE8);
-            border: 2px solid rgba(11,110,79,0.2);
-        }
-
-        .cat-card.wc-cat:hover {
-            border-color: #0B6E4F;
-        }
-
-        .cat-icon {
-            font-size: 2.2rem;
-            margin-bottom: 10px;
-            display: block;
-        }
-
-        .cat-card h3 {
-            font-size: 1.05rem;
-            font-weight: 700;
-            color: var(--charcoal);
-            margin-bottom: 4px;
-        }
-
-        .cat-card p {
-            font-size: 0.8rem;
-            color: var(--gray);
-            line-height: 1.4;
-        }
-
-        /* Info banner */
+        .cat-card:hover { border-color: var(--red); transform: translateY(-4px); box-shadow: var(--shadow-md); }
+        .cat-card.new-cat { background: linear-gradient(135deg, #FAF5FF, #FDF2F8); border: 2px solid rgba(123,58,237,0.2); }
+        .cat-card.new-cat:hover { border-color: #7C3AED; }
+        .cat-card.wc-cat { background: linear-gradient(135deg, #E8FFF3, #FFFBE8); border: 2px solid rgba(11,110,79,0.2); }
+        .cat-card.wc-cat:hover { border-color: #0B6E4F; }
+        .cat-card.siniya-cat { background: linear-gradient(135deg, #FFF0EE, #FFE5E0); border: 2px solid rgba(192,57,43,0.2); }
+        .cat-card.siniya-cat:hover { border-color: #C0392B; }
+        .cat-icon { font-size: 2.2rem; margin-bottom: 10px; display: block; }
+        .cat-card h3 { font-size: 1.05rem; font-weight: 700; color: var(--charcoal); margin-bottom: 4px; }
+        .cat-card p { font-size: 0.8rem; color: var(--gray); line-height: 1.4; }
         .info-banner {
             background: linear-gradient(135deg, #FFF3CD, #FFE69C);
             border: 2px solid var(--gold);
@@ -459,500 +313,227 @@
             align-items: center;
             gap: 16px;
         }
-
         .info-banner-icon { font-size: 2rem; }
-
         .info-banner-text { flex: 1; }
+        .info-banner h4 { font-size: 1rem; font-weight: 700; color: var(--red-dark); margin-bottom: 4px; }
+        .info-banner p { font-size: 0.9rem; color: #7A5800; }
 
-        .info-banner h4 {
-            font-size: 1rem;
-            font-weight: 700;
-            color: var(--red-dark);
-            margin-bottom: 4px;
-        }
-
-        .info-banner p {
-            font-size: 0.9rem;
-            color: #7A5800;
-        }
-
-        /* ── NEW SECTION HERO BANNER ── */
-        .new-hero-banner {
-            border-radius: 24px;
-            overflow: hidden;
-            margin-bottom: 36px;
-            position: relative;
-            cursor: pointer;
-            transition: transform 0.3s;
-        }
-        .new-hero-banner:hover { transform: scale(1.01); }
-        .new-hero-banner img {
-            width: 100%;
-            max-height: 420px;
-            object-fit: cover;
-            display: block;
-        }
-        .new-hero-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, rgba(123,58,237,0.7) 0%, rgba(219,39,119,0.5) 100%);
+        /* ── SINIYA (صواني) SECTION ── */
+        .siniya-hero-banner {
+            background: linear-gradient(135deg, #1a0000 0%, #5c0a0a 40%, #8B1A1A 70%, #C0392B 100%);
+            border-radius: 28px;
+            padding: 48px 48px 0;
+            margin-bottom: 40px;
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 32px;
-        }
-        .new-hero-overlay .new-label {
-            background: rgba(255,255,255,0.25);
-            color: #fff;
-            font-size: 0.8rem;
-            font-weight: 900;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            padding: 6px 20px;
-            border-radius: 50px;
-            margin-bottom: 16px;
-            border: 1.5px solid rgba(255,255,255,0.5);
-        }
-        .new-hero-overlay h2 {
-            font-family: 'Tajawal', sans-serif;
-            font-size: 2.8rem;
-            font-weight: 900;
-            color: #fff;
-            margin-bottom: 10px;
-            text-shadow: 0 2px 12px rgba(0,0,0,0.3);
-        }
-        .new-hero-overlay p {
-            font-size: 1.1rem;
-            color: rgba(255,255,255,0.9);
-        }
-
-        /* ── RED POWER DEAL BANNER ── */
-        .power-deal-banner {
-            background: linear-gradient(135deg, #1a0030, #4a0080, #8B1A8B);
-            border-radius: 24px;
-            overflow: hidden;
-            margin-bottom: 36px;
+            align-items: flex-end;
+            gap: 32px;
             position: relative;
-            display: flex;
-            align-items: stretch;
-            min-height: 260px;
+            min-height: 300px;
+            overflow: hidden;
         }
-        .power-deal-banner::before {
+        .siniya-hero-banner::before {
             content: '';
             position: absolute;
             inset: 0;
-            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            background: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='40' cy='40' r='30'/%3E%3Ccircle cx='40' cy='40' r='20'/%3E%3Ccircle cx='40' cy='40' r='10'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         }
-        .power-deal-content {
+        .siniya-hero-glow {
+            position: absolute;
+            top: -60px;
+            right: -60px;
+            width: 320px;
+            height: 320px;
+            background: radial-gradient(circle, rgba(245,166,35,0.25) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .siniya-hero-text {
             flex: 1;
-            padding: 36px 40px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            position: relative;
+            color: var(--white);
             z-index: 1;
+            padding-bottom: 48px;
         }
-        .power-deal-tag {
+        .siniya-hero-eyebrow {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: rgba(255,215,0,0.2);
-            border: 1.5px solid rgba(255,215,0,0.5);
-            color: #FFD700;
+            background: rgba(245,166,35,0.2);
+            border: 1.5px solid rgba(245,166,35,0.5);
+            color: var(--gold);
             font-size: 0.8rem;
             font-weight: 900;
             letter-spacing: 2px;
             text-transform: uppercase;
-            padding: 6px 16px;
+            padding: 6px 18px;
             border-radius: 50px;
-            margin-bottom: 16px;
-            width: fit-content;
+            margin-bottom: 18px;
         }
-        .power-deal-tag span { font-size: 1rem; }
-        .power-deal-content h2 {
+        .siniya-hero-text h1 {
             font-family: 'Tajawal', sans-serif;
-            font-size: 2.4rem;
+            font-size: 3rem;
             font-weight: 900;
-            color: #fff;
-            line-height: 1.2;
-            margin-bottom: 12px;
-            text-shadow: 0 2px 12px rgba(0,0,0,0.4);
+            line-height: 1.15;
+            margin-bottom: 14px;
+            text-shadow: 0 2px 16px rgba(0,0,0,0.4);
         }
-        .power-deal-content .deal-subtitle {
-            font-size: 1rem;
-            color: rgba(255,255,255,0.85);
-            margin-bottom: 24px;
-            line-height: 1.6;
+        .siniya-hero-text p {
+            font-size: 1.05rem;
+            opacity: 0.88;
+            margin-bottom: 28px;
+            line-height: 1.7;
         }
-        .power-deal-price-row {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-        .power-deal-price {
-            background: linear-gradient(135deg, #FFD700, #FF8C00);
-            color: #1a0030;
-            font-family: 'Tajawal', sans-serif;
-            font-size: 2.2rem;
-            font-weight: 900;
-            padding: 12px 28px;
-            border-radius: 50px;
-            line-height: 1;
-            box-shadow: 0 6px 24px rgba(255,200,0,0.4);
-        }
-        .power-deal-cta {
-            background: rgba(255,255,255,0.15);
-            color: #fff;
-            border: 2px solid rgba(255,255,255,0.4);
-            padding: 12px 24px;
-            border-radius: 50px;
-            font-family: 'Cairo', sans-serif;
-            font-size: 1rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.25s;
-            text-decoration: none;
-        }
-        .power-deal-cta:hover {
-            background: rgba(255,255,255,0.25);
-            border-color: #fff;
-        }
-        .power-deal-img {
+        .siniya-hero-img {
             width: 320px;
             flex-shrink: 0;
-            position: relative;
+            align-self: flex-end;
+            z-index: 1;
+            border-radius: 20px 20px 0 0;
             overflow: hidden;
+            box-shadow: 0 -8px 40px rgba(0,0,0,0.35);
         }
-        .power-deal-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            mix-blend-mode: luminosity;
-            opacity: 0.9;
-        }
-        .power-deal-glow {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 200px;
-            height: 200px;
-            background: radial-gradient(circle, rgba(255,215,0,0.3), transparent 70%);
-            pointer-events: none;
-        }
+        .siniya-hero-img img { width: 100%; height: 260px; object-fit: cover; display: block; }
 
-        /* Included items list in deal */
-        .deal-includes {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 20px;
-        }
-        .deal-tag-item {
-            background: rgba(255,255,255,0.12);
-            color: rgba(255,255,255,0.9);
-            font-size: 0.82rem;
-            font-weight: 600;
-            padding: 4px 12px;
-            border-radius: 50px;
-            border: 1px solid rgba(255,255,255,0.2);
-        }
-
-        /* ── NEW ITEMS HEADER ── */
-        .new-items-header {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            margin-bottom: 24px;
-        }
-        .new-items-header h3 {
-            font-family: 'Tajawal', sans-serif;
-            font-size: 1.4rem;
-            font-weight: 900;
-            color: var(--charcoal);
-        }
-        .new-pill {
-            background: linear-gradient(135deg, #7C3AED, #DB2777);
-            color: #fff;
-            font-size: 0.75rem;
-            font-weight: 900;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            padding: 4px 14px;
-            border-radius: 50px;
-        }
-        .new-items-header::after {
-            content: '';
-            flex: 1;
-            height: 2px;
-            background: linear-gradient(90deg, rgba(123,58,237,0.3), transparent);
-            border-radius: 2px;
-        }
-
-        /* ── MENU GRID ── */
-        .menu-grid {
+        /* Siniya Cards */
+        .siniya-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+            margin-bottom: 40px;
         }
-
-        .card {
+        .siniya-card {
             background: var(--white);
-            border-radius: var(--radius);
+            border-radius: 20px;
             overflow: hidden;
             box-shadow: var(--shadow-sm);
+            border: 2px solid rgba(192,57,43,0.1);
             transition: all 0.3s;
             display: flex;
             flex-direction: column;
-            border: 1px solid rgba(0,0,0,0.05);
-        }
-
-        .card:hover {
-            transform: translateY(-6px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .card.new-item {
-            border: 2px solid rgba(123,58,237,0.25);
             position: relative;
         }
-        .card.new-item::before {
-            content: '✨ جديد';
-            position: absolute;
-            top: 12px;
-            right: 12px;
-            background: linear-gradient(135deg, #7C3AED, #DB2777);
-            color: #fff;
-            font-size: 0.72rem;
-            font-weight: 900;
-            padding: 4px 12px;
-            border-radius: 50px;
-            z-index: 10;
-            letter-spacing: 0.5px;
+        .siniya-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 48px rgba(192,57,43,0.2);
+            border-color: var(--red);
         }
-        .card.new-item:hover {
-            border-color: #7C3AED;
-            box-shadow: 0 12px 40px rgba(123,58,237,0.2);
-        }
-
-        .card.wc-item {
-            border: 2px solid rgba(11,110,79,0.25);
+        .siniya-card-img-wrap {
             position: relative;
+            overflow: hidden;
         }
-        .card.wc-item::before {
-            content: '🏆 عرض كأس العالم';
-            position: absolute;
-            top: 12px;
-            right: 12px;
-            background: linear-gradient(135deg, #0B6E4F, #FFD700);
-            color: #fff;
-            font-size: 0.72rem;
-            font-weight: 900;
-            padding: 4px 12px;
-            border-radius: 50px;
-            z-index: 10;
-            letter-spacing: 0.5px;
-        }
-        .card.wc-item:hover {
-            border-color: #0B6E4F;
-            box-shadow: 0 12px 40px rgba(11,110,79,0.2);
-        }
-
-        .card-img {
+        .siniya-card-img {
             width: 100%;
-            height: 200px;
+            height: 220px;
             object-fit: cover;
             display: block;
+            transition: transform 0.4s ease;
         }
-
-        .card-img-placeholder {
-            width: 100%;
-            height: 160px;
-            background: linear-gradient(135deg, #F8E8E8, #F2D5D5);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
+        .siniya-card:hover .siniya-card-img { transform: scale(1.05); }
+        .siniya-card-number {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            background: linear-gradient(135deg, var(--red), #8B1A1A);
+            color: #fff;
+            font-family: 'Tajawal', sans-serif;
+            font-size: 0.78rem;
+            font-weight: 900;
+            letter-spacing: 1px;
+            padding: 5px 14px;
+            border-radius: 50px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.3);
         }
-
-        .card-body {
-            padding: 16px 18px 20px;
+        .siniya-card-nashville {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            background: linear-gradient(135deg, #E67E22, #C0392B);
+            color: #fff;
+            font-size: 0.75rem;
+            font-weight: 900;
+            padding: 5px 12px;
+            border-radius: 50px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.3);
+        }
+        .siniya-card-body {
+            padding: 20px 22px 24px;
             flex: 1;
             display: flex;
             flex-direction: column;
         }
-
-        .card-name {
+        .siniya-card-name {
             font-family: 'Tajawal', sans-serif;
-            font-size: 1.15rem;
-            font-weight: 700;
+            font-size: 1.25rem;
+            font-weight: 900;
             color: var(--charcoal);
             margin-bottom: 4px;
             line-height: 1.3;
         }
-
-        .card-name-en {
-            font-size: 0.8rem;
+        .siniya-card-name-en {
+            font-size: 0.78rem;
+            color: var(--gray);
             font-weight: 400;
-            color: var(--gray);
             display: block;
-            margin-bottom: 8px;
-        }
-
-        .card-desc {
-            font-size: 0.88rem;
-            color: var(--gray);
             margin-bottom: 14px;
+        }
+        .siniya-card-divider {
+            height: 1px;
+            background: linear-gradient(90deg, rgba(192,57,43,0.25), transparent);
+            margin-bottom: 14px;
+            border: none;
+        }
+        .siniya-includes-title {
+            font-size: 0.78rem;
+            font-weight: 900;
+            color: var(--red);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        .siniya-includes {
+            list-style: none;
             flex: 1;
+            margin-bottom: 18px;
+        }
+        .siniya-includes li {
+            font-size: 0.88rem;
+            color: #444;
+            padding: 4px 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
             line-height: 1.5;
         }
-
-        .card-footer {
+        .siniya-includes li::before {
+            content: '🍗';
+            font-size: 0.8rem;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+        .siniya-includes li.rice::before { content: '🍚'; }
+        .siniya-includes li.fries::before { content: '🍟'; }
+        .siniya-includes li.sauce::before { content: '🥣'; }
+        .siniya-includes li.nashville::before { content: '🔥'; }
+        .siniya-card-footer {
             display: flex;
             align-items: center;
             justify-content: space-between;
+            gap: 12px;
         }
-
-        .price-badge {
-            background: var(--red);
-            color: var(--white);
+        .siniya-price {
+            background: linear-gradient(135deg, var(--red), #8B1A1A);
+            color: #fff;
             font-family: 'Tajawal', sans-serif;
-            font-size: 1.2rem;
+            font-size: 1.35rem;
             font-weight: 900;
-            padding: 6px 16px;
-            border-radius: 50px;
-        }
-
-        .price-badge.gold {
-            background: linear-gradient(135deg, var(--gold), #FF8C00);
-        }
-
-        .price-badge.purple {
-            background: linear-gradient(135deg, #7C3AED, #DB2777);
-        }
-
-        .price-badge.green {
-            background: linear-gradient(135deg, #0B6E4F, #1FAE74);
-        }
-
-        /* ── NASHVILLE ── */
-        .nash-banner {
-            background: linear-gradient(135deg, #1A0A00, #3D1200, #7A2800);
-            border-radius: 20px;
-            padding: 32px;
-            text-align: center;
-            margin-bottom: 32px;
-            color: var(--white);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .nash-banner::before {
-            content: '🔥';
-            position: absolute;
-            font-size: 10rem;
-            opacity: 0.08;
-            top: -20px;
-            right: -20px;
-        }
-
-        .nash-banner h2 {
-            font-family: 'Tajawal', sans-serif;
-            font-size: 2rem;
-            font-weight: 900;
-            margin-bottom: 12px;
-        }
-
-        .nash-banner p {
-            font-size: 1rem;
-            opacity: 0.85;
-            margin-bottom: 20px;
-        }
-
-        .heat-chips {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .heat-chip {
             padding: 8px 20px;
             border-radius: 50px;
-            font-weight: 700;
-            font-size: 0.95rem;
+            box-shadow: 0 4px 16px rgba(192,57,43,0.35);
+            white-space: nowrap;
         }
-
-        .heat-chip.mild { background: #27AE60; color: white; }
-        .heat-chip.hot  { background: #E67E22; color: white; }
-        .heat-chip.extra{ background: #C0392B; color: white; }
-
-        /* ── WORLD CUP ── */
-        .wc-banner {
-            background: linear-gradient(135deg, #0B3D2E 0%, #0B6E4F 55%, #1FAE74 100%);
-            border-radius: 24px;
-            padding: 40px;
-            text-align: center;
-            margin-bottom: 36px;
-            color: var(--white);
-            position: relative;
-            overflow: hidden;
-        }
-        .wc-banner::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-        }
-        .wc-banner::after {
-            content: '🏆';
-            position: absolute;
-            font-size: 11rem;
-            opacity: 0.08;
-            top: -25px;
-            left: -25px;
-        }
-        .wc-banner-inner { position: relative; z-index: 1; }
-        .wc-flag-strip {
-            display: inline-flex;
-            gap: 4px;
-            margin-bottom: 16px;
-        }
-        .wc-flag-strip span {
-            width: 36px;
-            height: 6px;
-            border-radius: 3px;
-        }
-        .wc-flag-strip span:nth-child(1) { background: #CE1126; }
-        .wc-flag-strip span:nth-child(2) { background: #FFFFFF; }
-        .wc-flag-strip span:nth-child(3) { background: #000000; }
-        .wc-banner h2 {
-            font-family: 'Tajawal', sans-serif;
-            font-size: 2.2rem;
-            font-weight: 900;
-            margin-bottom: 12px;
-            text-shadow: 0 2px 12px rgba(0,0,0,0.3);
-        }
-        .wc-banner p {
-            font-size: 1.05rem;
-            opacity: 0.92;
-            max-width: 640px;
-            margin: 0 auto;
-        }
-
-        .wc-card-price {
-            background: linear-gradient(135deg, #FFD700, #FFB800);
-            color: #0B3D2E;
-        }
-
-        .wc-cta {
-            background: linear-gradient(135deg, #0B6E4F, #1FAE74);
+        .siniya-order-btn {
+            background: linear-gradient(135deg, #00C853, #00897B);
             color: #fff;
             border: none;
-            padding: 8px 18px;
+            padding: 10px 18px;
             border-radius: 50px;
             font-family: 'Cairo', sans-serif;
             font-size: 0.9rem;
@@ -963,368 +544,180 @@
             align-items: center;
             gap: 6px;
             transition: all 0.25s;
+            white-space: nowrap;
         }
-        .wc-cta:hover {
-            background: linear-gradient(135deg, #FFD700, #FFB800);
-            color: #0B3D2E;
+        .siniya-order-btn:hover {
+            background: linear-gradient(135deg, #00E676, #00BFA5);
             transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,180,120,0.4);
         }
 
-        /* ── OFFERS ── */
-        .offer-section-title {
-            font-size: 1.3rem;
-            font-weight: 900;
-            color: var(--red);
-            margin: 32px 0 16px;
-            padding-bottom: 10px;
-            border-bottom: 2px dashed rgba(217,43,43,0.25);
-        }
-
-        .offer-divider {
-            border: none;
-            border-top: 2px dashed var(--gold-light);
-            margin: 40px 0;
-        }
-
-        /* ── INFO CARDS ── */
-        .info-card {
-            background: var(--white);
+        /* Siniya info banner */
+        .siniya-info-banner {
+            background: linear-gradient(135deg, #FFF5F5, #FFE8E8);
+            border: 2px solid rgba(192,57,43,0.3);
             border-radius: var(--radius);
-            padding: 28px 32px;
-            box-shadow: var(--shadow-sm);
-            margin-bottom: 20px;
-            border-right: 4px solid var(--red);
-        }
-
-        .info-card h3 {
-            font-family: 'Tajawal', sans-serif;
-            font-size: 1.3rem;
-            font-weight: 900;
-            color: var(--red);
-            margin-bottom: 14px;
-        }
-
-        .info-card p, .info-card li {
-            font-size: 1rem;
-            color: #444;
-            line-height: 1.7;
-        }
-
-        .info-card ul { list-style: none; }
-
-        .info-card li {
-            padding-right: 24px;
-            position: relative;
-            margin-bottom: 10px;
-        }
-
-        .info-card li::before {
-            content: "🔥";
-            position: absolute;
-            right: 0;
-        }
-
-        /* ── CONTACT ── */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 16px;
-            margin-top: 20px;
-        }
-
-        .contact-card {
-            background: var(--cream);
-            border: 2px solid rgba(217,43,43,0.15);
-            border-radius: var(--radius-sm);
-            padding: 20px;
-            text-align: center;
-            transition: all 0.2s;
-        }
-
-        .contact-card:hover {
-            border-color: var(--red);
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-md);
-        }
-
-        .contact-card-icon { font-size: 2rem; margin-bottom: 8px; }
-
-        .contact-card h4 {
-            font-size: 0.9rem;
-            font-weight: 700;
-            color: var(--gray);
-            margin-bottom: 10px;
-        }
-
-        .contact-card a {
-            display: inline-block;
-            text-decoration: none;
-            font-weight: 900;
-            font-size: 1.05rem;
-            color: var(--red);
-            transition: color 0.2s;
-        }
-
-        .contact-card a:hover { color: var(--red-dark); }
-
-        .contact-card a.whatsapp {
-            background: #25D366;
-            color: white;
-            padding: 8px 20px;
-            border-radius: 50px;
-        }
-
-        .contact-card a.whatsapp:hover { background: #128C7E; color: white; }
-
-        .contact-card a.facebook {
-            background: #1877F2;
-            color: white;
-            padding: 8px 20px;
-            border-radius: 50px;
-        }
-
-        .contact-card a.facebook:hover { background: #0E5FC0; color: white; }
-
-        /* ── CALL SCENARIO ── */
-        .scenario-step {
-            background: var(--white);
-            border-radius: var(--radius-sm);
-            padding: 18px 22px;
-            margin-bottom: 12px;
-            box-shadow: var(--shadow-sm);
-            display: flex;
-            gap: 16px;
-            align-items: flex-start;
-            border-right: 4px solid var(--gold);
-        }
-
-        .step-num {
-            background: var(--red);
-            color: var(--white);
-            font-weight: 900;
-            font-size: 0.9rem;
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
+            padding: 22px 28px;
             display: flex;
             align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
+            gap: 18px;
+            margin-top: 8px;
         }
+        .siniya-info-banner-icon { font-size: 2.2rem; flex-shrink: 0; }
+        .siniya-info-banner-text h4 { font-size: 1rem; font-weight: 900; color: var(--red-dark); margin-bottom: 4px; }
+        .siniya-info-banner-text p { font-size: 0.9rem; color: #7A2828; line-height: 1.6; }
 
-        .step-content { flex: 1; }
+        /* ── NEW SECTION HERO BANNER ── */
+        .new-hero-banner { border-radius: 24px; overflow: hidden; margin-bottom: 36px; position: relative; cursor: pointer; transition: transform 0.3s; }
+        .new-hero-banner:hover { transform: scale(1.01); }
+        .new-hero-banner img { width: 100%; max-height: 420px; object-fit: cover; display: block; }
+        .new-hero-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(123,58,237,0.7) 0%, rgba(219,39,119,0.5) 100%); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 32px; }
+        .new-hero-overlay .new-label { background: rgba(255,255,255,0.25); color: #fff; font-size: 0.8rem; font-weight: 900; letter-spacing: 3px; text-transform: uppercase; padding: 6px 20px; border-radius: 50px; margin-bottom: 16px; border: 1.5px solid rgba(255,255,255,0.5); }
+        .new-hero-overlay h2 { font-family: 'Tajawal', sans-serif; font-size: 2.8rem; font-weight: 900; color: #fff; margin-bottom: 10px; text-shadow: 0 2px 12px rgba(0,0,0,0.3); }
+        .new-hero-overlay p { font-size: 1.1rem; color: rgba(255,255,255,0.9); }
 
-        .step-label {
-            font-weight: 700;
-            color: var(--red);
-            font-size: 0.85rem;
-            margin-bottom: 4px;
-        }
+        /* ── RED POWER DEAL BANNER ── */
+        .power-deal-banner { background: linear-gradient(135deg, #1a0030, #4a0080, #8B1A8B); border-radius: 24px; overflow: hidden; margin-bottom: 36px; position: relative; display: flex; align-items: stretch; min-height: 260px; }
+        .power-deal-banner::before { content: ''; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+        .power-deal-content { flex: 1; padding: 36px 40px; display: flex; flex-direction: column; justify-content: center; position: relative; z-index: 1; }
+        .power-deal-tag { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,215,0,0.2); border: 1.5px solid rgba(255,215,0,0.5); color: #FFD700; font-size: 0.8rem; font-weight: 900; letter-spacing: 2px; text-transform: uppercase; padding: 6px 16px; border-radius: 50px; margin-bottom: 16px; width: fit-content; }
+        .power-deal-tag span { font-size: 1rem; }
+        .power-deal-content h2 { font-family: 'Tajawal', sans-serif; font-size: 2.4rem; font-weight: 900; color: #fff; line-height: 1.2; margin-bottom: 12px; text-shadow: 0 2px 12px rgba(0,0,0,0.4); }
+        .power-deal-content .deal-subtitle { font-size: 1rem; color: rgba(255,255,255,0.85); margin-bottom: 24px; line-height: 1.6; }
+        .power-deal-price-row { display: flex; align-items: center; gap: 20px; }
+        .power-deal-price { background: linear-gradient(135deg, #FFD700, #FF8C00); color: #1a0030; font-family: 'Tajawal', sans-serif; font-size: 2.2rem; font-weight: 900; padding: 12px 28px; border-radius: 50px; line-height: 1; box-shadow: 0 6px 24px rgba(255,200,0,0.4); }
+        .power-deal-cta { background: rgba(255,255,255,0.15); color: #fff; border: 2px solid rgba(255,255,255,0.4); padding: 12px 24px; border-radius: 50px; font-family: 'Cairo', sans-serif; font-size: 1rem; font-weight: 700; cursor: pointer; transition: all 0.25s; text-decoration: none; }
+        .power-deal-cta:hover { background: rgba(255,255,255,0.25); border-color: #fff; }
+        .power-deal-img { width: 320px; flex-shrink: 0; position: relative; overflow: hidden; }
+        .power-deal-img img { width: 100%; height: 100%; object-fit: cover; display: block; mix-blend-mode: luminosity; opacity: 0.9; }
+        .power-deal-glow { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 200px; height: 200px; background: radial-gradient(circle, rgba(255,215,0,0.3), transparent 70%); pointer-events: none; }
+        .deal-includes { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+        .deal-tag-item { background: rgba(255,255,255,0.12); color: rgba(255,255,255,0.9); font-size: 0.82rem; font-weight: 600; padding: 4px 12px; border-radius: 50px; border: 1px solid rgba(255,255,255,0.2); }
 
-        .step-text {
-            color: var(--charcoal);
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
+        /* ── NEW ITEMS HEADER ── */
+        .new-items-header { display: flex; align-items: center; gap: 14px; margin-bottom: 24px; }
+        .new-items-header h3 { font-family: 'Tajawal', sans-serif; font-size: 1.4rem; font-weight: 900; color: var(--charcoal); }
+        .new-pill { background: linear-gradient(135deg, #7C3AED, #DB2777); color: #fff; font-size: 0.75rem; font-weight: 900; letter-spacing: 1px; text-transform: uppercase; padding: 4px 14px; border-radius: 50px; }
+        .new-items-header::after { content: ''; flex: 1; height: 2px; background: linear-gradient(90deg, rgba(123,58,237,0.3), transparent); border-radius: 2px; }
 
-        /* ── NOTES ── */
-        .note-item {
-            background: var(--white);
-            border-radius: var(--radius-sm);
-            padding: 18px 22px;
-            margin-bottom: 12px;
-            box-shadow: var(--shadow-sm);
-            display: flex;
-            gap: 14px;
-            align-items: flex-start;
-            border-right: 4px solid var(--gold);
-        }
+        /* ── MENU GRID ── */
+        .menu-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 20px; }
+        .card { background: var(--white); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); transition: all 0.3s; display: flex; flex-direction: column; border: 1px solid rgba(0,0,0,0.05); }
+        .card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+        .card.new-item { border: 2px solid rgba(123,58,237,0.25); position: relative; }
+        .card.new-item::before { content: '✨ جديد'; position: absolute; top: 12px; right: 12px; background: linear-gradient(135deg, #7C3AED, #DB2777); color: #fff; font-size: 0.72rem; font-weight: 900; padding: 4px 12px; border-radius: 50px; z-index: 10; letter-spacing: 0.5px; }
+        .card.new-item:hover { border-color: #7C3AED; box-shadow: 0 12px 40px rgba(123,58,237,0.2); }
+        .card.wc-item { border: 2px solid rgba(11,110,79,0.25); position: relative; }
+        .card.wc-item::before { content: '🏆 عرض كأس العالم'; position: absolute; top: 12px; right: 12px; background: linear-gradient(135deg, #0B6E4F, #FFD700); color: #fff; font-size: 0.72rem; font-weight: 900; padding: 4px 12px; border-radius: 50px; z-index: 10; letter-spacing: 0.5px; }
+        .card.wc-item:hover { border-color: #0B6E4F; box-shadow: 0 12px 40px rgba(11,110,79,0.2); }
+        .card-img { width: 100%; height: 200px; object-fit: cover; display: block; }
+        .card-img-placeholder { width: 100%; height: 160px; background: linear-gradient(135deg, #F8E8E8, #F2D5D5); display: flex; align-items: center; justify-content: center; font-size: 3rem; }
+        .card-body { padding: 16px 18px 20px; flex: 1; display: flex; flex-direction: column; }
+        .card-name { font-family: 'Tajawal', sans-serif; font-size: 1.15rem; font-weight: 700; color: var(--charcoal); margin-bottom: 4px; line-height: 1.3; }
+        .card-name-en { font-size: 0.8rem; font-weight: 400; color: var(--gray); display: block; margin-bottom: 8px; }
+        .card-desc { font-size: 0.88rem; color: var(--gray); margin-bottom: 14px; flex: 1; line-height: 1.5; }
+        .card-footer { display: flex; align-items: center; justify-content: space-between; }
+        .price-badge { background: var(--red); color: var(--white); font-family: 'Tajawal', sans-serif; font-size: 1.2rem; font-weight: 900; padding: 6px 16px; border-radius: 50px; }
+        .price-badge.gold { background: linear-gradient(135deg, var(--gold), #FF8C00); }
+        .price-badge.purple { background: linear-gradient(135deg, #7C3AED, #DB2777); }
+        .price-badge.green { background: linear-gradient(135deg, #0B6E4F, #1FAE74); }
 
+        /* ── NASHVILLE ── */
+        .nash-banner { background: linear-gradient(135deg, #1A0A00, #3D1200, #7A2800); border-radius: 20px; padding: 32px; text-align: center; margin-bottom: 32px; color: var(--white); position: relative; overflow: hidden; }
+        .nash-banner::before { content: '🔥'; position: absolute; font-size: 10rem; opacity: 0.08; top: -20px; right: -20px; }
+        .nash-banner h2 { font-family: 'Tajawal', sans-serif; font-size: 2rem; font-weight: 900; margin-bottom: 12px; }
+        .nash-banner p { font-size: 1rem; opacity: 0.85; margin-bottom: 20px; }
+        .heat-chips { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+        .heat-chip { padding: 8px 20px; border-radius: 50px; font-weight: 700; font-size: 0.95rem; }
+        .heat-chip.mild { background: #27AE60; color: white; }
+        .heat-chip.hot  { background: #E67E22; color: white; }
+        .heat-chip.extra{ background: #C0392B; color: white; }
+
+        /* ── WORLD CUP ── */
+        .wc-banner { background: linear-gradient(135deg, #0B3D2E 0%, #0B6E4F 55%, #1FAE74 100%); border-radius: 24px; padding: 40px; text-align: center; margin-bottom: 36px; color: var(--white); position: relative; overflow: hidden; }
+        .wc-banner::before { content: ''; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+        .wc-banner::after { content: '🏆'; position: absolute; font-size: 11rem; opacity: 0.08; top: -25px; left: -25px; }
+        .wc-banner-inner { position: relative; z-index: 1; }
+        .wc-flag-strip { display: inline-flex; gap: 4px; margin-bottom: 16px; }
+        .wc-flag-strip span { width: 36px; height: 6px; border-radius: 3px; }
+        .wc-flag-strip span:nth-child(1) { background: #CE1126; }
+        .wc-flag-strip span:nth-child(2) { background: #FFFFFF; }
+        .wc-flag-strip span:nth-child(3) { background: #000000; }
+        .wc-banner h2 { font-family: 'Tajawal', sans-serif; font-size: 2.2rem; font-weight: 900; margin-bottom: 12px; text-shadow: 0 2px 12px rgba(0,0,0,0.3); }
+        .wc-banner p { font-size: 1.05rem; opacity: 0.92; max-width: 640px; margin: 0 auto; }
+        .wc-card-price { background: linear-gradient(135deg, #FFD700, #FFB800); color: #0B3D2E; }
+        .wc-cta { background: linear-gradient(135deg, #0B6E4F, #1FAE74); color: #fff; border: none; padding: 8px 18px; border-radius: 50px; font-family: 'Cairo', sans-serif; font-size: 0.9rem; font-weight: 700; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; transition: all 0.25s; }
+        .wc-cta:hover { background: linear-gradient(135deg, #FFD700, #FFB800); color: #0B3D2E; transform: translateY(-2px); }
+
+        /* ── OFFERS ── */
+        .offer-section-title { font-size: 1.3rem; font-weight: 900; color: var(--red); margin: 32px 0 16px; padding-bottom: 10px; border-bottom: 2px dashed rgba(217,43,43,0.25); }
+        .offer-divider { border: none; border-top: 2px dashed var(--gold-light); margin: 40px 0; }
+
+        /* ── INFO CARDS ── */
+        .info-card { background: var(--white); border-radius: var(--radius); padding: 28px 32px; box-shadow: var(--shadow-sm); margin-bottom: 20px; border-right: 4px solid var(--red); }
+        .info-card h3 { font-family: 'Tajawal', sans-serif; font-size: 1.3rem; font-weight: 900; color: var(--red); margin-bottom: 14px; }
+        .info-card p, .info-card li { font-size: 1rem; color: #444; line-height: 1.7; }
+        .info-card ul { list-style: none; }
+        .info-card li { padding-right: 24px; position: relative; margin-bottom: 10px; }
+        .info-card li::before { content: "🔥"; position: absolute; right: 0; }
+        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-top: 20px; }
+        .contact-card { background: var(--cream); border: 2px solid rgba(217,43,43,0.15); border-radius: var(--radius-sm); padding: 20px; text-align: center; transition: all 0.2s; }
+        .contact-card:hover { border-color: var(--red); transform: translateY(-3px); box-shadow: var(--shadow-md); }
+        .contact-card-icon { font-size: 2rem; margin-bottom: 8px; }
+        .contact-card h4 { font-size: 0.9rem; font-weight: 700; color: var(--gray); margin-bottom: 10px; }
+        .contact-card a { display: inline-block; text-decoration: none; font-weight: 900; font-size: 1.05rem; color: var(--red); transition: color 0.2s; }
+        .contact-card a:hover { color: var(--red-dark); }
+        .contact-card a.whatsapp { background: #25D366; color: white; padding: 8px 20px; border-radius: 50px; }
+        .contact-card a.whatsapp:hover { background: #128C7E; color: white; }
+        .contact-card a.facebook { background: #1877F2; color: white; padding: 8px 20px; border-radius: 50px; }
+        .contact-card a.facebook:hover { background: #0E5FC0; color: white; }
+
+        /* ── NOTE ITEMS ── */
+        .note-item { background: var(--white); border-radius: var(--radius-sm); padding: 18px 22px; margin-bottom: 12px; box-shadow: var(--shadow-sm); display: flex; gap: 14px; align-items: flex-start; border-right: 4px solid var(--gold); }
         .note-icon { font-size: 1.4rem; flex-shrink: 0; }
         .note-text { font-size: 0.98rem; color: var(--charcoal); line-height: 1.6; }
 
         /* ── BRANCHES ── */
-        .branch-card {
-            background: var(--white);
-            border-radius: var(--radius);
-            padding: 28px;
-            box-shadow: var(--shadow-sm);
-            display: flex;
-            gap: 20px;
-            align-items: center;
-            border: 2px solid rgba(217,43,43,0.1);
-            transition: all 0.25s;
-        }
-
-        .branch-card:hover {
-            border-color: var(--red);
-            box-shadow: var(--shadow-md);
-        }
-
-        .branch-icon {
-            width: 56px;
-            height: 56px;
-            background: linear-gradient(135deg, var(--red), var(--red-dark));
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8rem;
-            flex-shrink: 0;
-        }
-
-        .branch-info h3 {
-            font-family: 'Tajawal', sans-serif;
-            font-size: 1.2rem;
-            font-weight: 900;
-            color: var(--charcoal);
-            margin-bottom: 6px;
-        }
-
-        .branch-info p {
-            font-size: 0.9rem;
-            color: var(--gray);
-            line-height: 1.5;
-        }
+        .branch-card { background: var(--white); border-radius: var(--radius); padding: 28px; box-shadow: var(--shadow-sm); display: flex; gap: 20px; align-items: center; border: 2px solid rgba(217,43,43,0.1); transition: all 0.25s; }
+        .branch-card:hover { border-color: var(--red); box-shadow: var(--shadow-md); }
+        .branch-icon { width: 56px; height: 56px; background: linear-gradient(135deg, var(--red), var(--red-dark)); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; flex-shrink: 0; }
+        .branch-info h3 { font-family: 'Tajawal', sans-serif; font-size: 1.2rem; font-weight: 900; color: var(--charcoal); margin-bottom: 6px; }
+        .branch-info p { font-size: 0.9rem; color: var(--gray); line-height: 1.5; }
 
         /* ── FOOTER ── */
-        footer {
-            background: var(--charcoal);
-            color: rgba(255,255,255,0.7);
-            text-align: center;
-            padding: 24px;
-            font-size: 0.9rem;
-        }
-
+        footer { background: var(--charcoal); color: rgba(255,255,255,0.7); text-align: center; padding: 24px; font-size: 0.9rem; }
         footer strong { color: var(--red); }
 
-        /* ── WHATSAPP ORDER BUTTON ── */
-        .order-btn-wrap {
-            position: fixed;
-            bottom: 28px;
-            right: 24px;
-            z-index: 2000;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            gap: 8px;
-        }
+        /* ── WHATSAPP BUTTON ── */
+        .order-btn-wrap { position: fixed; bottom: 28px; right: 24px; z-index: 2000; display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
+        .order-tooltip { background: #111; color: #fff; font-size: 0.82rem; font-weight: 600; padding: 6px 14px; border-radius: 20px; white-space: nowrap; opacity: 0; transform: translateY(6px); transition: all 0.25s; pointer-events: none; }
+        .order-btn-wrap:hover .order-tooltip { opacity: 1; transform: translateY(0); }
+        .order-btn { display: flex; align-items: center; gap: 10px; background: linear-gradient(135deg, #00C853, #00897B); color: #fff; text-decoration: none; font-family: 'Tajawal', sans-serif; font-size: 1.05rem; font-weight: 900; padding: 14px 22px; border-radius: 50px; box-shadow: 0 6px 28px rgba(0,150,100,0.45); border: none; cursor: pointer; transition: all 0.3s; animation: floatPulse 2.8s ease-in-out infinite; }
+        .order-btn:hover { background: linear-gradient(135deg, #00E676, #00BFA5); transform: translateY(-3px) scale(1.04); box-shadow: 0 10px 36px rgba(0,200,130,0.55); }
+        .order-btn svg { width: 22px; height: 22px; fill: #fff; flex-shrink: 0; }
+        @keyframes floatPulse { 0%, 100% { box-shadow: 0 6px 28px rgba(0,150,100,0.45); } 50% { box-shadow: 0 10px 40px rgba(0,200,130,0.65); transform: translateY(-2px); } }
 
-        .order-tooltip {
-            background: #111;
-            color: #fff;
-            font-size: 0.82rem;
-            font-weight: 600;
-            padding: 6px 14px;
-            border-radius: 20px;
-            white-space: nowrap;
-            opacity: 0;
-            transform: translateY(6px);
-            transition: all 0.25s;
-            pointer-events: none;
-        }
-
-        .order-btn-wrap:hover .order-tooltip {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .order-btn {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            background: linear-gradient(135deg, #00C853, #00897B);
-            color: #fff;
-            text-decoration: none;
-            font-family: 'Tajawal', sans-serif;
-            font-size: 1.05rem;
-            font-weight: 900;
-            padding: 14px 22px;
-            border-radius: 50px;
-            box-shadow: 0 6px 28px rgba(0, 150, 100, 0.45);
-            border: none;
-            cursor: pointer;
-            transition: all 0.3s;
-            animation: floatPulse 2.8s ease-in-out infinite;
-        }
-
-        .order-btn:hover {
-            background: linear-gradient(135deg, #00E676, #00BFA5);
-            transform: translateY(-3px) scale(1.04);
-            box-shadow: 0 10px 36px rgba(0, 200, 130, 0.55);
-        }
-
-        .order-btn svg {
-            width: 22px;
-            height: 22px;
-            fill: #fff;
-            flex-shrink: 0;
-        }
-
-        @keyframes floatPulse {
-            0%, 100% { box-shadow: 0 6px 28px rgba(0,150,100,0.45); }
-            50%       { box-shadow: 0 10px 40px rgba(0,200,130,0.65); transform: translateY(-2px); }
-        }
-
-        /* ── SCROLL TO TOP ── */
-        .scroll-top {
-            position: fixed;
-            bottom: 24px;
-            left: 24px;
-            width: 44px;
-            height: 44px;
-            background: var(--red);
-            color: white;
-            border: none;
-            border-radius: 50%;
-            font-size: 1.2rem;
-            cursor: pointer;
-            box-shadow: var(--shadow-md);
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.3s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .scroll-top.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .scroll-top:hover {
-            background: var(--red-dark);
-            transform: translateY(-2px);
-        }
+        .scroll-top { position: fixed; bottom: 24px; left: 24px; width: 44px; height: 44px; background: var(--red); color: white; border: none; border-radius: 50%; font-size: 1.2rem; cursor: pointer; box-shadow: var(--shadow-md); opacity: 0; transform: translateY(20px); transition: all 0.3s; display: flex; align-items: center; justify-content: center; }
+        .scroll-top.visible { opacity: 1; transform: translateY(0); }
+        .scroll-top:hover { background: var(--red-dark); transform: translateY(-2px); }
 
         /* ── RESPONSIVE ── */
         @media (max-width: 900px) {
             nav { display: none; }
             .hamburger { display: flex; }
-
-            .hero {
-                flex-direction: column;
-                padding: 32px 28px 0;
-                min-height: auto;
-            }
-
+            .hero { flex-direction: column; padding: 32px 28px 0; min-height: auto; }
             .hero-text h1 { font-size: 2rem; }
-
-            .hero-img {
-                width: 100%;
-                max-width: 360px;
-                align-self: center;
-            }
-
+            .hero-img { width: 100%; max-width: 360px; align-self: center; }
             .hero-img img { height: 200px; }
-
             .power-deal-banner { flex-direction: column; }
             .power-deal-img { width: 100%; height: 220px; }
             .power-deal-content { padding: 28px 24px; }
             .power-deal-content h2 { font-size: 1.8rem; }
+            .siniya-hero-banner { flex-direction: column; padding: 32px 28px 0; min-height: auto; }
+            .siniya-hero-text h1 { font-size: 2.2rem; }
+            .siniya-hero-img { width: 100%; max-width: 360px; align-self: center; }
+            .siniya-hero-img img { height: 200px; }
         }
-
         @media (max-width: 640px) {
             .header-inner { height: 62px; }
             main { padding: 20px 14px 48px; }
@@ -1332,6 +725,8 @@
             .hero { padding: 24px 20px 0; border-radius: 16px; }
             .hero-text h1 { font-size: 1.6rem; }
             .menu-grid { grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 14px; }
+            .siniya-grid { grid-template-columns: 1fr; gap: 18px; }
+            .siniya-hero-text h1 { font-size: 1.8rem; }
             .info-card { padding: 20px; }
             .category-grid { grid-template-columns: repeat(2, 1fr); }
             .nash-banner { padding: 24px 20px; }
@@ -1344,7 +739,6 @@
 </head>
 <body>
 
-<!-- HEADER -->
 <header>
     <div class="header-inner">
         <div class="logo-wrap">
@@ -1360,6 +754,7 @@
                 <li><button onclick="showSection('home')" class="active">الرئيسية</button></li>
                 <li><button onclick="showSection('world-cup')" class="wc-badge">🏆 كأس العالم</button></li>
                 <li><button onclick="showSection('new-items')" class="new-badge">✨ جديد</button></li>
+                <li><button onclick="showSection('siniya')" class="siniya-badge">🥘 صواني ريد روستر</button></li>
                 <li><button onclick="showSection('offers')">العروض 🎉</button></li>
                 <li><button onclick="showSection('nashville')" class="highlight">🔥 ناشڤيل</button></li>
                 <li><button onclick="showSection('beef-sandwiches')">برجر اللحم</button></li>
@@ -1382,12 +777,12 @@
     </div>
 </header>
 
-<!-- MOBILE NAV -->
 <div class="mobile-nav" id="mobileNav" onclick="closeMobileNav()">
     <div class="mobile-nav-inner" onclick="event.stopPropagation()">
         <button onclick="showSection('home'); closeMobileNav()">🏠 الرئيسية</button>
         <button class="wc-badge" onclick="showSection('world-cup'); closeMobileNav()">🏆 عروض كأس العالم</button>
         <button class="new-badge" onclick="showSection('new-items'); closeMobileNav()">✨ جديد ريد روستر</button>
+        <button class="siniya-badge" onclick="showSection('siniya'); closeMobileNav()">🥘 صواني ريد روستر</button>
         <button onclick="showSection('offers'); closeMobileNav()">🎉 العروض الحصرية</button>
         <button class="highlight" onclick="showSection('nashville'); closeMobileNav()">🔥 منيو ناشڤيل</button>
         <button onclick="showSection('beef-sandwiches'); closeMobileNav()">🍔 برجر اللحم البقري</button>
@@ -1413,6 +808,7 @@
                 <h1>أشهى دجاج<br>في مصر 🐓</h1>
                 <p>ساندوتشات وبرجر ووجبات بجودة لا مثيل لها وبأسعار تنافسية</p>
                 <div class="hero-cta-group">
+                    <button class="btn btn-siniya" onclick="showSection('siniya')">🥘 صواني ريد روستر</button>
                     <button class="btn btn-wc" onclick="showSection('world-cup')">🏆 عروض كأس العالم</button>
                     <button class="btn btn-new" onclick="showSection('new-items')">✨ الجديد عندنا</button>
                     <button class="btn btn-primary" onclick="showSection('offers')">🎉 شوف العروض</button>
@@ -1425,6 +821,11 @@
         </div>
 
         <div class="category-grid">
+            <div class="cat-card siniya-cat" onclick="showSection('siniya')">
+                <span class="cat-icon">🥘</span>
+                <h3>صواني ريد روستر</h3>
+                <p>حفلة قرمشة لا تُنسى!</p>
+            </div>
             <div class="cat-card wc-cat" onclick="showSection('world-cup')">
                 <span class="cat-icon">🏆</span>
                 <h3>عروض كأس العالم</h3>
@@ -1489,7 +890,6 @@
     <!-- 🏆 WORLD CUP OFFERS -->
     <section id="world-cup" class="section">
         <h2 class="section-title">🏆 عروض كأس العالم</h2>
-
         <div class="wc-banner">
             <div class="wc-banner-inner">
                 <div class="wc-flag-strip"><span></span><span></span><span></span></div>
@@ -1497,49 +897,45 @@
                 <p>بمناسبة كأس العالم 2026، جهزنا لك عروض ضخمة تكفي العيلة والصحاب وقت الماتشات — كل عرض مصمم خصيصًا لروقان حقيقي قدام الشاشة!</p>
             </div>
         </div>
-
         <div class="menu-grid">
             <div class="card wc-item">
                 <img class="card-img" src="https://i.postimg.cc/FRP3DCM9/alrymwntada.jpg" alt="عرض الريمونتادا">
                 <div class="card-body">
                     <div class="card-name">عرض الريمونتادا <span class="card-name-en">Remontada Deal</span></div>
-                    <p class="card-desc"> خمس قطع دجاج + خمس قطع استريبس+ 3 قطع خبز كايزر + كول سلو حجم عائلي + بطاطس كبيرة + مشروب غازي لتر</p>
+                    <p class="card-desc">خمس قطع دجاج + خمس قطع استريبس + 3 قطع خبز كايزر + كول سلو حجم عائلي + بطاطس كبيرة + مشروب غازي لتر</p>
                     <div class="card-footer">
                         <span class="price-badge wc-card-price">499 LE</span>
                         <a class="wc-cta" href="https://wa.me/201023278000?text=عايز%20أطلب%20عرض%20الريمونتادا" target="_blank">اطلب 🛒</a>
                     </div>
                 </div>
             </div>
-
             <div class="card wc-item">
                 <img class="card-img" src="https://i.postimg.cc/JnTZPYfL/kas-alʿalm.jpg" alt="عرض كأس العالم">
                 <div class="card-body">
                     <div class="card-name">عرض كأس العالم <span class="card-name-en">World Cup Deal</span></div>
-                    <p class="card-desc">اختيارك من اتنين ساندوتش ناشفيل (كوول ناش أو سويتي هيت ناش ) + 2 ريزو ناشفيل + ميكس بوكس قرمشة حجم كبير + مشروب غازي لتر </p>
+                    <p class="card-desc">اختيارك من اتنين ساندوتش ناشفيل (كوول ناش أو سويتي هيت ناش) + 2 ريزو ناشفيل + ميكس بوكس قرمشة حجم كبير + مشروب غازي لتر</p>
                     <div class="card-footer">
                         <span class="price-badge wc-card-price">699 LE</span>
                         <a class="wc-cta" href="https://wa.me/201023278000?text=عايز%20أطلب%20عرض%20كأس%20العالم" target="_blank">اطلب 🛒</a>
                     </div>
                 </div>
             </div>
-
             <div class="card wc-item">
                 <img class="card-img" src="https://i.postimg.cc/k4jKfY0P/altshjyʿ.jpg" alt="عرض التشجيع">
                 <div class="card-body">
                     <div class="card-name">عرض التشجيع <span class="card-name-en">Tashgee3 Deal</span></div>
-                    <p class="card-desc">أختيارك من اربع ساندوتشات تشيكن (ساندوتش سوبريم + ثلاث ساندوتشات من قسم ساندوتشات الدجاج ) (عدا المايتي زينجر) + اثنين بطاطس حجم وسط + كول سلو عائلي +مشروب غازي لتر </p>
+                    <p class="card-desc">أختيارك من أربع ساندوتشات تشيكن (ساندوتش سوبريم + ثلاث ساندوتشات من قسم ساندوتشات الدجاج) (عدا المايتي زينجر) + اثنين بطاطس حجم وسط + كول سلو عائلي + مشروب غازي لتر</p>
                     <div class="card-footer">
                         <span class="price-badge wc-card-price">599 LE</span>
                         <a class="wc-cta" href="https://wa.me/201023278000?text=عايز%20أطلب%20عرض%20التشجيع" target="_blank">اطلب 🛒</a>
                     </div>
                 </div>
             </div>
-
             <div class="card wc-item">
                 <img class="card-img" src="https://i.postimg.cc/LXyLNQcS/alhatryk.jpg" alt="عرض الهاتريك">
                 <div class="card-body">
                     <div class="card-name">عرض الهاتريك <span class="card-name-en">Hattrick Deal</span></div>
-                    <p class="card-desc">ثلاثة ساندوتشات تويستر من اختيارك + 3 ريزو من اختيارك +3 كول سلو </p>
+                    <p class="card-desc">ثلاثة ساندوتشات تويستر من اختيارك + 3 ريزو من اختيارك + 3 كول سلو</p>
                     <div class="card-footer">
                         <span class="price-badge wc-card-price">499 LE</span>
                         <a class="wc-cta" href="https://wa.me/201023278000?text=عايز%20أطلب%20عرض%20الهاتريك" target="_blank">اطلب 🛒</a>
@@ -1547,7 +943,6 @@
                 </div>
             </div>
         </div>
-
         <div class="info-banner" style="margin-top: 28px; background: linear-gradient(135deg, #E8FFF3, #D4FFE9); border-color: #0B6E4F;">
             <div class="info-banner-icon">⚽</div>
             <div class="info-banner-text">
@@ -1560,8 +955,6 @@
     <!-- ✨ NEW ITEMS -->
     <section id="new-items" class="section">
         <h2 class="section-title">✨ جديد ريد روستر</h2>
-
-        <!-- RED POWER DEAL BANNER -->
         <div class="power-deal-banner">
             <div class="power-deal-content">
                 <div class="power-deal-tag"><span>⚡</span> عرض حصري جديد</div>
@@ -1583,13 +976,10 @@
                 <div class="power-deal-glow"></div>
             </div>
         </div>
-
-        <!-- NEW SANDWICHES -->
         <div class="new-items-header">
             <h3>ساندوتشات جديدة</h3>
             <span class="new-pill">NEW</span>
         </div>
-
         <div class="menu-grid">
             <div class="card new-item">
                 <img class="card-img" src="https://i.ibb.co/TMD1795L/mango-sandwich.jpg" alt="Mango Fire">
@@ -1610,10 +1000,181 @@
         </div>
     </section>
 
+    <!-- 🥘 SINIYA — صواني ريد روستر -->
+    <section id="siniya" class="section">
+        <h2 class="section-title">🥘 صواني ريد روستر</h2>
+
+        <!-- SINIYA HERO BANNER -->
+        <div class="siniya-hero-banner">
+            <div class="siniya-hero-glow"></div>
+            <div class="siniya-hero-text">
+                <div class="siniya-hero-eyebrow">🔥 حفلة قرمشة</div>
+                <h1>الصينية اللي هتجمّع<br>عليها الكل!</h1>
+                <p>صواني مليانة قرمشة وجودة — مش مجرد وجبة، ده تجربة كاملة تشاركها مع أحبّك وانتوا مبسوطين</p>
+                <button class="btn btn-siniya" onclick="document.getElementById('siniya-grid').scrollIntoView({behavior:'smooth'})">اكتشف الصواني 👇</button>
+            </div>
+            <div class="siniya-hero-img">
+                <img src="https://i.postimg.cc/4ypKrJy8/hflt-arbʿt.jpg" alt="صواني ريد روستر">
+            </div>
+        </div>
+
+        <!-- SINIYA CARDS GRID -->
+        <div class="siniya-grid" id="siniya-grid">
+
+            <!-- صينية 1 -->
+            <div class="siniya-card">
+                <div class="siniya-card-img-wrap">
+                    <img class="siniya-card-img" src="https://i.postimg.cc/fyY36wyv/hflt-1.jpg" alt="حفلة قرمشة 1">
+                    <div class="siniya-card-number">صينية 1</div>
+                </div>
+                <div class="siniya-card-body">
+                    <div class="siniya-card-name">حفلة قرمشة 1</div>
+                    <span class="siniya-card-name-en">Hafflet Qormashe 1</span>
+                    <hr class="siniya-card-divider">
+                    <div class="siniya-includes-title">محتوى الصينية</div>
+                    <ul class="siniya-includes">
+                        <li>3 قطع كرسبي</li>
+                        <li>3 قطع فرايد تشكين</li>
+                        <li class="rice">600 جرام أرز</li>
+                        <li class="fries">طبق بطاطس حجم عائلي</li>
+                        <li class="sauce">كب صوص سويت مانجو</li>
+                    </ul>
+                    <div class="siniya-card-footer">
+                        <div class="siniya-price">349 LE</div>
+                        <a class="siniya-order-btn" href="https://wa.me/201023278000?text=عايز%20أطلب%20صينية%20حفلة%20قرمشة%201" target="_blank">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                            اطلب الآن
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- صينية 2 -->
+            <div class="siniya-card">
+                <div class="siniya-card-img-wrap">
+                    <img class="siniya-card-img" src="https://i.postimg.cc/0j76L8jV/hflt-athnyn.jpg" alt="حفلة قرمشة 2">
+                    <div class="siniya-card-number">صينية 2</div>
+                </div>
+                <div class="siniya-card-body">
+                    <div class="siniya-card-name">حفلة قرمشة 2</div>
+                    <span class="siniya-card-name-en">Hafflet Qormashe 2</span>
+                    <hr class="siniya-card-divider">
+                    <div class="siniya-includes-title">محتوى الصينية</div>
+                    <ul class="siniya-includes">
+                        <li>4 قطع كرسبي</li>
+                        <li>4 قطع فرايد تشكين</li>
+                        <li>6 قطع ناجتس</li>
+                        <li class="rice">600 جرام أرز</li>
+                        <li class="sauce">كب صوص سويت مانجو</li>
+                    </ul>
+                    <div class="siniya-card-footer">
+                        <div class="siniya-price">449 LE</div>
+                        <a class="siniya-order-btn" href="https://wa.me/201023278000?text=عايز%20أطلب%20صينية%20حفلة%20قرمشة%202" target="_blank">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                            اطلب الآن
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- صينية 3 -->
+            <div class="siniya-card">
+                <div class="siniya-card-img-wrap">
+                    <img class="siniya-card-img" src="https://i.postimg.cc/Y0Q4Jp0D/hflt-thlatht.jpg" alt="حفلة قرمشة 3">
+                    <div class="siniya-card-number">صينية 3</div>
+                    <div class="siniya-card-nashville">🔥 ناشفيل تشكين</div>
+                </div>
+                <div class="siniya-card-body">
+                    <div class="siniya-card-name">حفلة قرمشة 3 🔥</div>
+                    <span class="siniya-card-name-en">Hafflet Qormashe 3 — Nashville Chicken</span>
+                    <hr class="siniya-card-divider">
+                    <div class="siniya-includes-title">محتوى الصينية</div>
+                    <ul class="siniya-includes">
+                        <li class="nashville">3 قطع ناشفيل تندر</li>
+                        <li class="nashville">3 قطع ناشفيل تشكين</li>
+                        <li class="nashville">روستر ناش</li>
+                        <li class="rice">600 جرام أرز</li>
+                        <li class="sauce">كب صوص سويت مانجو</li>
+                    </ul>
+                    <div class="siniya-card-footer">
+                        <div class="siniya-price">499 LE</div>
+                        <a class="siniya-order-btn" href="https://wa.me/201023278000?text=عايز%20أطلب%20صينية%20حفلة%20قرمشة%203%20ناشفيل" target="_blank">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                            اطلب الآن
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- صينية 4 -->
+            <div class="siniya-card">
+                <div class="siniya-card-img-wrap">
+                    <img class="siniya-card-img" src="https://i.postimg.cc/4ypKrJy8/hflt-arbʿt.jpg" alt="حفلة قرمشة 4">
+                    <div class="siniya-card-number">صينية 4</div>
+                </div>
+                <div class="siniya-card-body">
+                    <div class="siniya-card-name">حفلة قرمشة 4</div>
+                    <span class="siniya-card-name-en">Hafflet Qormashe 4</span>
+                    <hr class="siniya-card-divider">
+                    <div class="siniya-includes-title">محتوى الصينية</div>
+                    <ul class="siniya-includes">
+                        <li>6 قطع كرسبي</li>
+                        <li>6 قطع فرايد تشكين</li>
+                        <li class="fries">طبق بطاطس حجم عائلي</li>
+                        <li class="rice">800 جرام أرز</li>
+                        <li class="sauce">كب صوص سويت مانجو</li>
+                    </ul>
+                    <div class="siniya-card-footer">
+                        <div class="siniya-price">599 LE</div>
+                        <a class="siniya-order-btn" href="https://wa.me/201023278000?text=عايز%20أطلب%20صينية%20حفلة%20قرمشة%204" target="_blank">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                            اطلب الآن
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="siniya-info-banner">
+            <div class="siniya-info-banner-icon">🥘</div>
+            <div class="siniya-info-banner-text">
+                <h4>الصواني — أكلة الجمع والبهجة!</h4>
+                <p>كل صينية مصممة تكفي أكتر من شخص وتجمع الكل حواليها — اطلب عبر واتساب وهنوصّل لك في أسرع وقت 🚀</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- OFFERS -->
+    <section id="offers" class="section">
+        <h2 class="section-title">🎉 العروض الحصرية</h2>
+        <p class="offer-section-title">عروض الروقان الخاصة</p>
+        <div class="menu-grid">
+            <div class="card"><img class="card-img" src="https://i.ibb.co/0R89m3TW/Whats-App-Image-2026-05-02-at-10-20-34-PM.jpg" alt="عرض الروقان 1"><div class="card-body"><div class="card-name">عرض الروقان 1</div><p class="card-desc">أرز كبير + 2 قطعة دجاج أو 4 قطعة استربس + صوص + مشروب</p><div class="card-footer"><span class="price-badge gold">185 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.ibb.co/Lhzpw1xv/Whats-App-Image-2026-05-02-at-10-20-35-PM.jpg" alt="عرض الروقان 2"><div class="card-body"><div class="card-name">عرض الروقان 2</div><p class="card-desc">قطعة دجاج + ساندوتش تشيكن + 1 مشروب</p><div class="card-footer"><span class="price-badge gold">185 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.ibb.co/N6XLM8vG/3.jpg" alt="عرض الروقان 3"><div class="card-body"><div class="card-name">عرض الروقان 3</div><p class="card-desc">قطعة دجاج + تويستر تشيكن أو فاهيتا + كول سلو + مشروب</p><div class="card-footer"><span class="price-badge gold">185 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.ibb.co/ym1RsqgJ/4.jpg" alt="عرض الروقان 4"><div class="card-body"><div class="card-name">عرض الروقان 4</div><p class="card-desc">قطعة دجاج + قطعة كرسبي + خبز + ريزو + 1 مشروب</p><div class="card-footer"><span class="price-badge gold">185 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.ibb.co/W4y4fHsD/5.jpg" alt="عرض الروقان 5"><div class="card-body"><div class="card-name">عرض الروقان 5</div><p class="card-desc">تويستر تشيكن أو فاهيتا + سوبريم + كول سلو</p><div class="card-footer"><span class="price-badge gold">185 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.ibb.co/bj7JytKp/Whats-App-Image-2026-05-02-at-10-20-32-PM.jpg" alt="عرض الروقان 6"><div class="card-body"><div class="card-name">عرض الروقان 6</div><p class="card-desc">قطعتين دجاج + قطعتين كرسبي استربس + أرز + 1 خبز</p><div class="card-footer"><span class="price-badge gold">185 LE</span></div></div></div>
+        </div>
+        <hr class="offer-divider">
+        <p class="offer-section-title">العروض الكلاسيكية والوجبات الموفرة</p>
+        <div class="menu-grid">
+            <div class="card"><img class="card-img" src="https://i.ibb.co/yBbXK0Fq/image.jpg" alt="عرض الريزو"><div class="card-body"><div class="card-name">عرض الريزو</div><p class="card-desc">طبق ريزو كبير</p><div class="card-footer"><span class="price-badge">70 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.postimg.cc/vTvHYpyK/image.jpg" alt="3 قطع دجاج + خبز"><div class="card-body"><div class="card-name">3 قطع دجاج + خبز</div><p class="card-desc">3 قطع دجاج + 1 خبز</p><div class="card-footer"><span class="price-badge">135 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.postimg.cc/k4fp7cZ8/image.jpg" alt="فانتاستيك فايف"><div class="card-body"><div class="card-name">فانتاستيك فايف</div><p class="card-desc">5 قطع استربس + 1 خبز</p><div class="card-footer"><span class="price-badge">135 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.ibb.co/Xf4VJ1Xz/image.jpg" alt="كلاسيك الروقان"><div class="card-body"><div class="card-name">كلاسيك الروقان</div><p class="card-desc">ساندوتش تشيكن (من اختيار العميل) *(عدا المايتي زينجر)* + 1 مشروب أو كول سلو</p><div class="card-footer"><span class="price-badge">135 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.postimg.cc/fLBxVgM0/Chicken-twister-spicy.jpg" alt="دابل راب"><div class="card-body"><div class="card-name">دابل راب</div><p class="card-desc">2 ساندوتش راب (تويستر عادي أو فاهيتا)</p><div class="card-footer"><span class="price-badge">169 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.ibb.co/fGKBstdP/image.jpg" alt="كومبو الروقان"><div class="card-body"><div class="card-name">كومبو الروقان</div><p class="card-desc">ساندوتش برجر (120جرام) + فرايز + مشروب</p><div class="card-footer"><span class="price-badge">175 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.ibb.co/CRHL9fB/image.jpg" alt="عرض الرايقين"><div class="card-body"><div class="card-name">عرض الرايقين</div><p class="card-desc">6 قطع دجاج + 3 أرز + 3 خبز كايزر</p><div class="card-footer"><span class="price-badge">315 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.ibb.co/1JqcXscd/image.jpg" alt="ملوك الروقان"><div class="card-body"><div class="card-name">ملوك الروقان</div><p class="card-desc">10 قطع دجاج + 2 أرز + كول سلو فاملي + 5 خبز + مشروب لتر</p><div class="card-footer"><span class="price-badge">575 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.ibb.co/67Z27j0y/image.png" alt="يا دلعوا"><div class="card-body"><div class="card-name">يادلعوا</div><p class="card-desc">أربع قطع استريبس بالإضافة إلى بطاطس وخبز وصوص كب</p><div class="card-footer"><span class="price-badge">119 LE</span></div></div></div>
+        </div>
+    </section>
+
     <!-- NASHVILLE -->
     <section id="nashville" class="section">
         <h2 class="section-title">🔥 منيو ناشڤيل</h2>
-
         <div class="nash-banner">
             <h2>تجربة لا تُنسى 🔥</h2>
             <p>كل طبق في منيو الناشفيل يجي بثلاث درجات حرارة من اختيارك</p>
@@ -1623,294 +1184,32 @@
                 <span class="heat-chip extra">EXTRA — للعشاق الحقيقيين!</span>
             </div>
         </div>
-
         <div class="menu-grid">
-            <div class="card">
-                <img class="card-img" src="https://i.postimg.cc/d12rnkXc/meal-S.jpg" alt="Red Nash Meal Small">
-                <div class="card-body">
-                    <div class="card-name">ريد ناش وجبة صغيرة <span class="card-name-en">Red Nash Meal Small</span></div>
-                    <p class="card-desc">2 قطعة دجاج + خبز + 1 كول سلو + 1 فرايز وسط</p>
-                    <div class="card-footer"><span class="price-badge">179 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.postimg.cc/CKWscVxj/meal-l.jpg" alt="Red Nash Meal Large">
-                <div class="card-body">
-                    <div class="card-name">ريد ناش وجبة كبيرة <span class="card-name-en">Red Nash Meal Large</span></div>
-                    <p class="card-desc">3 قطعة دجاج + خبز + 1 كول سلو + 1 فرايز وسط</p>
-                    <div class="card-footer"><span class="price-badge">239 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.postimg.cc/VvzMhsy2/strips-Sl.jpg" alt="Red Nash Tinder Small">
-                <div class="card-body">
-                    <div class="card-name">ريد ناش استربس صغير <span class="card-name-en">Red Nash Tinder Small</span></div>
-                    <p class="card-desc">2 قطعة استربس + 1 خبز + 1 كول سلو + 1 فرايز وسط</p>
-                    <div class="card-footer"><span class="price-badge">179 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.postimg.cc/PxYzcFC4/strips-l.jpg" alt="Red Nash Tinder Large">
-                <div class="card-body">
-                    <div class="card-name">ريد ناش استربس كبير <span class="card-name-en">Red Nash Tinder Large</span></div>
-                    <p class="card-desc">3 قطعة استربس + 1 خبز + 1 كول سلو + 1 فرايز وسط</p>
-                    <div class="card-footer"><span class="price-badge">239 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.postimg.cc/xCMy7FXP/rizo-nash.jpg" alt="Rizo Nash">
-                <div class="card-body">
-                    <div class="card-name">ريزو ناش <span class="card-name-en">Rizo Nash</span></div>
-                    <p class="card-desc">أرز مبهر + صوص سبايسي روستر + دجاج ناشفيل</p>
-                    <div class="card-footer"><span class="price-badge">109 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.postimg.cc/qRyXYZN1/sweety-nash-fries.jpg" alt="Sweety Nash Fries">
-                <div class="card-body">
-                    <div class="card-name">سويتي ناش فرايز <span class="card-name-en">Sweety Nash Fries</span></div>
-                    <p class="card-desc">صوص سويت شيلي + فرايز + دجاج ناشفيل</p>
-                    <div class="card-footer"><span class="price-badge">129 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.postimg.cc/hjTbw3X1/nash-fries.jpg" alt="Rooster Nash Fries">
-                <div class="card-body">
-                    <div class="card-name">روستر ناش فرايز <span class="card-name-en">Rooster Nash Fries</span></div>
-                    <p class="card-desc">صوص روستر الخاص + فرايز + دجاج ناشفيل</p>
-                    <div class="card-footer"><span class="price-badge">129 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.postimg.cc/9MZtSND8/twister-nash.jpg" alt="Nash Rab">
-                <div class="card-body">
-                    <div class="card-name">ناش راب <span class="card-name-en">Nash Rab</span></div>
-                    <p class="card-desc">عيش التورتيلا + قطع السبايسي ناشفيل + خس وصوص خاص</p>
-                    <div class="card-footer"><span class="price-badge">139 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.postimg.cc/FzvgQgSW/nash-cool.png" alt="NASH COOL">
-                <div class="card-body">
-                    <div class="card-name">ناش كول <span class="card-name-en">NASH COOL</span></div>
-                    <p class="card-desc">زينجر + سلو + روستر الميز + خس + خيار</p>
-                    <div class="card-footer"><span class="price-badge">179 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.postimg.cc/tJbtHtP9/sweety-nash.png" alt="SWEETY HIT NASH">
-                <div class="card-body">
-                    <div class="card-name">سويتي هيت ناش <span class="card-name-en">SWEETY HIT NASH</span></div>
-                    <p class="card-desc">زينجر + جبنة أمريكي + سويت شيلي + خس + خيار</p>
-                    <div class="card-footer"><span class="price-badge">179 LE</span></div>
-                </div>
-            </div>
+            <div class="card"><img class="card-img" src="https://i.postimg.cc/d12rnkXc/meal-S.jpg" alt="Red Nash Meal Small"><div class="card-body"><div class="card-name">ريد ناش وجبة صغيرة <span class="card-name-en">Red Nash Meal Small</span></div><p class="card-desc">2 قطعة دجاج + خبز + 1 كول سلو + 1 فرايز وسط</p><div class="card-footer"><span class="price-badge">179 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.postimg.cc/CKWscVxj/meal-l.jpg" alt="Red Nash Meal Large"><div class="card-body"><div class="card-name">ريد ناش وجبة كبيرة <span class="card-name-en">Red Nash Meal Large</span></div><p class="card-desc">3 قطعة دجاج + خبز + 1 كول سلو + 1 فرايز وسط</p><div class="card-footer"><span class="price-badge">239 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.postimg.cc/VvzMhsy2/strips-Sl.jpg" alt="Red Nash Tinder Small"><div class="card-body"><div class="card-name">ريد ناش استربس صغير <span class="card-name-en">Red Nash Tinder Small</span></div><p class="card-desc">2 قطعة استربس + 1 خبز + 1 كول سلو + 1 فرايز وسط</p><div class="card-footer"><span class="price-badge">179 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.postimg.cc/PxYzcFC4/strips-l.jpg" alt="Red Nash Tinder Large"><div class="card-body"><div class="card-name">ريد ناش استربس كبير <span class="card-name-en">Red Nash Tinder Large</span></div><p class="card-desc">3 قطعة استربس + 1 خبز + 1 كول سلو + 1 فرايز وسط</p><div class="card-footer"><span class="price-badge">239 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.postimg.cc/xCMy7FXP/rizo-nash.jpg" alt="Rizo Nash"><div class="card-body"><div class="card-name">ريزو ناش <span class="card-name-en">Rizo Nash</span></div><p class="card-desc">أرز مبهر + صوص سبايسي روستر + دجاج ناشفيل</p><div class="card-footer"><span class="price-badge">109 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.postimg.cc/qRyXYZN1/sweety-nash-fries.jpg" alt="Sweety Nash Fries"><div class="card-body"><div class="card-name">سويتي ناش فرايز <span class="card-name-en">Sweety Nash Fries</span></div><p class="card-desc">صوص سويت شيلي + فرايز + دجاج ناشفيل</p><div class="card-footer"><span class="price-badge">129 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.postimg.cc/hjTbw3X1/nash-fries.jpg" alt="Rooster Nash Fries"><div class="card-body"><div class="card-name">روستر ناش فرايز <span class="card-name-en">Rooster Nash Fries</span></div><p class="card-desc">صوص روستر الخاص + فرايز + دجاج ناشفيل</p><div class="card-footer"><span class="price-badge">129 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.postimg.cc/9MZtSND8/twister-nash.jpg" alt="Nash Rab"><div class="card-body"><div class="card-name">ناش راب <span class="card-name-en">Nash Rab</span></div><p class="card-desc">عيش التورتيلا + قطع السبايسي ناشفيل + خس وصوص خاص</p><div class="card-footer"><span class="price-badge">139 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.postimg.cc/FzvgQgSW/nash-cool.png" alt="NASH COOL"><div class="card-body"><div class="card-name">ناش كول <span class="card-name-en">NASH COOL</span></div><p class="card-desc">زينجر + سلو + روستر الميز + خس + خيار</p><div class="card-footer"><span class="price-badge">179 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.postimg.cc/tJbtHtP9/sweety-nash.png" alt="SWEETY HIT NASH"><div class="card-body"><div class="card-name">سويتي هيت ناش <span class="card-name-en">SWEETY HIT NASH</span></div><p class="card-desc">زينجر + جبنة أمريكي + سويت شيلي + خس + خيار</p><div class="card-footer"><span class="price-badge">179 LE</span></div></div></div>
         </div>
-    </section>
-
-    <!-- OFFERS -->
-    <section id="offers" class="section">
-        <h2 class="section-title">🎉 العروض الحصرية</h2>
-
-        <p class="offer-section-title">عروض الروقان الخاصة</p>
-        <div class="menu-grid">
-            <div class="card">
-                <img class="card-img" src="https://i.ibb.co/0R89m3TW/Whats-App-Image-2026-05-02-at-10-20-34-PM.jpg" alt="عرض الروقان 1">
-                <div class="card-body">
-                    <div class="card-name">عرض الروقان 1</div>
-                    <p class="card-desc">أرز كبير + 2 قطعة دجاج أو 4 قطعة استربس + صوص + مشروب</p>
-                    <div class="card-footer"><span class="price-badge gold">185 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.ibb.co/Lhzpw1xv/Whats-App-Image-2026-05-02-at-10-20-35-PM.jpg" alt="عرض الروقان 2">
-                <div class="card-body">
-                    <div class="card-name">عرض الروقان 2</div>
-                    <p class="card-desc">قطعة دجاج + ساندوتش تشيكن + 1 مشروب</p>
-                    <div class="card-footer"><span class="price-badge gold">185 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.ibb.co/N6XLM8vG/3.jpg" alt="عرض الروقان 3">
-                <div class="card-body">
-                    <div class="card-name">عرض الروقان 3</div>
-                    <p class="card-desc">قطعة دجاج + تويستر تشيكن أو فاهيتا + كول سلو + مشروب</p>
-                    <div class="card-footer"><span class="price-badge gold">185 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.ibb.co/ym1RsqgJ/4.jpg" alt="عرض الروقان 4">
-                <div class="card-body">
-                    <div class="card-name">عرض الروقان 4</div>
-                    <p class="card-desc">قطعة دجاج + قطعة كرسبي + خبز + ريزو + 1 مشروب</p>
-                    <div class="card-footer"><span class="price-badge gold">185 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.ibb.co/W4y4fHsD/5.jpg" alt="عرض الروقان 5">
-                <div class="card-body">
-                    <div class="card-name">عرض الروقان 5</div>
-                    <p class="card-desc">تويستر تشيكن أو فاهيتا + سوبريم + كول سلو</p>
-                    <div class="card-footer"><span class="price-badge gold">185 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.ibb.co/bj7JytKp/Whats-App-Image-2026-05-02-at-10-20-32-PM.jpg" alt="عرض الروقان 6">
-                <div class="card-body">
-                    <div class="card-name">عرض الروقان 6</div>
-                    <p class="card-desc">قطعتين دجاج + قطعتين كرسبي استربس + أرز + 1 خبز</p>
-                    <div class="card-footer"><span class="price-badge gold">185 LE</span></div>
-                </div>
-            </div>
-        </div>
-
-        <hr class="offer-divider">
-
-        <p class="offer-section-title">العروض الكلاسيكية والوجبات الموفرة</p>
-        <div class="menu-grid">
-            <div class="card">
-                <img class="card-img" src="https://i.ibb.co/yBbXK0Fq/image.jpg" alt="عرض الريزو">
-                <div class="card-body">
-                    <div class="card-name">عرض الريزو</div>
-                    <p class="card-desc">طبق ريزو كبير</p>
-                    <div class="card-footer"><span class="price-badge">70 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.postimg.cc/vTvHYpyK/image.jpg" alt="3 قطع دجاج + خبز">
-                <div class="card-body">
-                    <div class="card-name">3 قطع دجاج + خبز</div>
-                    <p class="card-desc">3 قطع دجاج + 1 خبز</p>
-                    <div class="card-footer"><span class="price-badge">135 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.postimg.cc/k4fp7cZ8/image.jpg" alt="فانتاستيك فايف">
-                <div class="card-body">
-                    <div class="card-name">فانتاستيك فايف</div>
-                    <p class="card-desc">5 قطع استربس + 1 خبز</p>
-                    <div class="card-footer"><span class="price-badge">135 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.ibb.co/Xf4VJ1Xz/image.jpg" alt="كلاسيك الروقان">
-                <div class="card-body">
-                    <div class="card-name">كلاسيك الروقان</div>
-                    <p class="card-desc">ساندوتش تشيكن (من اختيار العميل) *(عدا المايتي زينجر)* + 1 مشروب أو كول سلو</p>
-                    <div class="card-footer"><span class="price-badge">135 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.postimg.cc/fLBxVgM0/Chicken-twister-spicy.jpg" alt="دابل راب">
-                <div class="card-body">
-                    <div class="card-name">دابل راب</div>
-                    <p class="card-desc">2 ساندوتش راب (تويستر عادي أو فاهيتا)</p>
-                    <div class="card-footer"><span class="price-badge">169 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.ibb.co/fGKBstdP/image.jpg" alt="كومبو الروقان">
-                <div class="card-body">
-                    <div class="card-name">كومبو الروقان</div>
-                    <p class="card-desc">ساندوتش برجر (120جرام) + فرايز + مشروب</p>
-                    <div class="card-footer"><span class="price-badge">175 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.ibb.co/CRHL9fB/image.jpg" alt="عرض الرايقين">
-                <div class="card-body">
-                    <div class="card-name">عرض الرايقين</div>
-                    <p class="card-desc">6 قطع دجاج + 3 أرز + 3 خبز كايزر</p>
-                    <div class="card-footer"><span class="price-badge">315 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.ibb.co/1JqcXscd/image.jpg" alt="ملوك الروقان">
-                <div class="card-body">
-                    <div class="card-name">ملوك الروقان</div>
-                    <p class="card-desc">10 قطع دجاج + 2 أرز + كول سلو فاملي + 5 خبز + مشروب لتر</p>
-                    <div class="card-footer"><span class="price-badge">575 LE</span></div>
-                </div>
-            </div>
-         <div class="card">
-                <img class="card-img" src="https://i.ibb.co/67Z27j0y/image.png" alt="يا دلعوا">
-                <div class="card-body">
-                    <div class="card-name">يادلعوا</div>
-                    <p class="card-desc">اربع قطع استريبس بالاضافه الي بطاطس وخبز وصوص كب  </p>
-                    <div class="card-footer"><span class="price-badge">119 LE</span></div>
-                </div>
-            </div>
-         </div>
     </section>
 
     <!-- BEEF SANDWICHES -->
     <section id="beef-sandwiches" class="section">
         <h2 class="section-title">🍔 برجر اللحم البقري</h2>
         <div class="menu-grid">
-            <div class="card">
-                <img class="card-img" src="https://i.postimg.cc/BnHF7xWt/Classic-King.jpg" alt="Classic King">
-                <div class="card-body">
-                    <div class="card-name">كلاسيك كينج <span class="card-name-en">Classic King</span></div>
-                    <p class="card-desc">صوص تكساس + خيار مخلل + خس + قطعة برجر + بصل + جبنة أمريكي</p>
-                    <div class="card-footer"><span class="price-badge">149 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.postimg.cc/xTqy5JTw/Mushroom-Crown.jpg" alt="Mushroom Crown">
-                <div class="card-body">
-                    <div class="card-name">مشروم كراون <span class="card-name-en">Mushroom Crown</span></div>
-                    <p class="card-desc">صوص مايونيز + خيار مخلل + خس + قطعة برجر + بصل + جبنة أمريكي + مشروم فريش</p>
-                    <div class="card-footer"><span class="price-badge">169 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.postimg.cc/CKMjZzt1/image.jpg" alt="Bacon Star">
-                <div class="card-body">
-                    <div class="card-name">بيكون ستار <span class="card-name-en">Bacon Star</span></div>
-                    <p class="card-desc">صوص بوسطن + خيار مخلل + خس + قطعة برجر + صوص ساور كريم + بيف بيكون</p>
-                    <div class="card-footer"><span class="price-badge">169 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.postimg.cc/Bv8nw31W/Tasty-Lord.jpg" alt="Tasty Lord">
-                <div class="card-body">
-                    <div class="card-name">تاستي لورد <span class="card-name-en">Tasty Lord</span></div>
-                    <p class="card-desc">صوص تكساس + خيار مخلل + خس + قطعة برجر + بصل + صوص بصل فرنسي</p>
-                    <div class="card-footer"><span class="price-badge">— LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.postimg.cc/wBSTCrhk/Red-War.jpg" alt="Red War">
-                <div class="card-body">
-                    <div class="card-name">ريد وار <span class="card-name-en">Red War</span></div>
-                    <p class="card-desc">صوص ديناميت + فلفل هالبينو + خس + قطعة برجر + بصل + صوص روستر + أصابع شيدر هالبينو</p>
-                    <div class="card-footer"><span class="price-badge">169 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.postimg.cc/9MZFCBpB/Royal-Bite.jpg" alt="Royal Bite">
-                <div class="card-body">
-                    <div class="card-name">رويال بايت <span class="card-name-en">Royal Bite</span></div>
-                    <p class="card-desc">صوص باربكيو + خيار مخلل + خس + قطعة برجر + بصل + بيف بيكون + حلقات بصل + صوص بوسطن</p>
-                    <div class="card-footer"><span class="price-badge">169 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.ibb.co/GfrWtNWd/mexicano.jpg" alt="Mixicano">
-                <div class="card-body">
-                    <div class="card-name">ميكسكانو <span class="card-name-en">Mixicano</span></div>
-                    <p class="card-desc">صوص بوسطن + خيار مخلل + قطعة برجر + بصل + جبنة أمريكي + ناتشوز + فلفل ألوان سوتية</p>
-                    <div class="card-footer"><span class="price-badge">169 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.postimg.cc/J0jmC41L/Beeftashio.jpg" alt="Beef Tashio">
-                <div class="card-body">
-                    <div class="card-name">بيف تاشيو <span class="card-name-en">Beef Tashio</span></div>
-                    <p class="card-desc">صوص تكساس + خيار مخلل + قطعة برجر + بصل + جبنة أمريكي + صوص بستاشيو</p>
-                    <div class="card-footer"><span class="price-badge">— LE</span></div>
-                </div>
-            </div>
+            <div class="card"><img class="card-img" src="https://i.postimg.cc/BnHF7xWt/Classic-King.jpg" alt="Classic King"><div class="card-body"><div class="card-name">كلاسيك كينج <span class="card-name-en">Classic King</span></div><p class="card-desc">صوص تكساس + خيار مخلل + خس + قطعة برجر + بصل + جبنة أمريكي</p><div class="card-footer"><span class="price-badge">149 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.postimg.cc/xTqy5JTw/Mushroom-Crown.jpg" alt="Mushroom Crown"><div class="card-body"><div class="card-name">مشروم كراون <span class="card-name-en">Mushroom Crown</span></div><p class="card-desc">صوص مايونيز + خيار مخلل + خس + قطعة برجر + بصل + جبنة أمريكي + مشروم فريش</p><div class="card-footer"><span class="price-badge">169 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.postimg.cc/CKMjZzt1/image.jpg" alt="Bacon Star"><div class="card-body"><div class="card-name">بيكون ستار <span class="card-name-en">Bacon Star</span></div><p class="card-desc">صوص بوسطن + خيار مخلل + خس + قطعة برجر + صوص ساور كريم + بيف بيكون</p><div class="card-footer"><span class="price-badge">169 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.postimg.cc/Bv8nw31W/Tasty-Lord.jpg" alt="Tasty Lord"><div class="card-body"><div class="card-name">تاستي لورد <span class="card-name-en">Tasty Lord</span></div><p class="card-desc">صوص تكساس + خيار مخلل + خس + قطعة برجر + بصل + صوص بصل فرنسي</p><div class="card-footer"><span class="price-badge">— LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.postimg.cc/wBSTCrhk/Red-War.jpg" alt="Red War"><div class="card-body"><div class="card-name">ريد وار <span class="card-name-en">Red War</span></div><p class="card-desc">صوص ديناميت + فلفل هالبينو + خس + قطعة برجر + بصل + صوص روستر + أصابع شيدر هالبينو</p><div class="card-footer"><span class="price-badge">169 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.postimg.cc/9MZFCBpB/Royal-Bite.jpg" alt="Royal Bite"><div class="card-body"><div class="card-name">رويال بايت <span class="card-name-en">Royal Bite</span></div><p class="card-desc">صوص باربكيو + خيار مخلل + خس + قطعة برجر + بصل + بيف بيكون + حلقات بصل + صوص بوسطن</p><div class="card-footer"><span class="price-badge">169 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.ibb.co/GfrWtNWd/mexicano.jpg" alt="Mixicano"><div class="card-body"><div class="card-name">ميكسكانو <span class="card-name-en">Mixicano</span></div><p class="card-desc">صوص بوسطن + خيار مخلل + قطعة برجر + بصل + جبنة أمريكي + ناتشوز + فلفل ألوان سوتية</p><div class="card-footer"><span class="price-badge">169 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.postimg.cc/J0jmC41L/Beeftashio.jpg" alt="Beef Tashio"><div class="card-body"><div class="card-name">بيف تاشيو <span class="card-name-en">Beef Tashio</span></div><p class="card-desc">صوص تكساس + خيار مخلل + قطعة برجر + بصل + جبنة أمريكي + صوص بستاشيو</p><div class="card-footer"><span class="price-badge">— LE</span></div></div></div>
         </div>
     </section>
 
@@ -1918,54 +1217,12 @@
     <section id="chicken-sandwiches" class="section">
         <h2 class="section-title">🍗 برجر الدجاج</h2>
         <div class="menu-grid">
-            <div class="card">
-                <img class="card-img" src="https://i.postimg.cc/sXcMnB8F/Turkey-Melt.jpg" alt="Turkey Melt">
-                <div class="card-body">
-                    <div class="card-name">تركي ميلت <span class="card-name-en">Turkey Melt</span></div>
-                    <p class="card-desc">صوص الرانش + خيار مخلل + خس + صدور دجاج كريسبي + لحم تركي مدخن + صوص الجبنة</p>
-                    <div class="card-footer"><span class="price-badge">139 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.postimg.cc/d07MHgSx/wild-mushroom.jpg" alt="Wild Mushroom">
-                <div class="card-body">
-                    <div class="card-name">وايلد مشروم <span class="card-name-en">Wild Mushroom</span></div>
-                    <p class="card-desc">صوص الروستر + خيار مخلل + خس + صدور دجاج كريسبي + جبنة أمريكي + مشروم فريش + صوص رانش</p>
-                    <div class="card-footer"><span class="price-badge">139 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.postimg.cc/MTMWBnSm/chili-Gun.jpg" alt="Chili GUN">
-                <div class="card-body">
-                    <div class="card-name">تشيلي جان <span class="card-name-en">Chili GUN</span></div>
-                    <p class="card-desc">صوص دناميت + هالبينو + خس + صدور دجاج كريسبي + أصابع شيدر هالبينو + صوص شيلي مايونيز</p>
-                    <div class="card-footer"><span class="price-badge">139 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.postimg.cc/8CF8Kxnq/Smokey-chicken.jpg" alt="Smokey Chicken">
-                <div class="card-body">
-                    <div class="card-name">سموكي تشيكن <span class="card-name-en">SMOKEY CHICKEN</span></div>
-                    <p class="card-desc">صوص باربكيو + خيار مخلل + خس + صدور دجاج كريسبي + مايونيز + حلقات بصل</p>
-                    <div class="card-footer"><span class="price-badge">139 LE</span></div>
-                </div>
-            </div>
-            <div class="card new-item">
-                <img class="card-img" src="https://i.ibb.co/TMD1795L/mango-sandwich.jpg" alt="Mango Fire">
-                <div class="card-body">
-                    <div class="card-name">مانجو فاير <span class="card-name-en">Mango Fire</span></div>
-                    <p class="card-desc">خس + قطعة من صدور دجاج زنجر + صوص مانجو + أصابع موتزريلا</p>
-                    <div class="card-footer"><span class="price-badge">99 LE</span></div>
-                </div>
-            </div>
-            <div class="card new-item">
-                <img class="card-img" src="https://i.ibb.co/tP1BMZDR/mighty-zinger.jpg" alt="Mighty Zinger">
-                <div class="card-body">
-                    <div class="card-name">مايتي زينجر <span class="card-name-en">Mighty Zinger</span></div>
-                    <p class="card-desc">شريحة جبنة أمريكي + خس + قطعتين من صدور دجاج زينجر + مايونيز + تشيلي مايونيز</p>
-                    <div class="card-footer"><span class="price-badge">149 LE</span></div>
-                </div>
-            </div>
+            <div class="card"><img class="card-img" src="https://i.postimg.cc/sXcMnB8F/Turkey-Melt.jpg" alt="Turkey Melt"><div class="card-body"><div class="card-name">تركي ميلت <span class="card-name-en">Turkey Melt</span></div><p class="card-desc">صوص الرانش + خيار مخلل + خس + صدور دجاج كريسبي + لحم تركي مدخن + صوص الجبنة</p><div class="card-footer"><span class="price-badge">139 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.postimg.cc/d07MHgSx/wild-mushroom.jpg" alt="Wild Mushroom"><div class="card-body"><div class="card-name">وايلد مشروم <span class="card-name-en">Wild Mushroom</span></div><p class="card-desc">صوص الروستر + خيار مخلل + خس + صدور دجاج كريسبي + جبنة أمريكي + مشروم فريش + صوص رانش</p><div class="card-footer"><span class="price-badge">139 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.postimg.cc/MTMWBnSm/chili-Gun.jpg" alt="Chili GUN"><div class="card-body"><div class="card-name">تشيلي جان <span class="card-name-en">Chili GUN</span></div><p class="card-desc">صوص دناميت + هالبينو + خس + صدور دجاج كريسبي + أصابع شيدر هالبينو + صوص شيلي مايونيز</p><div class="card-footer"><span class="price-badge">139 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.postimg.cc/8CF8Kxnq/Smokey-chicken.jpg" alt="Smokey Chicken"><div class="card-body"><div class="card-name">سموكي تشيكن <span class="card-name-en">SMOKEY CHICKEN</span></div><p class="card-desc">صوص باربكيو + خيار مخلل + خس + صدور دجاج كريسبي + مايونيز + حلقات بصل</p><div class="card-footer"><span class="price-badge">139 LE</span></div></div></div>
+            <div class="card new-item"><img class="card-img" src="https://i.ibb.co/TMD1795L/mango-sandwich.jpg" alt="Mango Fire"><div class="card-body"><div class="card-name">مانجو فاير <span class="card-name-en">Mango Fire</span></div><p class="card-desc">خس + قطعة من صدور دجاج زنجر + صوص مانجو + أصابع موتزريلا</p><div class="card-footer"><span class="price-badge">99 LE</span></div></div></div>
+            <div class="card new-item"><img class="card-img" src="https://i.ibb.co/tP1BMZDR/mighty-zinger.jpg" alt="Mighty Zinger"><div class="card-body"><div class="card-name">مايتي زينجر <span class="card-name-en">Mighty Zinger</span></div><p class="card-desc">شريحة جبنة أمريكي + خس + قطعتين من صدور دجاج زينجر + مايونيز + تشيلي مايونيز</p><div class="card-footer"><span class="price-badge">149 LE</span></div></div></div>
         </div>
     </section>
 
@@ -1973,46 +1230,11 @@
     <section id="twister-supreme" class="section">
         <h2 class="section-title">🌯 تويستر وسوبريم</h2>
         <div class="menu-grid">
-            <div class="card">
-                <img class="card-img" src="https://i.postimg.cc/CLDsN77g/ZINGER-SUPREME.jpg" alt="Zinger Supreme">
-                <div class="card-body">
-                    <div class="card-name">زينجر سوبريم <span class="card-name-en">Zinger Supreme</span></div>
-                    <p class="card-desc">صوص مايونيز + خيار مخلل + خس + قطعة زينجر + سويت شيلي + تركي مدخن + جبنة أمريكي</p>
-                    <div class="card-footer"><span class="price-badge">139 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.postimg.cc/506wFSyv/Fillet-supreme.jpg" alt="Fillet Supreme">
-                <div class="card-body">
-                    <div class="card-name">فيليه سوبريم <span class="card-name-en">Fillet Supreme</span></div>
-                    <p class="card-desc">صوص مايونيز + خيار مخلل + خس + قطعة دجاج كريسبي + صوص روستر + روست بيف + جبنة أمريكي</p>
-                    <div class="card-footer"><span class="price-badge">139 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.postimg.cc/Hnr7VYS0/Fajita-twister.jpg" alt="Fajita twister">
-                <div class="card-body">
-                    <div class="card-name">فاهيتا توستر <span class="card-name-en">Fajita Twister</span></div>
-                    <p class="card-desc">فاهيتا + باربكيو (حار أو عادي)</p>
-                    <div class="card-footer"><span class="price-badge">99 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.postimg.cc/fLBxVgM0/Chicken-twister-spicy.jpg" alt="Chicken twister spicy">
-                <div class="card-body">
-                    <div class="card-name">تشيكن توستر حار <span class="card-name-en">Chicken Twister Spicy</span></div>
-                    <p class="card-desc">2 قطعة كرسبي استربس + طماطم + خس + مايونيز حار</p>
-                    <div class="card-footer"><span class="price-badge">99 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.postimg.cc/xCcKb38s/Chicken-twister.jpg" alt="Chicken twister">
-                <div class="card-body">
-                    <div class="card-name">تشيكن توستر <span class="card-name-en">Chicken Twister</span></div>
-                    <p class="card-desc">2 قطعة كرسبي استربس + طماطم + خس + مايونيز بالفلفل الأسود</p>
-                    <div class="card-footer"><span class="price-badge">99 LE</span></div>
-                </div>
-            </div>
+            <div class="card"><img class="card-img" src="https://i.postimg.cc/CLDsN77g/ZINGER-SUPREME.jpg" alt="Zinger Supreme"><div class="card-body"><div class="card-name">زينجر سوبريم <span class="card-name-en">Zinger Supreme</span></div><p class="card-desc">صوص مايونيز + خيار مخلل + خس + قطعة زينجر + سويت شيلي + تركي مدخن + جبنة أمريكي</p><div class="card-footer"><span class="price-badge">139 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.postimg.cc/506wFSyv/Fillet-supreme.jpg" alt="Fillet Supreme"><div class="card-body"><div class="card-name">فيليه سوبريم <span class="card-name-en">Fillet Supreme</span></div><p class="card-desc">صوص مايونيز + خيار مخلل + خس + قطعة دجاج كريسبي + صوص روستر + روست بيف + جبنة أمريكي</p><div class="card-footer"><span class="price-badge">139 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.postimg.cc/Hnr7VYS0/Fajita-twister.jpg" alt="Fajita twister"><div class="card-body"><div class="card-name">فاهيتا توستر <span class="card-name-en">Fajita Twister</span></div><p class="card-desc">فاهيتا + باربكيو (حار أو عادي)</p><div class="card-footer"><span class="price-badge">99 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.postimg.cc/fLBxVgM0/Chicken-twister-spicy.jpg" alt="Chicken twister spicy"><div class="card-body"><div class="card-name">تشيكن توستر حار <span class="card-name-en">Chicken Twister Spicy</span></div><p class="card-desc">2 قطعة كرسبي استربس + طماطم + خس + مايونيز حار</p><div class="card-footer"><span class="price-badge">99 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.postimg.cc/xCcKb38s/Chicken-twister.jpg" alt="Chicken twister"><div class="card-body"><div class="card-name">تشيكن توستر <span class="card-name-en">Chicken Twister</span></div><p class="card-desc">2 قطعة كرسبي استربس + طماطم + خس + مايونيز بالفلفل الأسود</p><div class="card-footer"><span class="price-badge">99 LE</span></div></div></div>
         </div>
     </section>
 
@@ -2020,62 +1242,13 @@
     <section id="individual-meals" class="section">
         <h2 class="section-title">🥡 الوجبات الفردية</h2>
         <div class="menu-grid">
-            <div class="card">
-                <img class="card-img" src="https://i.postimg.cc/D0CkYFnv/image.jpg" alt="SNACK">
-                <div class="card-body">
-                    <div class="card-name">سناك <span class="card-name-en">SNACK</span></div>
-                    <p class="card-desc">2 قطعة دجاج + فرايز + كايزر</p>
-                    <div class="card-footer"><span class="price-badge">119 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.postimg.cc/D0CkYFnv/image.jpg" alt="SUPER SNACK">
-                <div class="card-body">
-                    <div class="card-name">سوبر سناك <span class="card-name-en">SUPER SNACK</span></div>
-                    <p class="card-desc">2 قطعة دجاج + فرايز + كايزر + كول سلو + مشروب</p>
-                    <div class="card-footer"><span class="price-badge">159 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.postimg.cc/nVTJLK72/image.jpg" alt="DINNER">
-                <div class="card-body">
-                    <div class="card-name">دينر <span class="card-name-en">DINNER</span></div>
-                    <p class="card-desc">3 قطعة دجاج + فرايز + كايزر + كول سلو </p>
-                    <div class="card-footer"><span class="price-badge">199 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.postimg.cc/k4fp7cZ8/image.jpg" alt="Super Dinner">
-                <div class="card-body">
-                    <div class="card-name">سوبر دينر <span class="card-name-en">Super Dinner</span></div>
-                    <p class="card-desc">4 قطعة دجاج + فرايز + كايزر + كول سلو + مشروب</p>
-                    <div class="card-footer"><span class="price-badge">269 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.postimg.cc/vTvHYpyK/image.jpg" alt="Chicken Duo">
-                <div class="card-body">
-                    <div class="card-name">تشكين ديو <span class="card-name-en">Chicken Duo</span></div>
-                    <p class="card-desc">2 قطعة دجاج + 2 قطعة استربس + فرايز + كايزر + كول سلو + مشروب</p>
-                    <div class="card-footer"><span class="price-badge">219 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.postimg.cc/nhBSXZgp/image.jpg" alt="Light strips">
-                <div class="card-body">
-                    <div class="card-name">لايت استربس <span class="card-name-en">Light Strips</span></div>
-                    <p class="card-desc">3 قطعة استربس + فرايز + كايزر</p>
-                    <div class="card-footer"><span class="price-badge">119 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.postimg.cc/LsF7DhLz/image.jpg" alt="Dinner strips">
-                <div class="card-body">
-                    <div class="card-name">دينر استربس <span class="card-name-en">Dinner Strips</span></div>
-                    <p class="card-desc">5 قطعة استربس + فرايز + كايزر + كول سلو</p>
-                    <div class="card-footer"><span class="price-badge">199 LE</span></div>
-                </div>
-            </div>
+            <div class="card"><img class="card-img" src="https://i.postimg.cc/D0CkYFnv/image.jpg" alt="SNACK"><div class="card-body"><div class="card-name">سناك <span class="card-name-en">SNACK</span></div><p class="card-desc">2 قطعة دجاج + فرايز + كايزر</p><div class="card-footer"><span class="price-badge">119 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.postimg.cc/D0CkYFnv/image.jpg" alt="SUPER SNACK"><div class="card-body"><div class="card-name">سوبر سناك <span class="card-name-en">SUPER SNACK</span></div><p class="card-desc">2 قطعة دجاج + فرايز + كايزر + كول سلو + مشروب</p><div class="card-footer"><span class="price-badge">159 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.postimg.cc/nVTJLK72/image.jpg" alt="DINNER"><div class="card-body"><div class="card-name">دينر <span class="card-name-en">DINNER</span></div><p class="card-desc">3 قطعة دجاج + فرايز + كايزر + كول سلو</p><div class="card-footer"><span class="price-badge">199 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.postimg.cc/k4fp7cZ8/image.jpg" alt="Super Dinner"><div class="card-body"><div class="card-name">سوبر دينر <span class="card-name-en">Super Dinner</span></div><p class="card-desc">4 قطعة دجاج + فرايز + كايزر + كول سلو + مشروب</p><div class="card-footer"><span class="price-badge">269 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.postimg.cc/vTvHYpyK/image.jpg" alt="Chicken Duo"><div class="card-body"><div class="card-name">تشكين ديو <span class="card-name-en">Chicken Duo</span></div><p class="card-desc">2 قطعة دجاج + 2 قطعة استربس + فرايز + كايزر + كول سلو + مشروب</p><div class="card-footer"><span class="price-badge">219 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.postimg.cc/nhBSXZgp/image.jpg" alt="Light strips"><div class="card-body"><div class="card-name">لايت استربس <span class="card-name-en">Light Strips</span></div><p class="card-desc">3 قطعة استربس + فرايز + كايزر</p><div class="card-footer"><span class="price-badge">119 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.postimg.cc/LsF7DhLz/image.jpg" alt="Dinner strips"><div class="card-body"><div class="card-name">دينر استربس <span class="card-name-en">Dinner Strips</span></div><p class="card-desc">5 قطعة استربس + فرايز + كايزر + كول سلو</p><div class="card-footer"><span class="price-badge">199 LE</span></div></div></div>
         </div>
     </section>
 
@@ -2083,46 +1256,11 @@
     <section id="family-meals" class="section">
         <h2 class="section-title">👨‍👩‍👧‍👦 الوجبات العائلية</h2>
         <div class="menu-grid">
-            <div class="card">
-                <img class="card-img" src="https://i.postimg.cc/763mLNW9/Copy-of-3-Z7-A7087.png" alt="Family 5 PC">
-                <div class="card-body">
-                    <div class="card-name">وجبة عائلية 10 قطع <span class="card-name-en">5 PC Family Meal</span></div>
-                    <p class="card-desc">5 قطع دجاج + 5 قطع استريبس + 5 كايزر</p>
-                    <div class="card-footer"><span class="price-badge gold">549 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.postimg.cc/763mLNW9/Copy-of-3-Z7-A7087.png" alt="Family 9 PC">
-                <div class="card-body">
-                    <div class="card-name">وجبة عائلية 9 قطع <span class="card-name-en">9 PC Family Meal</span></div>
-                    <p class="card-desc">9 قطع دجاج + فرايز فاملي + 3 كايزر + كول سلو فاملي + لتر مشروب</p>
-                    <div class="card-footer"><span class="price-badge gold">599 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.postimg.cc/763mLNW9/Copy-of-3-Z7-A7087.png" alt="Family 12 PC">
-                <div class="card-body">
-                    <div class="card-name">وجبة عائلية 12 قطعة <span class="card-name-en">12 PC Family Meal</span></div>
-                    <p class="card-desc">12 قطع دجاج + فرايز فاملي + 4 كايزر + كول سلو فاملي + لتر مشروب</p>
-                    <div class="card-footer"><span class="price-badge gold">699 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.postimg.cc/763mLNW9/Copy-of-3-Z7-A7087.png" alt="Family 15 PC">
-                <div class="card-body">
-                    <div class="card-name">وجبة عائلية 15 قطعة <span class="card-name-en">15 PC Family Meal</span></div>
-                    <p class="card-desc">15 قطع دجاج + فرايز فاملي + 5 كايزر + كول سلو فاملي + لتر مشروب</p>
-                    <div class="card-footer"><span class="price-badge gold">799 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.postimg.cc/763mLNW9/Copy-of-3-Z7-A7087.png" alt="Family 18 PC">
-                <div class="card-body">
-                    <div class="card-name">وجبة عائلية 18 قطعة <span class="card-name-en">18 PC Family Meal</span></div>
-                    <p class="card-desc">18 قطع دجاج + فرايز فاملي + 6 كايزر + كول سلو فاملي + لتر مشروب</p>
-                    <div class="card-footer"><span class="price-badge gold">899 LE</span></div>
-                </div>
-            </div>
+            <div class="card"><img class="card-img" src="https://i.postimg.cc/763mLNW9/Copy-of-3-Z7-A7087.png" alt="Family 10 PC"><div class="card-body"><div class="card-name">وجبة عائلية 10 قطع <span class="card-name-en">5 PC Family Meal</span></div><p class="card-desc">5 قطع دجاج + 5 قطع استريبس + 5 كايزر</p><div class="card-footer"><span class="price-badge gold">549 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.postimg.cc/763mLNW9/Copy-of-3-Z7-A7087.png" alt="Family 9 PC"><div class="card-body"><div class="card-name">وجبة عائلية 9 قطع <span class="card-name-en">9 PC Family Meal</span></div><p class="card-desc">9 قطع دجاج + فرايز فاملي + 3 كايزر + كول سلو فاملي + لتر مشروب</p><div class="card-footer"><span class="price-badge gold">599 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.postimg.cc/763mLNW9/Copy-of-3-Z7-A7087.png" alt="Family 12 PC"><div class="card-body"><div class="card-name">وجبة عائلية 12 قطعة <span class="card-name-en">12 PC Family Meal</span></div><p class="card-desc">12 قطع دجاج + فرايز فاملي + 4 كايزر + كول سلو فاملي + لتر مشروب</p><div class="card-footer"><span class="price-badge gold">699 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.postimg.cc/763mLNW9/Copy-of-3-Z7-A7087.png" alt="Family 15 PC"><div class="card-body"><div class="card-name">وجبة عائلية 15 قطعة <span class="card-name-en">15 PC Family Meal</span></div><p class="card-desc">15 قطع دجاج + فرايز فاملي + 5 كايزر + كول سلو فاملي + لتر مشروب</p><div class="card-footer"><span class="price-badge gold">799 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.postimg.cc/763mLNW9/Copy-of-3-Z7-A7087.png" alt="Family 18 PC"><div class="card-body"><div class="card-name">وجبة عائلية 18 قطعة <span class="card-name-en">18 PC Family Meal</span></div><p class="card-desc">18 قطع دجاج + فرايز فاملي + 6 كايزر + كول سلو فاملي + لتر مشروب</p><div class="card-footer"><span class="price-badge gold">899 LE</span></div></div></div>
         </div>
     </section>
 
@@ -2130,38 +1268,10 @@
     <section id="kids-meals" class="section">
         <h2 class="section-title">🧸 وجبات الأطفال</h2>
         <div class="menu-grid">
-            <div class="card">
-                <img class="card-img" src="https://i.postimg.cc/gkqNp4Z3/red-rosters2542.jpg" alt="Kids Chicken">
-                <div class="card-body">
-                    <div class="card-name">وجبة أطفال دجاج <span class="card-name-en">Kids Chicken</span></div>
-                    <p class="card-desc">قطعة دجاج + فرايز + كايزر + عصير + لعبة 🧸</p>
-                    <div class="card-footer"><span class="price-badge">129 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.postimg.cc/zGx7bBpJ/red-rosters2543.jpg" alt="Kids Nuggets">
-                <div class="card-body">
-                    <div class="card-name">وجبة أطفال ناجتس <span class="card-name-en">Kids Nuggets</span></div>
-                    <p class="card-desc">5 قطع ناجتس + فرايز + صوص باربكيو + عصير + لعبة 🧸</p>
-                    <div class="card-footer"><span class="price-badge">129 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.postimg.cc/CLFbG0RT/red-rosters2846.jpg" alt="Kids Sandwich">
-                <div class="card-body">
-                    <div class="card-name">وجبة أطفال ساندوتش <span class="card-name-en">Kids Sandwich</span></div>
-                    <p class="card-desc">ساندوتش تشيكن + فرايز + عصير + لعبة 🧸</p>
-                    <div class="card-footer"><span class="price-badge">129 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.postimg.cc/05GpKjyq/red-rosters2845.jpg" alt="Kids Burger">
-                <div class="card-body">
-                    <div class="card-name">وجبة أطفال برجر <span class="card-name-en">Kids Burger</span></div>
-                    <p class="card-desc">برجر + فرايز + عصير + لعبة 🧸</p>
-                    <div class="card-footer"><span class="price-badge">129 LE</span></div>
-                </div>
-            </div>
+            <div class="card"><img class="card-img" src="https://i.postimg.cc/gkqNp4Z3/red-rosters2542.jpg" alt="Kids Chicken"><div class="card-body"><div class="card-name">وجبة أطفال دجاج <span class="card-name-en">Kids Chicken</span></div><p class="card-desc">قطعة دجاج + فرايز + كايزر + عصير + لعبة 🧸</p><div class="card-footer"><span class="price-badge">129 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.postimg.cc/zGx7bBpJ/red-rosters2543.jpg" alt="Kids Nuggets"><div class="card-body"><div class="card-name">وجبة أطفال ناجتس <span class="card-name-en">Kids Nuggets</span></div><p class="card-desc">5 قطع ناجتس + فرايز + صوص باربكيو + عصير + لعبة 🧸</p><div class="card-footer"><span class="price-badge">129 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.postimg.cc/CLFbG0RT/red-rosters2846.jpg" alt="Kids Sandwich"><div class="card-body"><div class="card-name">وجبة أطفال ساندوتش <span class="card-name-en">Kids Sandwich</span></div><p class="card-desc">ساندوتش تشيكن + فرايز + عصير + لعبة 🧸</p><div class="card-footer"><span class="price-badge">129 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.postimg.cc/05GpKjyq/red-rosters2845.jpg" alt="Kids Burger"><div class="card-body"><div class="card-name">وجبة أطفال برجر <span class="card-name-en">Kids Burger</span></div><p class="card-desc">برجر + فرايز + عصير + لعبة 🧸</p><div class="card-footer"><span class="price-badge">129 LE</span></div></div></div>
         </div>
     </section>
 
@@ -2169,231 +1279,38 @@
     <section id="appetizers" class="section">
         <h2 class="section-title">🍟 المقبلات</h2>
         <div class="menu-grid">
-            <div class="card">
-                <div class="card-img-placeholder">🥗</div>
-                <div class="card-body">
-                    <div class="card-name">كول سلو صغير <span class="card-name-en">Coleslaw Small</span></div>
-                    <div class="card-footer"><span class="price-badge">25 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-img-placeholder">🥗</div>
-                <div class="card-body">
-                    <div class="card-name">كول سلو عائلي <span class="card-name-en">Coleslaw Family</span></div>
-                    <div class="card-footer"><span class="price-badge">70 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.postimg.cc/zvpYJfrP/image.jpg" alt="Fries Medium">
-                <div class="card-body">
-                    <div class="card-name">بطاطس متوسطة <span class="card-name-en">Fries Medium</span></div>
-                    <div class="card-footer"><span class="price-badge">40 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.postimg.cc/1XyZhqLN/image.jpg" alt="Friscas Fries">
-                <div class="card-body">
-                    <div class="card-name">فريسكاس بطاطس متوسطة <span class="card-name-en">Friscas Fries Medium</span></div>
-                    <div class="card-footer"><span class="price-badge">50 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-img-placeholder">🍟</div>
-                <div class="card-body">
-                    <div class="card-name">فريسكاس بطاطس عائلية <span class="card-name-en">Friscas Fries Family</span></div>
-                    <div class="card-footer"><span class="price-badge">80 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-img-placeholder">🍗</div>
-                <div class="card-body">
-                    <div class="card-name">ناجتس 6 قطع <span class="card-name-en">Nuggets 6pc</span></div>
-                    <div class="card-footer"><span class="price-badge">70 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.postimg.cc/RVVzgw7Q/12.jpg" alt="ناجتس 12">
-                <div class="card-body">
-                    <div class="card-name">ناجتس 12 قطعة <span class="card-name-en">Nuggets 12pc</span></div>
-                    <div class="card-footer"><span class="price-badge">110 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.postimg.cc/4ywRJ3gz/5.jpg" alt="أعواد شيدر 5">
-                <div class="card-body">
-                    <div class="card-name">أعواد شيدر 5 قطع <span class="card-name-en">Cheddar Sticks 5pc</span></div>
-                    <div class="card-footer"><span class="price-badge">90 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-img-placeholder">🧀</div>
-                <div class="card-body">
-                    <div class="card-name">أعواد شيدر 3 قطع <span class="card-name-en">Cheddar Sticks 3pc</span></div>
-                    <div class="card-footer"><span class="price-badge">60 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.postimg.cc/HxXpCHnt/5.jpg" alt="أعواد موزاريلا 5">
-                <div class="card-body">
-                    <div class="card-name">أعواد موزاريلا 5 قطع <span class="card-name-en">Mozzarella Sticks 5pc</span></div>
-                    <div class="card-footer"><span class="price-badge">85 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-img-placeholder">🧀</div>
-                <div class="card-body">
-                    <div class="card-name">أعواد موزاريلا 3 قطع <span class="card-name-en">Mozzarella Sticks 3pc</span></div>
-                    <div class="card-footer"><span class="price-badge">55 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-img-placeholder">🧅</div>
-                <div class="card-body">
-                    <div class="card-name">حلقات بصل 4 قطع <span class="card-name-en">Onion Rings 4pc</span></div>
-                    <div class="card-footer"><span class="price-badge">40 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.postimg.cc/FKJvjmjq/8.jpg" alt="حلقات بصل 8">
-                <div class="card-body">
-                    <div class="card-name">حلقات بصل 8 قطع <span class="card-name-en">Onion Rings 8pc</span></div>
-                    <div class="card-footer"><span class="price-badge">60 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.postimg.cc/L4Vpkx1x/image.jpg" alt="كوردون 3">
-                <div class="card-body">
-                    <div class="card-name">كوردون 3 قطع <span class="card-name-en">Cordon 3pc</span></div>
-                    <div class="card-footer"><span class="price-badge">50 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.postimg.cc/L4Vpkx1x/image.jpg" alt="كوردون 5">
-                <div class="card-body">
-                    <div class="card-name">كوردون 5 قطع <span class="card-name-en">Cordon 5pc</span></div>
-                    <div class="card-footer"><span class="price-badge">80 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.postimg.cc/JzFmDtB5/image.jpg" alt="بطاطس دجاج جبن هالبينو">
-                <div class="card-body">
-                    <div class="card-name">بطاطس دجاج بالجبن والهالبينو <span class="card-name-en">Chicken Cheese Fries Jalapeño</span></div>
-                    <div class="card-footer"><span class="price-badge">109 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-img-placeholder">🍟</div>
-                <div class="card-body">
-                    <div class="card-name">بطاطس دجاج بالرانش والهالبينو <span class="card-name-en">Chicken Ranch Fries Jalapeño</span></div>
-                    <div class="card-footer"><span class="price-badge">109 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.postimg.cc/J41RSfLF/image.jpg" alt="بطاطس بالجبن">
-                <div class="card-body">
-                    <div class="card-name">بطاطس بالجبن <span class="card-name-en">Cheese Fries</span></div>
-                    <div class="card-footer"><span class="price-badge">85 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.postimg.cc/VNbwj1jp/image.jpg" alt="بطاطس بالرانش">
-                <div class="card-body">
-                    <div class="card-name">بطاطس بالرانش <span class="card-name-en">Ranch Fries</span></div>
-                    <div class="card-footer"><span class="price-badge">85 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-img-placeholder">🍟</div>
-                <div class="card-body">
-                    <div class="card-name">بطاطس بالجبن والهالبينو <span class="card-name-en">Cheese Fries Jalapeño</span></div>
-                    <div class="card-footer"><span class="price-badge">85 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-img-placeholder">🍟</div>
-                <div class="card-body">
-                    <div class="card-name">بطاطس بالرانش والهالبينو <span class="card-name-en">Ranch Fries Jalapeño</span></div>
-                    <div class="card-footer"><span class="price-badge">85 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-img-placeholder">🍟</div>
-                <div class="card-body">
-                    <div class="card-name">لوداد فرسكاس <span class="card-name-en">Loudad Frescas</span></div>
-                    <div class="card-footer"><span class="price-badge">109 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.postimg.cc/VsF89KC0/image.jpg" alt="دجاج ماك اند تشيز">
-                <div class="card-body">
-                    <div class="card-name">دجاج ماك اند تشيز <span class="card-name-en">Chicken Mac Cheese</span></div>
-                    <div class="card-footer"><span class="price-badge">99 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.postimg.cc/ry9kGfrh/image.jpg" alt="ماك تشيز">
-                <div class="card-body">
-                    <div class="card-name">ماك تشيز <span class="card-name-en">Mac Cheese</span></div>
-                    <div class="card-footer"><span class="price-badge">50 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.postimg.cc/TwVX49NC/image.jpg" alt="ريزو">
-                <div class="card-body">
-                    <div class="card-name">ريزو <span class="card-name-en">Rizo</span></div>
-                    <div class="card-footer"><span class="price-badge">90 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.postimg.cc/TwVX49NC/image.jpg" alt="ريزو حار">
-                <div class="card-body">
-                    <div class="card-name">ريزو حار <span class="card-name-en">Rizo Spicy</span></div>
-                    <div class="card-footer"><span class="price-badge">90 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-img-placeholder">🍚</div>
-                <div class="card-body">
-                    <div class="card-name">ريزو فاهيتا حار <span class="card-name-en">Rizo Fajita Spicy</span></div>
-                    <div class="card-footer"><span class="price-badge">90 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.postimg.cc/TwVX49NC/image.jpg" alt="ريزو فاهيتا">
-                <div class="card-body">
-                    <div class="card-name">ريزو فاهيتا <span class="card-name-en">Rizo Fajita</span></div>
-                    <div class="card-footer"><span class="price-badge">90 LE</span></div>
-                </div>
-            </div>
-              <div class="card">
-                <img class="card-img" src="https://i.ibb.co/DHpsfzrx/Whats-App-Image-2026-05-03-at-1-22-24-AM.jpg" alt="ميكس بوكس">
-                <div class="card-body">
-                    <div class="card-name">ميكس بوكس <span class="card-name-en">Mix Box</span></div>
-                    <div class="card-footer"><span class="price-badge">S 109
-                    L 169 </span></div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-img-placeholder">🧀</div>
-                <div class="card-body">
-                    <div class="card-name">كوب جبن <span class="card-name-en">Cheese Cup</span></div>
-                    <div class="card-footer"><span class="price-badge">39 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-img-placeholder">🧀</div>
-                <div class="card-body">
-                    <div class="card-name">جرة جبن متوسطة <span class="card-name-en">Cheese Jar Medium</span></div>
-                    <div class="card-footer"><span class="price-badge">69 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-img-placeholder">🧀</div>
-                <div class="card-body">
-                    <div class="card-name">جرة جبن عائلية <span class="card-name-en">Cheese Jar Family</span></div>
-                    <div class="card-footer"><span class="price-badge">99 LE</span></div>
-                </div>
-            </div>
+            <div class="card"><div class="card-img-placeholder">🥗</div><div class="card-body"><div class="card-name">كول سلو صغير <span class="card-name-en">Coleslaw Small</span></div><div class="card-footer"><span class="price-badge">25 LE</span></div></div></div>
+            <div class="card"><div class="card-img-placeholder">🥗</div><div class="card-body"><div class="card-name">كول سلو عائلي <span class="card-name-en">Coleslaw Family</span></div><div class="card-footer"><span class="price-badge">70 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.postimg.cc/zvpYJfrP/image.jpg" alt="Fries Medium"><div class="card-body"><div class="card-name">بطاطس متوسطة <span class="card-name-en">Fries Medium</span></div><div class="card-footer"><span class="price-badge">40 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.postimg.cc/1XyZhqLN/image.jpg" alt="Friscas Fries"><div class="card-body"><div class="card-name">فريسكاس بطاطس متوسطة <span class="card-name-en">Friscas Fries Medium</span></div><div class="card-footer"><span class="price-badge">50 LE</span></div></div></div>
+            <div class="card"><div class="card-img-placeholder">🍟</div><div class="card-body"><div class="card-name">فريسكاس بطاطس عائلية <span class="card-name-en">Friscas Fries Family</span></div><div class="card-footer"><span class="price-badge">80 LE</span></div></div></div>
+            <div class="card"><div class="card-img-placeholder">🍗</div><div class="card-body"><div class="card-name">ناجتس 6 قطع <span class="card-name-en">Nuggets 6pc</span></div><div class="card-footer"><span class="price-badge">70 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.postimg.cc/RVVzgw7Q/12.jpg" alt="ناجتس 12"><div class="card-body"><div class="card-name">ناجتس 12 قطعة <span class="card-name-en">Nuggets 12pc</span></div><div class="card-footer"><span class="price-badge">110 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.postimg.cc/4ywRJ3gz/5.jpg" alt="أعواد شيدر 5"><div class="card-body"><div class="card-name">أعواد شيدر 5 قطع <span class="card-name-en">Cheddar Sticks 5pc</span></div><div class="card-footer"><span class="price-badge">90 LE</span></div></div></div>
+            <div class="card"><div class="card-img-placeholder">🧀</div><div class="card-body"><div class="card-name">أعواد شيدر 3 قطع <span class="card-name-en">Cheddar Sticks 3pc</span></div><div class="card-footer"><span class="price-badge">60 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.postimg.cc/HxXpCHnt/5.jpg" alt="أعواد موزاريلا 5"><div class="card-body"><div class="card-name">أعواد موزاريلا 5 قطع <span class="card-name-en">Mozzarella Sticks 5pc</span></div><div class="card-footer"><span class="price-badge">85 LE</span></div></div></div>
+            <div class="card"><div class="card-img-placeholder">🧀</div><div class="card-body"><div class="card-name">أعواد موزاريلا 3 قطع <span class="card-name-en">Mozzarella Sticks 3pc</span></div><div class="card-footer"><span class="price-badge">55 LE</span></div></div></div>
+            <div class="card"><div class="card-img-placeholder">🧅</div><div class="card-body"><div class="card-name">حلقات بصل 4 قطع <span class="card-name-en">Onion Rings 4pc</span></div><div class="card-footer"><span class="price-badge">40 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.postimg.cc/FKJvjmjq/8.jpg" alt="حلقات بصل 8"><div class="card-body"><div class="card-name">حلقات بصل 8 قطع <span class="card-name-en">Onion Rings 8pc</span></div><div class="card-footer"><span class="price-badge">60 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.postimg.cc/L4Vpkx1x/image.jpg" alt="كوردون 3"><div class="card-body"><div class="card-name">كوردون 3 قطع <span class="card-name-en">Cordon 3pc</span></div><div class="card-footer"><span class="price-badge">50 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.postimg.cc/L4Vpkx1x/image.jpg" alt="كوردون 5"><div class="card-body"><div class="card-name">كوردون 5 قطع <span class="card-name-en">Cordon 5pc</span></div><div class="card-footer"><span class="price-badge">80 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.postimg.cc/JzFmDtB5/image.jpg" alt="بطاطس دجاج جبن هالبينو"><div class="card-body"><div class="card-name">بطاطس دجاج بالجبن والهالبينو <span class="card-name-en">Chicken Cheese Fries Jalapeño</span></div><div class="card-footer"><span class="price-badge">109 LE</span></div></div></div>
+            <div class="card"><div class="card-img-placeholder">🍟</div><div class="card-body"><div class="card-name">بطاطس دجاج بالرانش والهالبينو <span class="card-name-en">Chicken Ranch Fries Jalapeño</span></div><div class="card-footer"><span class="price-badge">109 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.postimg.cc/J41RSfLF/image.jpg" alt="بطاطس بالجبن"><div class="card-body"><div class="card-name">بطاطس بالجبن <span class="card-name-en">Cheese Fries</span></div><div class="card-footer"><span class="price-badge">85 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.postimg.cc/VNbwj1jp/image.jpg" alt="بطاطس بالرانش"><div class="card-body"><div class="card-name">بطاطس بالرانش <span class="card-name-en">Ranch Fries</span></div><div class="card-footer"><span class="price-badge">85 LE</span></div></div></div>
+            <div class="card"><div class="card-img-placeholder">🍟</div><div class="card-body"><div class="card-name">بطاطس بالجبن والهالبينو <span class="card-name-en">Cheese Fries Jalapeño</span></div><div class="card-footer"><span class="price-badge">85 LE</span></div></div></div>
+            <div class="card"><div class="card-img-placeholder">🍟</div><div class="card-body"><div class="card-name">بطاطس بالرانش والهالبينو <span class="card-name-en">Ranch Fries Jalapeño</span></div><div class="card-footer"><span class="price-badge">85 LE</span></div></div></div>
+            <div class="card"><div class="card-img-placeholder">🍟</div><div class="card-body"><div class="card-name">لوداد فرسكاس <span class="card-name-en">Loudad Frescas</span></div><div class="card-footer"><span class="price-badge">109 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.postimg.cc/VsF89KC0/image.jpg" alt="دجاج ماك اند تشيز"><div class="card-body"><div class="card-name">دجاج ماك اند تشيز <span class="card-name-en">Chicken Mac Cheese</span></div><div class="card-footer"><span class="price-badge">99 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.postimg.cc/ry9kGfrh/image.jpg" alt="ماك تشيز"><div class="card-body"><div class="card-name">ماك تشيز <span class="card-name-en">Mac Cheese</span></div><div class="card-footer"><span class="price-badge">50 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.postimg.cc/TwVX49NC/image.jpg" alt="ريزو"><div class="card-body"><div class="card-name">ريزو <span class="card-name-en">Rizo</span></div><div class="card-footer"><span class="price-badge">90 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.postimg.cc/TwVX49NC/image.jpg" alt="ريزو حار"><div class="card-body"><div class="card-name">ريزو حار <span class="card-name-en">Rizo Spicy</span></div><div class="card-footer"><span class="price-badge">90 LE</span></div></div></div>
+            <div class="card"><div class="card-img-placeholder">🍚</div><div class="card-body"><div class="card-name">ريزو فاهيتا حار <span class="card-name-en">Rizo Fajita Spicy</span></div><div class="card-footer"><span class="price-badge">90 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.postimg.cc/TwVX49NC/image.jpg" alt="ريزو فاهيتا"><div class="card-body"><div class="card-name">ريزو فاهيتا <span class="card-name-en">Rizo Fajita</span></div><div class="card-footer"><span class="price-badge">90 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.ibb.co/DHpsfzrx/Whats-App-Image-2026-05-03-at-1-22-24-AM.jpg" alt="ميكس بوكس"><div class="card-body"><div class="card-name">ميكس بوكس <span class="card-name-en">Mix Box</span></div><div class="card-footer"><span class="price-badge">S 109 / L 169</span></div></div></div>
+            <div class="card"><div class="card-img-placeholder">🧀</div><div class="card-body"><div class="card-name">كوب جبن <span class="card-name-en">Cheese Cup</span></div><div class="card-footer"><span class="price-badge">39 LE</span></div></div></div>
+            <div class="card"><div class="card-img-placeholder">🧀</div><div class="card-body"><div class="card-name">جرة جبن متوسطة <span class="card-name-en">Cheese Jar Medium</span></div><div class="card-footer"><span class="price-badge">69 LE</span></div></div></div>
+            <div class="card"><div class="card-img-placeholder">🧀</div><div class="card-body"><div class="card-name">جرة جبن عائلية <span class="card-name-en">Cheese Jar Family</span></div><div class="card-footer"><span class="price-badge">99 LE</span></div></div></div>
         </div>
     </section>
 
@@ -2401,130 +1318,47 @@
     <section id="sides-drinks" class="section">
         <h2 class="section-title">🥤 إضافات ومشروبات</h2>
         <div class="menu-grid">
-            <div class="card">
-                <img class="card-img" src="https://i.ibb.co/PssjBFrY/image.webp" alt="Soft Drink Can">
-                <div class="card-body">
-                    <div class="card-name">مشروب غازي (ماكسي كانز) <span class="card-name-en">Soft Drink Can</span></div>
-                    <p class="card-desc">كولا / رمان / برتقال</p>
-                    <div class="card-footer"><span class="price-badge">20 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.ibb.co/zhnkKGFW/image.jpg" alt="Soft Drink 1L">
-                <div class="card-body">
-                    <div class="card-name">مشروب غازي (لتر) <span class="card-name-en">Soft Drink 1L</span></div>
-                    <p class="card-desc">بيبسي / سفن أب / ميرندا</p>
-                    <div class="card-footer"><span class="price-badge">35 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.ibb.co/Gf1CJcnC/image.webp" alt="Water">
-                <div class="card-body">
-                    <div class="card-name">مياه معدنية <span class="card-name-en">Water</span></div>
-                    <p class="card-desc">مياه معبأة</p>
-                    <div class="card-footer"><span class="price-badge">15 LE</span></div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img" src="https://i.ibb.co/hR7dVyN5/image.jpg" alt="Kaiser Bread">
-                <div class="card-body">
-                    <div class="card-name">خبز كايزر <span class="card-name-en">Kaiser Bread</span></div>
-                    <p class="card-desc">قطعة خبز كايزر طازج</p>
-                    <div class="card-footer"><span class="price-badge">5 LE</span></div>
-                </div>
-            </div>
+            <div class="card"><img class="card-img" src="https://i.ibb.co/PssjBFrY/image.webp" alt="Soft Drink Can"><div class="card-body"><div class="card-name">مشروب غازي (ماكسي كانز) <span class="card-name-en">Soft Drink Can</span></div><p class="card-desc">كولا / رمان / برتقال</p><div class="card-footer"><span class="price-badge">20 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.ibb.co/zhnkKGFW/image.jpg" alt="Soft Drink 1L"><div class="card-body"><div class="card-name">مشروب غازي (لتر) <span class="card-name-en">Soft Drink 1L</span></div><p class="card-desc">بيبسي / سفن أب / ميرندا</p><div class="card-footer"><span class="price-badge">35 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.ibb.co/Gf1CJcnC/image.webp" alt="Water"><div class="card-body"><div class="card-name">مياه معدنية <span class="card-name-en">Water</span></div><p class="card-desc">مياه معبأة</p><div class="card-footer"><span class="price-badge">15 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.ibb.co/hR7dVyN5/image.jpg" alt="Kaiser Bread"><div class="card-body"><div class="card-name">خبز كايزر <span class="card-name-en">Kaiser Bread</span></div><p class="card-desc">قطعة خبز كايزر طازج</p><div class="card-footer"><span class="price-badge">5 LE</span></div></div></div>
         </div>
     </section>
 
     <!-- ABOUT -->
     <section id="about" class="section">
         <h2 class="section-title">ℹ️ عن Red Roosters</h2>
-
-        <div class="info-card">
-            <h3>الجودة أولاً</h3>
-            <p>نقدم أشهى وألذ وجبات الدجاج المقلي والساندوتشات وبرجر الفاخر بأعلى جودة وأسعار لا تقبل المنافسة.</p>
-        </div>
-
-        <div class="info-card">
-            <h3>ليه ريد روستر؟</h3>
-            <ul>
-                <li>جودة لا مثيل لها في تحضير الدجاج.</li>
-                <li>تنوع كبير في المنيو لتلبية جميع الأذواق.</li>
-                <li>أسرع خدمة توصيل وأفضل معاملة للعملاء.</li>
-                <li>عروض حصرية ومميزة بشكل مستمر.</li>
-            </ul>
-        </div>
-
-        <div class="info-card">
-            <h3>تواصل معنا</h3>
-            <div class="contact-grid">
-                <div class="contact-card">
-                    <div class="contact-card-icon">📞</div>
-                    <h4>الخط الساخن (للتوصيل)</h4>
-                    <a href="tel:0237721525">0237721525</a>
-                </div>
-                <div class="contact-card">
-                    <div class="contact-card-icon">💬</div>
-                    <h4>واتساب لخدمة أسرع</h4>
-                    <a href="https://wa.me/201023278000" target="_blank" class="whatsapp">01023278000</a>
-                </div>
-                <div class="contact-card">
-                    <div class="contact-card-icon">📘</div>
-                    <h4>تابعنا على فيسبوك</h4>
-                    <a href="https://www.facebook.com/redrooster.eg/" target="_blank" class="facebook">صفحتنا</a>
-                </div>
-            </div>
-        </div>
+        <div class="info-card"><h3>الجودة أولاً</h3><p>نقدم أشهى وألذ وجبات الدجاج المقلي والساندوتشات وبرجر الفاخر بأعلى جودة وأسعار لا تقبل المنافسة.</p></div>
+        <div class="info-card"><h3>ليه ريد روستر؟</h3><ul><li>جودة لا مثيل لها في تحضير الدجاج.</li><li>تنوع كبير في المنيو لتلبية جميع الأذواق.</li><li>أسرع خدمة توصيل وأفضل معاملة للعملاء.</li><li>عروض حصرية ومميزة بشكل مستمر.</li></ul></div>
+        <div class="info-card"><h3>تواصل معنا</h3><div class="contact-grid"><div class="contact-card"><div class="contact-card-icon">📞</div><h4>الخط الساخن (للتوصيل)</h4><a href="tel:0237721525">0237721525</a></div><div class="contact-card"><div class="contact-card-icon">💬</div><h4>واتساب لخدمة أسرع</h4><a href="https://wa.me/201023278000" target="_blank" class="whatsapp">01023278000</a></div><div class="contact-card"><div class="contact-card-icon">📘</div><h4>تابعنا على فيسبوك</h4><a href="https://www.facebook.com/redrooster.eg/" target="_blank" class="facebook">صفحتنا</a></div></div></div>
     </section>
 
     <!-- BRANCHES -->
     <section id="branches" class="section">
         <h2 class="section-title">📍 فروعنا</h2>
         <p style="color: var(--gray); margin-bottom: 20px; font-size: 1rem;">نعمل على توسيع شبكة فروعنا لخدمتك أينما كنت.</p>
-        <div class="branch-card">
-            <div class="branch-icon">📍</div>
-            <div class="branch-info">
-                <h3>فيصل الجيزة</h3>
-                <p>شارع المريوطية الرئيسي، بجوار كشري العريس وأمام مستشفى تبارك</p>
-            </div>
-        </div>
+        <div class="branch-card"><div class="branch-icon">📍</div><div class="branch-info"><h3>فيصل الجيزة</h3><p>شارع المريوطية الرئيسي، بجوار كشري العريس وأمام مستشفى تبارك</p></div></div>
     </section>
 
     <!-- NOTES -->
     <section id="notes" class="section">
         <h2 class="section-title">📝 ملحوظات هامة</h2>
-        <div class="note-item">
-            <span class="note-icon">💡</span>
-            <span class="note-text">يمكن إضافة <strong>50 جنيهاً مصرياً</strong> إلى أي ساندوتش لجعله <strong>وجبة كومبو</strong> (ساندوتش + بطاطس + مشروب).</span>
-        </div>
-        <div class="note-item">
-            <span class="note-icon">🔥</span>
-            <span class="note-text">لدينا خيار <strong>الدجاج العادي أو الحار</strong> حسب الطلب (بالإضافة إلى درجات حرارة الناشفيل).</span>
-        </div>
-        <div class="note-item">
-            <span class="note-icon">📍</span>
-            <span class="note-text">قد تختلف الأسعار حسب الفرع والموقع.</span>
-        </div>
-        <div class="note-item">
-            <span class="note-icon">💳</span>
-            <span class="note-text">جميع الأسعار بالجنيه المصري (LE) وهي شاملة ضريبة القيمة المضافة.</span>
-        </div>
+        <div class="note-item"><span class="note-icon">💡</span><span class="note-text">يمكن إضافة <strong>50 جنيهاً مصرياً</strong> إلى أي ساندوتش لجعله <strong>وجبة كومبو</strong> (ساندوتش + بطاطس + مشروب).</span></div>
+        <div class="note-item"><span class="note-icon">🔥</span><span class="note-text">لدينا خيار <strong>الدجاج العادي أو الحار</strong> حسب الطلب (بالإضافة إلى درجات حرارة الناشفيل).</span></div>
+        <div class="note-item"><span class="note-icon">📍</span><span class="note-text">قد تختلف الأسعار حسب الفرع والموقع.</span></div>
+        <div class="note-item"><span class="note-icon">💳</span><span class="note-text">جميع الأسعار بالجنيه المصري (LE) وهي شاملة ضريبة القيمة المضافة.</span></div>
     </section>
 
 </main>
 
-<!-- FLOATING WHATSAPP ORDER BUTTON -->
 <div class="order-btn-wrap">
     <div class="order-tooltip">اطلب الآن عبر واتساب 🛵</div>
     <a class="order-btn" href="https://wa.me/201023278000?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%F0%9F%90%93%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B7%D9%84%D8%A8%20%D9%85%D9%86%20Red%20Roosters" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-        </svg>
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         اطلب الآن 🛒
     </a>
 </div>
 
-<!-- FOOTER -->
 <footer>
     <p>&copy; 2025 <strong>Red Roosters</strong> — جميع الحقوق محفوظة</p>
 </footer>
@@ -2533,40 +1367,30 @@
 
 <script>
     const activeSection = { id: 'home' };
-
     function showSection(id) {
         document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
         const el = document.getElementById(id);
-        if (el) {
-            el.classList.add('active');
-            activeSection.id = id;
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
+        if (el) { el.classList.add('active'); activeSection.id = id; window.scrollTo({ top: 0, behavior: 'smooth' }); }
         document.querySelectorAll('#nav-list button').forEach(btn => {
             btn.classList.toggle('active', btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(`'${id}'`));
         });
     }
-
     function toggleMobileNav() {
         const nav = document.getElementById('mobileNav');
         const btn = document.getElementById('hamburger');
         nav.classList.toggle('open');
         btn.classList.toggle('open');
     }
-
     function closeMobileNav() {
         document.getElementById('mobileNav').classList.remove('open');
         document.getElementById('hamburger').classList.remove('open');
     }
-
     window.addEventListener('scroll', () => {
-        const btn = document.getElementById('scrollTop');
-        btn.classList.toggle('visible', window.scrollY > 400);
+        document.getElementById('scrollTop').classList.toggle('visible', window.scrollY > 400);
     });
-
-    document.addEventListener('DOMContentLoaded', () => {
-        showSection('home');
-    });
+    document.addEventListener('DOMContentLoaded', () => { showSection('home'); });
 </script>
 </body>
 </html>
+HTMLEOF
+echo "Done! File size: $(wc -c < /mnt/user-data/outputs/red_roosters_menu.html) bytes"
