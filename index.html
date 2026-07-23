@@ -752,7 +752,6 @@
         <nav>
             <ul id="nav-list">
                 <li><button onclick="showSection('home')" class="active">الرئيسية</button></li>
-                <li><button onclick="showSection('world-cup')" class="wc-badge">🏆 كأس العالم</button></li>
                 <li><button onclick="showSection('new-items')" class="new-badge">✨ جديد</button></li>
                 <li><button onclick="showSection('siniya')" class="siniya-badge">🥘 صواني ريد روستر</button></li>
                 <li><button onclick="showSection('offers')">العروض 🎉</button></li>
@@ -780,7 +779,6 @@
 <div class="mobile-nav" id="mobileNav" onclick="closeMobileNav()">
     <div class="mobile-nav-inner" onclick="event.stopPropagation()">
         <button onclick="showSection('home'); closeMobileNav()">🏠 الرئيسية</button>
-        <button class="wc-badge" onclick="showSection('world-cup'); closeMobileNav()">🏆 عروض كأس العالم</button>
         <button class="new-badge" onclick="showSection('new-items'); closeMobileNav()">✨ جديد ريد روستر</button>
         <button class="siniya-badge" onclick="showSection('siniya'); closeMobileNav()">🥘 صواني ريد روستر</button>
         <button onclick="showSection('offers'); closeMobileNav()">🎉 العروض الحصرية</button>
@@ -809,7 +807,6 @@
                 <p>ساندوتشات وبرجر ووجبات بجودة لا مثيل لها وبأسعار تنافسية</p>
                 <div class="hero-cta-group">
                     <button class="btn btn-siniya" onclick="showSection('siniya')">🥘 صواني ريد روستر</button>
-                    <button class="btn btn-wc" onclick="showSection('world-cup')">🏆 عروض كأس العالم</button>
                     <button class="btn btn-new" onclick="showSection('new-items')">✨ الجديد عندنا</button>
                     <button class="btn btn-primary" onclick="showSection('offers')">🎉 شوف العروض</button>
                     <button class="btn btn-outline" onclick="showSection('about')">📞 اتصل بنا</button>
@@ -825,11 +822,6 @@
                 <span class="cat-icon">🥘</span>
                 <h3>صواني ريد روستر</h3>
                 <p>حفلة قرمشة لا تُنسى!</p>
-            </div>
-            <div class="cat-card wc-cat" onclick="showSection('world-cup')">
-                <span class="cat-icon">🏆</span>
-                <h3>عروض كأس العالم</h3>
-                <p>عروض حصرية بمناسبة المونديال</p>
             </div>
             <div class="cat-card new-cat" onclick="showSection('new-items')">
                 <span class="cat-icon">✨</span>
@@ -883,71 +875,6 @@
             <div class="info-banner-text">
                 <h4>كومبو بـ 50 جنيه بس!</h4>
                 <p>أضف 50 ج.م فقط على أي ساندوتش وحوّله لوجبة كاملة (ساندوتش + بطاطس + مشروب)</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- 🏆 WORLD CUP OFFERS -->
-    <section id="world-cup" class="section">
-        <h2 class="section-title">🏆 عروض كأس العالم</h2>
-        <div class="wc-banner">
-            <div class="wc-banner-inner">
-                <div class="wc-flag-strip"><span></span><span></span><span></span></div>
-                <h2>اتشجع وكل من Red Rooster 🇪🇬⚽</h2>
-                <p>بمناسبة كأس العالم 2026، جهزنا لك عروض ضخمة تكفي العيلة والصحاب وقت الماتشات — كل عرض مصمم خصيصًا لروقان حقيقي قدام الشاشة!</p>
-            </div>
-        </div>
-        <div class="menu-grid">
-            <div class="card wc-item">
-                <img class="card-img" src="https://i.postimg.cc/FRP3DCM9/alrymwntada.jpg" alt="عرض الريمونتادا">
-                <div class="card-body">
-                    <div class="card-name">عرض الريمونتادا <span class="card-name-en">Remontada Deal</span></div>
-                    <p class="card-desc">خمس قطع دجاج + خمس قطع استريبس + 3 قطع خبز كايزر + كول سلو حجم عائلي + بطاطس كبيرة + مشروب غازي لتر</p>
-                    <div class="card-footer">
-                        <span class="price-badge wc-card-price">499 LE</span>
-                        <a class="wc-cta" href="https://wa.me/201023278000?text=عايز%20أطلب%20عرض%20الريمونتادا" target="_blank">اطلب 🛒</a>
-                    </div>
-                </div>
-            </div>
-            <div class="card wc-item">
-                <img class="card-img" src="https://i.postimg.cc/JnTZPYfL/kas-alʿalm.jpg" alt="عرض كأس العالم">
-                <div class="card-body">
-                    <div class="card-name">عرض كأس العالم <span class="card-name-en">World Cup Deal</span></div>
-                    <p class="card-desc">اختيارك من اتنين ساندوتش ناشفيل (كوول ناش أو سويتي هيت ناش) + 2 ريزو ناشفيل + ميكس بوكس قرمشة حجم كبير + مشروب غازي لتر</p>
-                    <div class="card-footer">
-                        <span class="price-badge wc-card-price">699 LE</span>
-                        <a class="wc-cta" href="https://wa.me/201023278000?text=عايز%20أطلب%20عرض%20كأس%20العالم" target="_blank">اطلب 🛒</a>
-                    </div>
-                </div>
-            </div>
-            <div class="card wc-item">
-                <img class="card-img" src="https://i.postimg.cc/k4jKfY0P/altshjyʿ.jpg" alt="عرض التشجيع">
-                <div class="card-body">
-                    <div class="card-name">عرض التشجيع <span class="card-name-en">Tashgee3 Deal</span></div>
-                    <p class="card-desc">أختيارك من أربع ساندوتشات تشيكن (ساندوتش سوبريم + ثلاث ساندوتشات من قسم ساندوتشات الدجاج) (عدا المايتي زينجر) + اثنين بطاطس حجم وسط + كول سلو عائلي + مشروب غازي لتر</p>
-                    <div class="card-footer">
-                        <span class="price-badge wc-card-price">599 LE</span>
-                        <a class="wc-cta" href="https://wa.me/201023278000?text=عايز%20أطلب%20عرض%20التشجيع" target="_blank">اطلب 🛒</a>
-                    </div>
-                </div>
-            </div>
-            <div class="card wc-item">
-                <img class="card-img" src="https://i.postimg.cc/LXyLNQcS/alhatryk.jpg" alt="عرض الهاتريك">
-                <div class="card-body">
-                    <div class="card-name">عرض الهاتريك <span class="card-name-en">Hattrick Deal</span></div>
-                    <p class="card-desc">ثلاثة ساندوتشات تويستر من اختيارك + 3 ريزو من اختيارك + 3 كول سلو</p>
-                    <div class="card-footer">
-                        <span class="price-badge wc-card-price">499 LE</span>
-                        <a class="wc-cta" href="https://wa.me/201023278000?text=عايز%20أطلب%20عرض%20الهاتريك" target="_blank">اطلب 🛒</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="info-banner" style="margin-top: 28px; background: linear-gradient(135deg, #E8FFF3, #D4FFE9); border-color: #0B6E4F;">
-            <div class="info-banner-icon">⚽</div>
-            <div class="info-banner-text">
-                <h4 style="color:#0B6E4F;">عروض لفترة محدودة!</h4>
-                <p style="color:#0B6E4F;">عروض كأس العالم متاحة طول فترة البطولة فقط، اطلب وانت قاعد قدام التليفزيون واستمتع بالماتش 🔥</p>
             </div>
         </div>
     </section>
