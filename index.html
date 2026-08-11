@@ -594,6 +594,23 @@
         .deal-includes { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
         .deal-tag-item { background: rgba(255,255,255,0.12); color: rgba(255,255,255,0.9); font-size: 0.82rem; font-weight: 600; padding: 4px 12px; border-radius: 50px; border: 1px solid rgba(255,255,255,0.2); }
 
+        /* ── ZINGER SUPREME BOX BANNER ── */
+        .zsb-banner { background: linear-gradient(135deg, #3a0000, #7A1010, #D92B2B); border-radius: 24px; overflow: hidden; margin-bottom: 36px; position: relative; display: flex; align-items: stretch; min-height: 260px; }
+        .zsb-banner::before { content: ''; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+        .zsb-content { flex: 1; padding: 36px 40px; display: flex; flex-direction: column; justify-content: center; position: relative; z-index: 1; }
+        .zsb-tag { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,215,0,0.2); border: 1.5px solid rgba(255,215,0,0.5); color: #FFD700; font-size: 0.8rem; font-weight: 900; letter-spacing: 2px; text-transform: uppercase; padding: 6px 16px; border-radius: 50px; margin-bottom: 16px; width: fit-content; }
+        .zsb-content h2 { font-family: 'Tajawal', sans-serif; font-size: 2.4rem; font-weight: 900; color: #fff; line-height: 1.2; margin-bottom: 12px; text-shadow: 0 2px 12px rgba(0,0,0,0.4); }
+        .zsb-content .zsb-subtitle { font-size: 1rem; color: rgba(255,255,255,0.9); margin-bottom: 22px; line-height: 1.6; }
+        .zsb-includes { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+        .zsb-tag-item { background: rgba(255,255,255,0.14); color: #fff; font-size: 0.82rem; font-weight: 700; padding: 4px 14px; border-radius: 50px; border: 1px solid rgba(255,255,255,0.25); }
+        .zsb-price-row { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+        .zsb-price { background: linear-gradient(135deg, #FFD700, #FF8C00); color: #3a0000; font-family: 'Tajawal', sans-serif; font-size: 2.2rem; font-weight: 900; padding: 12px 28px; border-radius: 50px; line-height: 1; box-shadow: 0 6px 24px rgba(255,200,0,0.4); }
+        .zsb-cta { background: linear-gradient(135deg, #00C853, #00897B); color: #fff; border: none; padding: 12px 26px; border-radius: 50px; font-family: 'Cairo', sans-serif; font-size: 1rem; font-weight: 700; cursor: pointer; transition: all 0.25s; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; }
+        .zsb-cta:hover { background: linear-gradient(135deg, #00E676, #00BFA5); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,180,120,0.4); }
+        .zsb-img { width: 320px; flex-shrink: 0; position: relative; overflow: hidden; }
+        .zsb-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .zsb-glow { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 220px; height: 220px; background: radial-gradient(circle, rgba(255,215,0,0.28), transparent 70%); pointer-events: none; }
+
         /* ── NEW ITEMS HEADER ── */
         .new-items-header { display: flex; align-items: center; gap: 14px; margin-bottom: 24px; }
         .new-items-header h3 { font-family: 'Tajawal', sans-serif; font-size: 1.4rem; font-weight: 900; color: var(--charcoal); }
@@ -610,6 +627,9 @@
         .card.wc-item { border: 2px solid rgba(11,110,79,0.25); position: relative; }
         .card.wc-item::before { content: '🏆 عرض كأس العالم'; position: absolute; top: 12px; right: 12px; background: linear-gradient(135deg, #0B6E4F, #FFD700); color: #fff; font-size: 0.72rem; font-weight: 900; padding: 4px 12px; border-radius: 50px; z-index: 10; letter-spacing: 0.5px; }
         .card.wc-item:hover { border-color: #0B6E4F; box-shadow: 0 12px 40px rgba(11,110,79,0.2); }
+        .card.offer-hot { border: 2px solid rgba(217,43,43,0.3); position: relative; }
+        .card.offer-hot::before { content: '🔥 عرض مميز'; position: absolute; top: 12px; right: 12px; background: linear-gradient(135deg, var(--red), #8B1A1A); color: #fff; font-size: 0.72rem; font-weight: 900; padding: 4px 12px; border-radius: 50px; z-index: 10; letter-spacing: 0.5px; }
+        .card.offer-hot:hover { border-color: var(--red); box-shadow: 0 12px 40px rgba(217,43,43,0.2); }
         .card-img { width: 100%; height: 200px; object-fit: cover; display: block; }
         .card-img-placeholder { width: 100%; height: 160px; background: linear-gradient(135deg, #F8E8E8, #F2D5D5); display: flex; align-items: center; justify-content: center; font-size: 3rem; }
         .card-body { padding: 16px 18px 20px; flex: 1; display: flex; flex-direction: column; }
@@ -713,6 +733,10 @@
             .power-deal-img { width: 100%; height: 220px; }
             .power-deal-content { padding: 28px 24px; }
             .power-deal-content h2 { font-size: 1.8rem; }
+            .zsb-banner { flex-direction: column; }
+            .zsb-img { width: 100%; height: 220px; }
+            .zsb-content { padding: 28px 24px; }
+            .zsb-content h2 { font-size: 1.8rem; }
             .siniya-hero-banner { flex-direction: column; padding: 32px 28px 0; min-height: auto; }
             .siniya-hero-text h1 { font-size: 2.2rem; }
             .siniya-hero-img { width: 100%; max-width: 360px; align-self: center; }
@@ -734,6 +758,7 @@
             .wc-banner h2 { font-size: 1.7rem; }
             .new-hero-overlay h2 { font-size: 1.8rem; }
             .power-deal-price { font-size: 1.6rem; }
+            .zsb-price { font-size: 1.6rem; }
         }
     </style>
 </head>
@@ -882,6 +907,31 @@
     <!-- ✨ NEW ITEMS -->
     <section id="new-items" class="section">
         <h2 class="section-title">✨ جديد ريد روستر</h2>
+
+        <!-- ZINGER SUPREME BOX — FEATURED -->
+        <div class="zsb-banner">
+            <div class="zsb-content">
+                <div class="zsb-tag"><span>🎁</span> بوكس جديد كليًا</div>
+                <h2>بوكس زنجر سوبريم 🔥</h2>
+                <p class="zsb-subtitle">اتنين ساندوتش سوبريم (فيلية أو زينجر) من اختيارك، في بوكس هدية مميز جاهز تشاركه مع اللي تحب</p>
+                <div class="zsb-includes">
+                    <span class="zsb-tag-item">🥪 2 ساندوتش سوبريم</span>
+                    <span class="zsb-tag-item">🎯 اختر فيلية أو زينجر</span>
+                </div>
+                <div class="zsb-price-row">
+                    <div class="zsb-price">199 LE</div>
+                    <a class="zsb-cta" href="https://wa.me/201023278000?text=عايز%20أطلب%20بوكس%20زنجر%20سوبريم" target="_blank">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        اطلب دلوقتي
+                    </a>
+                </div>
+            </div>
+            <div class="zsb-img">
+                <img src="https://i.postimg.cc/F1tCps6y/Whats-App-Image-2026-07-26-at-5-59-48-PM.jpg" alt="بوكس زنجر سوبريم">
+                <div class="zsb-glow"></div>
+            </div>
+        </div>
+
         <div class="power-deal-banner">
             <div class="power-deal-content">
                 <div class="power-deal-tag"><span>⚡</span> عرض حصري جديد</div>
@@ -1073,6 +1123,14 @@
         <h2 class="section-title">🎉 العروض الحصرية</h2>
         <p class="offer-section-title">عروض الروقان الخاصة</p>
         <div class="menu-grid">
+            <div class="card offer-hot">
+                <img class="card-img" src="https://i.postimg.cc/F1tCps6y/Whats-App-Image-2026-07-26-at-5-59-48-PM.jpg" alt="بوكس زنجر سوبريم">
+                <div class="card-body">
+                    <div class="card-name">بوكس زنجر سوبريم <span class="card-name-en">Zinger Supreme Box</span></div>
+                    <p class="card-desc">اتنين ساندوتش سوبريم (فيلية أو زينجر) من اختيار العميل، في بوكس هدية مميز</p>
+                    <div class="card-footer"><span class="price-badge gold">199 LE</span></div>
+                </div>
+            </div>
             <div class="card"><img class="card-img" src="https://i.ibb.co/0R89m3TW/Whats-App-Image-2026-05-02-at-10-20-34-PM.jpg" alt="عرض الروقان 1"><div class="card-body"><div class="card-name">عرض الروقان 1</div><p class="card-desc">أرز كبير + 2 قطعة دجاج أو 4 قطعة استربس + صوص + مشروب</p><div class="card-footer"><span class="price-badge gold">185 LE</span></div></div></div>
             <div class="card"><img class="card-img" src="https://i.ibb.co/Lhzpw1xv/Whats-App-Image-2026-05-02-at-10-20-35-PM.jpg" alt="عرض الروقان 2"><div class="card-body"><div class="card-name">عرض الروقان 2</div><p class="card-desc">قطعة دجاج + ساندوتش تشيكن + 1 مشروب</p><div class="card-footer"><span class="price-badge gold">185 LE</span></div></div></div>
             <div class="card"><img class="card-img" src="https://i.ibb.co/N6XLM8vG/3.jpg" alt="عرض الروقان 3"><div class="card-body"><div class="card-name">عرض الروقان 3</div><p class="card-desc">قطعة دجاج + تويستر تشيكن أو فاهيتا + كول سلو + مشروب</p><div class="card-footer"><span class="price-badge gold">185 LE</span></div></div></div>
