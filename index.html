@@ -7,7 +7,7 @@
 
     <!-- Open Graph tags -->
     <meta property="og:title" content="منيو ريد روستر 🐓">
-    <meta property="og:description" content="أروق ديك في مصر - برجر، ساندوتشات، صواني، وعروض حصرية">
+    <meta property="og:description" content="أروق ديك في مصر - عروض Back to School، برجر، ساندوتشات، صواني، وعروض حصرية">
     <meta property="og:image" content="https://i.ibb.co/5xh70cWh/Whats-App-Image-2026-07-25-at-8-21-17-PM.jpg">
     <meta property="og:image:width" content="1080">
     <meta property="og:image:height" content="1350">
@@ -286,6 +286,8 @@
         .btn-wc:hover { background: linear-gradient(135deg, #0B6E4F, #FFD700); color: #fff; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(11,110,79,0.4); }
         .btn-siniya { background: linear-gradient(135deg, #C0392B, #8B1A1A); color: var(--white); }
         .btn-siniya:hover { background: linear-gradient(135deg, #8B1A1A, #C0392B); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(192,57,43,0.5); }
+        .btn-school { background: linear-gradient(135deg, #1E40AF, #2563EB); color: var(--white); }
+        .btn-school:hover { background: linear-gradient(135deg, #FFC627, #F5A623); color: #1E3A8A; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(37,99,235,0.45); }
         .hero-img { width: 340px; flex-shrink: 0; align-self: flex-end; z-index: 1; border-radius: 16px 16px 0 0; overflow: hidden; }
         .hero-img img { width: 100%; height: 260px; object-fit: cover; display: block; }
 
@@ -647,7 +649,7 @@
         .card-name { font-family: 'Tajawal', sans-serif; font-size: 1.15rem; font-weight: 700; color: var(--charcoal); margin-bottom: 4px; line-height: 1.3; }
         .card-name-en { font-size: 0.8rem; font-weight: 400; color: var(--gray); display: block; margin-bottom: 8px; }
         .card-desc { font-size: 0.88rem; color: var(--gray); margin-bottom: 14px; flex: 1; line-height: 1.5; }
-        .card-footer { display: flex; align-items: center; justify-content: space-between; }
+        .card-footer { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
         .price-badge { background: var(--red); color: var(--white); font-family: 'Tajawal', sans-serif; font-size: 1.2rem; font-weight: 900; padding: 6px 16px; border-radius: 50px; }
         .price-badge.gold { background: linear-gradient(135deg, var(--gold), #FF8C00); }
         .price-badge.purple { background: linear-gradient(135deg, #7C3AED, #DB2777); }
@@ -683,6 +685,84 @@
         /* ── OFFERS ── */
         .offer-section-title { font-size: 1.3rem; font-weight: 900; color: var(--red); margin: 32px 0 16px; padding-bottom: 10px; border-bottom: 2px dashed rgba(217,43,43,0.25); }
         .offer-divider { border: none; border-top: 2px dashed var(--gold-light); margin: 40px 0; }
+
+        /* ── BACK TO SCHOOL ── */
+        nav button.school-badge { background: linear-gradient(135deg, #1E40AF, #2563EB); color: var(--white); }
+        nav button.school-badge:hover { background: linear-gradient(135deg, #FFC627, #F5A623); color: #1E3A8A; transform: scale(1.05); }
+        .mobile-nav button.school-badge { background: linear-gradient(135deg, #1E40AF, #2563EB); color: var(--white); }
+        .cat-card.school-cat { background: linear-gradient(135deg, #EEF4FF, #FFF8DB); border: 2px solid rgba(37,99,235,0.25); }
+        .cat-card.school-cat:hover { border-color: #2563EB; }
+
+        .school-banner {
+            background: linear-gradient(135deg, #0F1F5C 0%, #1E40AF 55%, #2563EB 100%);
+            border-radius: 24px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 36px;
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+        .school-banner::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                repeating-linear-gradient(0deg, rgba(255,255,255,0.05) 0 1px, transparent 1px 32px),
+                repeating-linear-gradient(90deg, rgba(255,255,255,0.05) 0 1px, transparent 1px 32px);
+        }
+        .school-banner::after { content: '🎒'; position: absolute; font-size: 11rem; opacity: 0.1; top: -25px; left: -20px; }
+        .school-banner-inner { position: relative; z-index: 1; }
+        .school-banner h2 { font-family: 'Tajawal', sans-serif; font-size: 2.4rem; font-weight: 900; margin-bottom: 12px; text-shadow: 0 2px 12px rgba(0,0,0,0.3); }
+        .school-banner p { font-size: 1.05rem; opacity: 0.92; max-width: 640px; margin: 0 auto 22px; }
+        .school-chips { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+        .school-chip { padding: 8px 22px; border-radius: 50px; font-weight: 900; font-size: 1rem; background: #FFC627; color: #1E3A8A; }
+        .school-chip.alt { background: #fff; color: #1E40AF; }
+        .school-offer-title { color: #1E40AF; border-bottom-color: rgba(37,99,235,0.25); }
+
+        /* Back to School — featured banner (صفحة جديد) */
+        .bts-banner { background: linear-gradient(135deg, #0F1F5C, #1E40AF, #2563EB); border-radius: 24px; overflow: hidden; margin-bottom: 36px; position: relative; display: flex; align-items: stretch; min-height: 260px; }
+        .bts-banner::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                repeating-linear-gradient(0deg, rgba(255,255,255,0.05) 0 1px, transparent 1px 32px),
+                repeating-linear-gradient(90deg, rgba(255,255,255,0.05) 0 1px, transparent 1px 32px);
+        }
+        .bts-content { flex: 1; padding: 36px 40px; display: flex; flex-direction: column; justify-content: center; position: relative; z-index: 1; }
+        .bts-tag { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,198,39,0.2); border: 1.5px solid rgba(255,198,39,0.5); color: #FFC627; font-size: 0.8rem; font-weight: 900; letter-spacing: 2px; text-transform: uppercase; padding: 6px 16px; border-radius: 50px; margin-bottom: 16px; width: fit-content; }
+        .bts-content h2 { font-family: 'Tajawal', sans-serif; font-size: 2.4rem; font-weight: 900; color: #fff; line-height: 1.2; margin-bottom: 12px; text-shadow: 0 2px 12px rgba(0,0,0,0.4); }
+        .bts-subtitle { font-size: 1rem; color: rgba(255,255,255,0.9); margin-bottom: 22px; line-height: 1.6; }
+        .bts-includes { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+        .bts-tag-item { background: rgba(255,255,255,0.14); color: #fff; font-size: 0.82rem; font-weight: 700; padding: 4px 14px; border-radius: 50px; border: 1px solid rgba(255,255,255,0.25); }
+        .bts-price-row { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+        .bts-price { background: linear-gradient(135deg, #FFC627, #F5A623); color: #0F1F5C; font-family: 'Tajawal', sans-serif; font-size: 1.8rem; font-weight: 900; padding: 10px 24px; border-radius: 50px; line-height: 1; box-shadow: 0 6px 24px rgba(255,198,39,0.35); }
+        .bts-cta { background: #fff; color: #1E40AF; border: none; padding: 12px 26px; border-radius: 50px; font-family: 'Cairo', sans-serif; font-size: 1rem; font-weight: 700; cursor: pointer; transition: all 0.25s; }
+        .bts-cta:hover { background: #FFC627; color: #0F1F5C; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(255,198,39,0.4); }
+        .bts-side { width: 280px; flex-shrink: 0; position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; background: rgba(0,0,0,0.18); }
+        .bts-side-emoji { font-size: 4.5rem; line-height: 1; }
+        .bts-side-note { color: rgba(255,255,255,0.85); font-size: 0.9rem; font-weight: 700; text-align: center; padding: 0 20px; line-height: 1.6; }
+
+        .card.school-item { border: 2px solid rgba(37,99,235,0.25); position: relative; }
+        .card.school-item::before {
+            content: '🎒 Back to School';
+            position: absolute; top: 12px; right: 12px;
+            background: linear-gradient(135deg, #1E40AF, #2563EB);
+            color: #fff; font-size: 0.72rem; font-weight: 900;
+            padding: 4px 12px; border-radius: 50px; z-index: 10; letter-spacing: 0.5px;
+        }
+        .card.school-item:hover { border-color: #2563EB; box-shadow: 0 12px 40px rgba(37,99,235,0.2); }
+        .card-img-placeholder.school-ph { background: linear-gradient(135deg, #E8F0FF, #FFF3C4); }
+        .price-badge.school { background: linear-gradient(135deg, #1E40AF, #2563EB); }
+        .school-cta {
+            background: linear-gradient(135deg, #00C853, #00897B);
+            color: #fff; padding: 8px 18px; border-radius: 50px;
+            font-family: 'Cairo', sans-serif; font-size: 0.9rem; font-weight: 700;
+            text-decoration: none; display: inline-flex; align-items: center; gap: 6px;
+            transition: all 0.25s;
+        }
+        .school-cta:hover { background: linear-gradient(135deg, #00E676, #00BFA5); transform: translateY(-2px); }
 
         /* ── INFO CARDS ── */
         .info-card { background: var(--white); border-radius: var(--radius); padding: 28px 32px; box-shadow: var(--shadow-sm); margin-bottom: 20px; border-right: 4px solid var(--red); }
@@ -731,70 +811,14 @@
         .scroll-top { position: fixed; bottom: 24px; left: 24px; width: 44px; height: 44px; background: var(--red); color: white; border: none; border-radius: 50%; font-size: 1.2rem; cursor: pointer; box-shadow: var(--shadow-md); opacity: 0; transform: translateY(20px); transition: all 0.3s; display: flex; align-items: center; justify-content: center; }
         .scroll-top.visible { opacity: 1; transform: translateY(0); }
         .scroll-top:hover { background: var(--red-dark); transform: translateY(-2px); }
-/* ── BACK TO SCHOOL ── */
-nav button.school-badge {
-    background: linear-gradient(135deg, #1E40AF, #2563EB);
-    color: var(--white);
-}
-nav button.school-badge:hover {
-    background: linear-gradient(135deg, #FFC627, #F5A623);
-    color: #1E3A8A;
-    transform: scale(1.05);
-}
-.mobile-nav button.school-badge { background: linear-gradient(135deg, #1E40AF, #2563EB); color: var(--white); }
-.cat-card.school-cat { background: linear-gradient(135deg, #EEF4FF, #FFF8DB); border: 2px solid rgba(37,99,235,0.25); }
-.cat-card.school-cat:hover { border-color: #2563EB; }
 
-.school-banner {
-    background: linear-gradient(135deg, #0F1F5C 0%, #1E40AF 55%, #2563EB 100%);
-    border-radius: 24px;
-    padding: 40px;
-    text-align: center;
-    margin-bottom: 36px;
-    color: var(--white);
-    position: relative;
-    overflow: hidden;
-}
-.school-banner::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image:
-        repeating-linear-gradient(0deg, rgba(255,255,255,0.05) 0 1px, transparent 1px 32px),
-        repeating-linear-gradient(90deg, rgba(255,255,255,0.05) 0 1px, transparent 1px 32px);
-}
-.school-banner::after { content: '🎒'; position: absolute; font-size: 11rem; opacity: 0.1; top: -25px; left: -20px; }
-.school-banner-inner { position: relative; z-index: 1; }
-.school-banner h2 { font-family: 'Tajawal', sans-serif; font-size: 2.4rem; font-weight: 900; margin-bottom: 12px; text-shadow: 0 2px 12px rgba(0,0,0,0.3); }
-.school-banner p { font-size: 1.05rem; opacity: 0.92; max-width: 640px; margin: 0 auto 22px; }
-.school-chips { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
-.school-chip { padding: 8px 22px; border-radius: 50px; font-weight: 900; font-size: 1rem; background: #FFC627; color: #1E3A8A; }
-.school-chip.alt { background: #fff; color: #1E40AF; }
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            .section { animation: none; }
+            .order-btn { animation: none; }
+            * { transition-duration: 0.01ms !important; }
+        }
 
-.card.school-item { border: 2px solid rgba(37,99,235,0.25); position: relative; }
-.card.school-item::before {
-    content: '🎒 Back to School';
-    position: absolute; top: 12px; right: 12px;
-    background: linear-gradient(135deg, #1E40AF, #2563EB);
-    color: #fff; font-size: 0.72rem; font-weight: 900;
-    padding: 4px 12px; border-radius: 50px; z-index: 10; letter-spacing: 0.5px;
-}
-.card.school-item:hover { border-color: #2563EB; box-shadow: 0 12px 40px rgba(37,99,235,0.2); }
-.card-img-placeholder.school-ph { background: linear-gradient(135deg, #E8F0FF, #FFF3C4); }
-.price-badge.school { background: linear-gradient(135deg, #1E40AF, #2563EB); }
-.school-cta {
-    background: linear-gradient(135deg, #00C853, #00897B);
-    color: #fff; padding: 8px 18px; border-radius: 50px;
-    font-family: 'Cairo', sans-serif; font-size: 0.9rem; font-weight: 700;
-    text-decoration: none; display: inline-flex; align-items: center; gap: 6px;
-    transition: all 0.25s;
-}
-.school-cta:hover { background: linear-gradient(135deg, #00E676, #00BFA5); transform: translateY(-2px); }
-
-@media (max-width: 640px) {
-    .school-banner { padding: 28px 20px; }
-    .school-banner h2 { font-size: 1.7rem; }
-}
         /* ── RESPONSIVE ── */
         @media (max-width: 900px) {
             nav { display: none; }
@@ -807,6 +831,10 @@ nav button.school-badge:hover {
             .power-deal-img { width: 100%; height: 220px; }
             .power-deal-content { padding: 28px 24px; }
             .power-deal-content h2 { font-size: 1.8rem; }
+            .bts-banner { flex-direction: column; }
+            .bts-side { width: 100%; padding: 24px 0; }
+            .bts-content { padding: 28px 24px; }
+            .bts-content h2 { font-size: 1.8rem; }
             .zsb-banner { flex-direction: column; }
             .zsb-img { width: 100%; height: 220px; }
             .zsb-content { padding: 28px 24px; }
@@ -833,6 +861,9 @@ nav button.school-badge:hover {
             .new-hero-overlay h2 { font-size: 1.8rem; }
             .power-deal-price { font-size: 1.6rem; }
             .zsb-price { font-size: 1.6rem; }
+            .bts-price { font-size: 1.4rem; padding: 8px 18px; }
+            .school-banner { padding: 28px 20px; }
+            .school-banner h2 { font-size: 1.7rem; }
         }
     </style>
 </head>
@@ -851,9 +882,9 @@ nav button.school-badge:hover {
         <nav>
             <ul id="nav-list">
                 <li><button onclick="showSection('home')" class="active">الرئيسية</button></li>
+                <li><button onclick="showSection('back-to-school')" class="school-badge">🎒 Back to School</button></li>
                 <li><button onclick="showSection('new-items')" class="new-badge">✨ جديد</button></li>
                 <li><button onclick="showSection('siniya')" class="siniya-badge">🥘 صواني ريد روستر</button></li>
-                <li><button onclick="showSection('back-to-school')" class="school-badge">🎒 Back to School</button></li>
                 <li><button onclick="showSection('offers')">العروض 🎉</button></li>
                 <li><button onclick="showSection('nashville')" class="highlight">🔥 ناشڤيل</button></li>
                 <li><button onclick="showSection('beef-sandwiches')">برجر اللحم</button></li>
@@ -879,9 +910,9 @@ nav button.school-badge:hover {
 <div class="mobile-nav" id="mobileNav" onclick="closeMobileNav()">
     <div class="mobile-nav-inner" onclick="event.stopPropagation()">
         <button onclick="showSection('home'); closeMobileNav()">🏠 الرئيسية</button>
+        <button class="school-badge" onclick="showSection('back-to-school'); closeMobileNav()">🎒 عروض Back to School</button>
         <button class="new-badge" onclick="showSection('new-items'); closeMobileNav()">✨ جديد ريد روستر</button>
         <button class="siniya-badge" onclick="showSection('siniya'); closeMobileNav()">🥘 صواني ريد روستر</button>
-        <button class="school-badge" onclick="showSection('back-to-school'); closeMobileNav()">🎒 عروض Back to School</button> 
         <button onclick="showSection('offers'); closeMobileNav()">🎉 العروض الحصرية</button>
         <button class="highlight" onclick="showSection('nashville'); closeMobileNav()">🔥 منيو ناشڤيل</button>
         <button onclick="showSection('beef-sandwiches'); closeMobileNav()">🍔 برجر اللحم البقري</button>
@@ -907,6 +938,7 @@ nav button.school-badge:hover {
                 <h1>أروق ديك<br>في مصر 🐓</h1>
                 <p>ساندوتشات وبرجر ووجبات بجودة لا مثيل لها وبأسعار تنافسية</p>
                 <div class="hero-cta-group">
+                    <button class="btn btn-school" onclick="showSection('back-to-school')">🎒 عروض المدارس</button>
                     <button class="btn btn-siniya" onclick="showSection('siniya')">🥘 صواني ريد روستر</button>
                     <button class="btn btn-new" onclick="showSection('new-items')">✨ الجديد عندنا</button>
                     <button class="btn btn-primary" onclick="showSection('offers')">🎉 شوف العروض</button>
@@ -919,15 +951,15 @@ nav button.school-badge:hover {
         </div>
 
         <div class="category-grid">
-            <div class="cat-card siniya-cat" onclick="showSection('siniya')">
-                <span class="cat-icon">🥘</span>
-                <h3>صواني ريد روستر</h3>
-                <p>حفلة قرمشة لا تُنسى!</p>
-            </div>
             <div class="cat-card school-cat" onclick="showSection('back-to-school')">
                 <span class="cat-icon">🎒</span>
                 <h3>Back to School</h3>
                 <p>عروض 99 و 299 جنيه</p>
+            </div>
+            <div class="cat-card siniya-cat" onclick="showSection('siniya')">
+                <span class="cat-icon">🥘</span>
+                <h3>صواني ريد روستر</h3>
+                <p>حفلة قرمشة لا تُنسى!</p>
             </div>
             <div class="cat-card new-cat" onclick="showSection('new-items')">
                 <span class="cat-icon">✨</span>
@@ -985,23 +1017,145 @@ nav button.school-badge:hover {
         </div>
     </section>
 
+    <!-- 🎒 BACK TO SCHOOL -->
+    <section id="back-to-school" class="section">
+        <h2 class="section-title">🎒 Back to School</h2>
+
+        <div class="school-banner">
+            <div class="school-banner-inner">
+                <h2>Back to School… وهنبدأها بعروض تفرّحك! 🔥</h2>
+                <p>رجوع المدارس محتاج أكلة تظبط المود 😋🍗 حضّرنا لك عروض الـ99 جنيه وعروض الـ299 جنيه</p>
+                <div class="school-chips">
+                    <span class="school-chip">عروض الـ 99 جنيه</span>
+                    <span class="school-chip alt">عروض الـ 299 جنيه</span>
+                </div>
+            </div>
+        </div>
+
+        <p class="offer-section-title school-offer-title">💥 عروض الـ 99 جنيه</p>
+        <div class="menu-grid">
+            <div class="card school-item">
+                <div class="card-img-placeholder school-ph">🌯</div>
+                <div class="card-body">
+                    <div class="card-name">عرض اللانش بوكس ١ <span class="card-name-en">Lunch Box 1</span></div>
+                    <p class="card-desc">ساندوتش تويستر 🌯 + قطعة دجاج 🍗 + بطاطس سمول 🍟</p>
+                    <div class="card-footer">
+                        <span class="price-badge school">99 LE</span>
+                        <a class="school-cta" href="https://wa.me/201023278000?text=عايز%20أطلب%20عرض%20اللانش%20بوكس%201" target="_blank" rel="noopener">اطلب الآن</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card school-item">
+                <div class="card-img-placeholder school-ph">🍚</div>
+                <div class="card-body">
+                    <div class="card-name">عرض اللانش بوكس ٢ <span class="card-name-en">Lunch Box 2</span></div>
+                    <p class="card-desc">ريزو 🍚 + قطعة دجاج 🍗 + بطاطس سمول 🍟</p>
+                    <div class="card-footer">
+                        <span class="price-badge school">99 LE</span>
+                        <a class="school-cta" href="https://wa.me/201023278000?text=عايز%20أطلب%20عرض%20اللانش%20بوكس%202" target="_blank" rel="noopener">اطلب الآن</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card school-item">
+                <div class="card-img-placeholder school-ph">🔥</div>
+                <div class="card-body">
+                    <div class="card-name">عرض اللانش بوكس ٣ <span class="card-name-en">Lunch Box 3</span></div>
+                    <p class="card-desc">أرز مبهر 🍚 + قطعة دجاج 🍗 + قطعة كريسبي 🍗</p>
+                    <div class="card-footer">
+                        <span class="price-badge school">99 LE</span>
+                        <a class="school-cta" href="https://wa.me/201023278000?text=عايز%20أطلب%20عرض%20اللانش%20بوكس%203" target="_blank" rel="noopener">اطلب الآن</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="offer-divider">
+
+        <p class="offer-section-title school-offer-title">💥 عروض الـ 299 جنيه</p>
+        <div class="menu-grid">
+            <div class="card school-item">
+                <div class="card-img-placeholder school-ph">🍗</div>
+                <div class="card-body">
+                    <div class="card-name">عرض الفسحة ١ <span class="card-name-en">Outing Deal 1</span></div>
+                    <p class="card-desc">7 قطع دجاج 🍗 + بطاطس وسط 🍟 + 2 كايزر 🍔 + 2 كول سلو صغير 🥗</p>
+                    <div class="card-footer">
+                        <span class="price-badge gold">299 LE</span>
+                        <a class="school-cta" href="https://wa.me/201023278000?text=عايز%20أطلب%20عرض%20الفسحة%201" target="_blank" rel="noopener">اطلب الآن</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card school-item">
+                <div class="card-img-placeholder school-ph">🥪</div>
+                <div class="card-body">
+                    <div class="card-name">عرض الفسحة ٢ <span class="card-name-en">Outing Deal 2</span></div>
+                    <p class="card-desc">ساندوتش تويستر 🌯 + ساندوتش سوبريم 🥪 + ساندوتش تشيكن 🍔 + بطاطس وسط 🍟 + 2 كول سلو صغير 🥗</p>
+                    <div class="card-footer">
+                        <span class="price-badge gold">299 LE</span>
+                        <a class="school-cta" href="https://wa.me/201023278000?text=عايز%20أطلب%20عرض%20الفسحة%202" target="_blank" rel="noopener">اطلب الآن</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card school-item">
+                <div class="card-img-placeholder school-ph">🥩</div>
+                <div class="card-body">
+                    <div class="card-name">عرض الفسحة ٣ <span class="card-name-en">Outing Deal 3</span></div>
+                    <p class="card-desc">2 ساندوتش بيف 🥩🍔 + بطاطس وسط فريسكس 🍟</p>
+                    <div class="card-footer">
+                        <span class="price-badge gold">299 LE</span>
+                        <a class="school-cta" href="https://wa.me/201023278000?text=عايز%20أطلب%20عرض%20الفسحة%203" target="_blank" rel="noopener">اطلب الآن</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-banner" style="margin-top:32px;">
+            <div class="info-banner-icon">🔥</div>
+            <div class="info-banner-text">
+                <h4>اختار عرضك… وسيب علينا الروقان!</h4>
+                <p>Red Rooster… لقمة تظبط يومك ❤️🍗</p>
+            </div>
+        </div>
+    </section>
+
     <!-- ✨ NEW ITEMS -->
     <section id="new-items" class="section">
         <h2 class="section-title">✨ جديد ريد روستر</h2>
+
+        <!-- BACK TO SCHOOL — FEATURED -->
+        <div class="bts-banner">
+            <div class="bts-content">
+                <div class="bts-tag"><span>🎒</span> عروض الدراسة الجديدة</div>
+                <h2>Back to School 🔥</h2>
+                <p class="bts-subtitle">رجوع المدارس محتاج أكلة تظبط المود — لانش بوكس للمدرسة وعروض الفسحة للعيلة</p>
+                <div class="bts-includes">
+                    <span class="bts-tag-item">🌯 3 لانش بوكس</span>
+                    <span class="bts-tag-item">🍗 3 عروض فسحة</span>
+                </div>
+                <div class="bts-price-row">
+                    <div class="bts-price">99 LE</div>
+                    <div class="bts-price">299 LE</div>
+                    <button class="bts-cta" onclick="showSection('back-to-school')">شوف العروض 👈</button>
+                </div>
+            </div>
+            <div class="bts-side">
+                <div class="bts-side-emoji">🎒</div>
+                <div class="bts-side-note">اختار عرضك… وسيب علينا الروقان!</div>
+            </div>
+        </div>
 
         <!-- ZINGER SUPREME BOX — FEATURED -->
         <div class="zsb-banner">
             <div class="zsb-content">
                 <div class="zsb-tag"><span>🎁</span> بوكس جديد كليًا</div>
                 <h2>بوكس زنجر سوبريم 🔥</h2>
-                <p class="zsb-subtitle">اتنين ساندوتش سوبريم (فيلية أو زينجر) من اختيارك، </p>
+                <p class="zsb-subtitle">اتنين ساندوتش سوبريم (فيلية أو زينجر) من اختيارك</p>
                 <div class="zsb-includes">
                     <span class="zsb-tag-item">🥪 2 ساندوتش سوبريم</span>
                     <span class="zsb-tag-item">🎯 اختر فيلية أو زينجر</span>
                 </div>
                 <div class="zsb-price-row">
                     <div class="zsb-price">199 LE</div>
-                    <a class="zsb-cta" href="https://wa.me/201023278000?text=عايز%20أطلب%20بوكس%20زنجر%20سوبريم" target="_blank">
+                    <a class="zsb-cta" href="https://wa.me/201023278000?text=عايز%20أطلب%20بوكس%20زنجر%20سوبريم" target="_blank" rel="noopener">
                         <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                         اطلب دلوقتي
                     </a>
@@ -1018,11 +1172,9 @@ nav button.school-badge:hover {
                 <div class="power-deal-tag"><span>⚡</span> عرض حصري جديد</div>
                 <h2>Red Power Deal 🔥</h2>
                 <p class="deal-subtitle">الصفقة الأقوى في المنيو — وجبتك الكاملة بسعر مش هتصدقه!</p>
-                <div class="deal-includes">
-                </div>
                 <div class="power-deal-price-row">
                     <div class="power-deal-price">249 LE</div>
-                    <a class="power-deal-cta" href="https://wa.me/201023278000?text=عايز%20أطلب%20Red%20Power%20Deal" target="_blank">اطلب دلوقتي 🛒</a>
+                    <a class="power-deal-cta" href="https://wa.me/201023278000?text=عايز%20أطلب%20Red%20Power%20Deal" target="_blank" rel="noopener">اطلب دلوقتي 🛒</a>
                 </div>
             </div>
             <div class="power-deal-img">
@@ -1095,7 +1247,7 @@ nav button.school-badge:hover {
                     </ul>
                     <div class="siniya-card-footer">
                         <div class="siniya-price">349 LE</div>
-                        <a class="siniya-order-btn" href="https://wa.me/201023278000?text=عايز%20أطلب%20صينية%20حفلة%20قرمشة%201" target="_blank">
+                        <a class="siniya-order-btn" href="https://wa.me/201023278000?text=عايز%20أطلب%20صينية%20حفلة%20قرمشة%201" target="_blank" rel="noopener">
                             <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                             اطلب الآن
                         </a>
@@ -1123,7 +1275,7 @@ nav button.school-badge:hover {
                     </ul>
                     <div class="siniya-card-footer">
                         <div class="siniya-price">449 LE</div>
-                        <a class="siniya-order-btn" href="https://wa.me/201023278000?text=عايز%20أطلب%20صينية%20حفلة%20قرمشة%202" target="_blank">
+                        <a class="siniya-order-btn" href="https://wa.me/201023278000?text=عايز%20أطلب%20صينية%20حفلة%20قرمشة%202" target="_blank" rel="noopener">
                             <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                             اطلب الآن
                         </a>
@@ -1152,7 +1304,7 @@ nav button.school-badge:hover {
                     </ul>
                     <div class="siniya-card-footer">
                         <div class="siniya-price">499 LE</div>
-                        <a class="siniya-order-btn" href="https://wa.me/201023278000?text=عايز%20أطلب%20صينية%20حفلة%20قرمشة%203%20ناشفيل" target="_blank">
+                        <a class="siniya-order-btn" href="https://wa.me/201023278000?text=عايز%20أطلب%20صينية%20حفلة%20قرمشة%203%20ناشفيل" target="_blank" rel="noopener">
                             <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                             اطلب الآن
                         </a>
@@ -1180,7 +1332,7 @@ nav button.school-badge:hover {
                     </ul>
                     <div class="siniya-card-footer">
                         <div class="siniya-price">599 LE</div>
-                        <a class="siniya-order-btn" href="https://wa.me/201023278000?text=عايز%20أطلب%20صينية%20حفلة%20قرمشة%204" target="_blank">
+                        <a class="siniya-order-btn" href="https://wa.me/201023278000?text=عايز%20أطلب%20صينية%20حفلة%20قرمشة%204" target="_blank" rel="noopener">
                             <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                             اطلب الآن
                         </a>
@@ -1198,149 +1350,101 @@ nav button.school-badge:hover {
             </div>
         </div>
     </section>
-<!-- 🎒 BACK TO SCHOOL -->
-<section id="back-to-school" class="section">
-    <h2 class="section-title">🎒 Back to School</h2>
 
-    <div class="school-banner">
-        <div class="school-banner-inner">
-            <h2>Back to School… وهنبدأها بعروض تفرّحك! 🔥</h2>
-            <p>رجوع المدارس محتاج أكلة تظبط المود 😋🍗 حضّرنا لك عروض الـ99 جنيه وعروض الـ299 جنيه</p>
-            <div class="school-chips">
-                <span class="school-chip">عروض الـ 99 جنيه</span>
-                <span class="school-chip alt">عروض الـ 299 جنيه</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- >>> ابدأ نسخ البلوك المشترك (الخطوة 5) <<< -->
-    <!-- الصق هنا بلوك "عروض الـ99 والـ299" -->
-    <!-- >>> نهاية <<< -->
-
-    <div class="info-banner" style="margin-top:32px;">
-        <div class="info-banner-icon">🔥</div>
-        <div class="info-banner-text">
-            <h4>اختار عرضك… وسيب علينا الروقان!</h4>
-            <p>Red Rooster… لقمة تظبط يومك ❤️🍗</p>
-        </div>
-    </div>
-</section><!-- 🎒 BACK TO SCHOOL -->
-<section id="back-to-school" class="section">
-    <h2 class="section-title">🎒 Back to School</h2>
-
-    <div class="school-banner">
-        <div class="school-banner-inner">
-            <h2>Back to School… وهنبدأها بعروض تفرّحك! 🔥</h2>
-            <p>رجوع المدارس محتاج أكلة تظبط المود 😋🍗 حضّرنا لك عروض الـ99 جنيه وعروض الـ299 جنيه</p>
-            <div class="school-chips">
-                <span class="school-chip">عروض الـ 99 جنيه</span>
-                <span class="school-chip alt">عروض الـ 299 جنيه</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- >>> ابدأ نسخ البلوك المشترك (الخطوة 5) <<< -->
-    <!-- الصق هنا بلوك "عروض الـ99 والـ299" -->
-    <!-- >>> نهاية <<< -->
-
-    <div class="info-banner" style="margin-top:32px;">
-        <div class="info-banner-icon">🔥</div>
-        <div class="info-banner-text">
-            <h4>اختار عرضك… وسيب علينا الروقان!</h4>
-            <p>Red Rooster… لقمة تظبط يومك ❤️🍗</p>
-        </div>
-    </div>
-</section>
     <!-- OFFERS -->
     <section id="offers" class="section">
         <h2 class="section-title">🎉 العروض الحصرية</h2>
-        <p class="offer-section-title">🎒 عروض Back to School — 99 جنيه</p>
-<div class="menu-grid">
-    <div class="card school-item">
-        <div class="card-img-placeholder school-ph">🌯</div>
-        <div class="card-body">
-            <div class="card-name">عرض اللانش بوكس ١ <span class="card-name-en">Lunch Box 1</span></div>
-            <p class="card-desc">ساندوتش تويستر 🌯 + قطعة دجاج 🍗 + بطاطس سمول 🍟</p>
-            <div class="card-footer">
-                <span class="price-badge school">99 LE</span>
-                <a class="school-cta" href="https://wa.me/201023278000?text=عايز%20أطلب%20عرض%20اللانش%20بوكس%201" target="_blank">اطلب الآن</a>
-            </div>
-        </div>
-    </div>
-    <div class="card school-item">
-        <div class="card-img-placeholder school-ph">🍚</div>
-        <div class="card-body">
-            <div class="card-name">عرض اللانش بوكس ٢ <span class="card-name-en">Lunch Box 2</span></div>
-            <p class="card-desc">ريزو 🍚 + قطعة دجاج 🍗 + بطاطس سمول 🍟</p>
-            <div class="card-footer">
-                <span class="price-badge school">99 LE</span>
-                <a class="school-cta" href="https://wa.me/201023278000?text=عايز%20أطلب%20عرض%20اللانش%20بوكس%202" target="_blank">اطلب الآن</a>
-            </div>
-        </div>
-    </div>
-    <div class="card school-item">
-        <div class="card-img-placeholder school-ph">🔥</div>
-        <div class="card-body">
-            <div class="card-name">عرض اللانش بوكس ٣ <span class="card-name-en">Lunch Box 3</span></div>
-            <p class="card-desc">أرز مبهر 🍚 + قطعة دجاج 🍗 + قطعة كريسبي 🍗</p>
-            <div class="card-footer">
-                <span class="price-badge school">99 LE</span>
-                <a class="school-cta" href="https://wa.me/201023278000?text=عايز%20أطلب%20عرض%20اللانش%20بوكس%203" target="_blank">اطلب الآن</a>
-            </div>
-        </div>
-    </div>
-</div>
 
-<hr class="offer-divider">
+        <p class="offer-section-title school-offer-title">🎒 عروض Back to School — 99 جنيه</p>
+        <div class="menu-grid">
+            <div class="card school-item">
+                <div class="card-img-placeholder school-ph">🌯</div>
+                <div class="card-body">
+                    <div class="card-name">عرض اللانش بوكس ١ <span class="card-name-en">Lunch Box 1</span></div>
+                    <p class="card-desc">ساندوتش تويستر 🌯 + قطعة دجاج 🍗 + بطاطس سمول 🍟</p>
+                    <div class="card-footer">
+                        <span class="price-badge school">99 LE</span>
+                        <a class="school-cta" href="https://wa.me/201023278000?text=عايز%20أطلب%20عرض%20اللانش%20بوكس%201" target="_blank" rel="noopener">اطلب الآن</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card school-item">
+                <div class="card-img-placeholder school-ph">🍚</div>
+                <div class="card-body">
+                    <div class="card-name">عرض اللانش بوكس ٢ <span class="card-name-en">Lunch Box 2</span></div>
+                    <p class="card-desc">ريزو 🍚 + قطعة دجاج 🍗 + بطاطس سمول 🍟</p>
+                    <div class="card-footer">
+                        <span class="price-badge school">99 LE</span>
+                        <a class="school-cta" href="https://wa.me/201023278000?text=عايز%20أطلب%20عرض%20اللانش%20بوكس%202" target="_blank" rel="noopener">اطلب الآن</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card school-item">
+                <div class="card-img-placeholder school-ph">🔥</div>
+                <div class="card-body">
+                    <div class="card-name">عرض اللانش بوكس ٣ <span class="card-name-en">Lunch Box 3</span></div>
+                    <p class="card-desc">أرز مبهر 🍚 + قطعة دجاج 🍗 + قطعة كريسبي 🍗</p>
+                    <div class="card-footer">
+                        <span class="price-badge school">99 LE</span>
+                        <a class="school-cta" href="https://wa.me/201023278000?text=عايز%20أطلب%20عرض%20اللانش%20بوكس%203" target="_blank" rel="noopener">اطلب الآن</a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-<p class="offer-section-title">🎒 عروض Back to School — 299 جنيه</p>
-<div class="menu-grid">
-    <div class="card school-item">
-        <div class="card-img-placeholder school-ph">🍗</div>
-        <div class="card-body">
-            <div class="card-name">عرض الفسحة ١ <span class="card-name-en">Outing Deal 1</span></div>
-            <p class="card-desc">7 قطع دجاج 🍗 + بطاطس وسط 🍟 + 2 كايزر 🍔 + 2 كول سلو صغير 🥗</p>
-            <div class="card-footer">
-                <span class="price-badge gold">299 LE</span>
-                <a class="school-cta" href="https://wa.me/201023278000?text=عايز%20أطلب%20عرض%20الفسحة%201" target="_blank">اطلب الآن</a>
+        <hr class="offer-divider">
+
+        <p class="offer-section-title school-offer-title">🎒 عروض Back to School — 299 جنيه</p>
+        <div class="menu-grid">
+            <div class="card school-item">
+                <div class="card-img-placeholder school-ph">🍗</div>
+                <div class="card-body">
+                    <div class="card-name">عرض الفسحة ١ <span class="card-name-en">Outing Deal 1</span></div>
+                    <p class="card-desc">7 قطع دجاج 🍗 + بطاطس وسط 🍟 + 2 كايزر 🍔 + 2 كول سلو صغير 🥗</p>
+                    <div class="card-footer">
+                        <span class="price-badge gold">299 LE</span>
+                        <a class="school-cta" href="https://wa.me/201023278000?text=عايز%20أطلب%20عرض%20الفسحة%201" target="_blank" rel="noopener">اطلب الآن</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card school-item">
+                <div class="card-img-placeholder school-ph">🥪</div>
+                <div class="card-body">
+                    <div class="card-name">عرض الفسحة ٢ <span class="card-name-en">Outing Deal 2</span></div>
+                    <p class="card-desc">ساندوتش تويستر 🌯 + ساندوتش سوبريم 🥪 + ساندوتش تشيكن 🍔 + بطاطس وسط 🍟 + 2 كول سلو صغير 🥗</p>
+                    <div class="card-footer">
+                        <span class="price-badge gold">299 LE</span>
+                        <a class="school-cta" href="https://wa.me/201023278000?text=عايز%20أطلب%20عرض%20الفسحة%202" target="_blank" rel="noopener">اطلب الآن</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card school-item">
+                <div class="card-img-placeholder school-ph">🥩</div>
+                <div class="card-body">
+                    <div class="card-name">عرض الفسحة ٣ <span class="card-name-en">Outing Deal 3</span></div>
+                    <p class="card-desc">2 ساندوتش بيف 🥩🍔 + بطاطس وسط فريسكس 🍟</p>
+                    <div class="card-footer">
+                        <span class="price-badge gold">299 LE</span>
+                        <a class="school-cta" href="https://wa.me/201023278000?text=عايز%20أطلب%20عرض%20الفسحة%203" target="_blank" rel="noopener">اطلب الآن</a>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="card school-item">
-        <div class="card-img-placeholder school-ph">🥪</div>
-        <div class="card-body">
-            <div class="card-name">عرض الفسحة ٢ <span class="card-name-en">Outing Deal 2</span></div>
-            <p class="card-desc">ساندوتش تويستر 🌯 + ساندوتش سوبريم 🥪 + ساندوتش تشيكن 🍔 + بطاطس وسط 🍟 + 2 كول سلو صغير 🥗</p>
-            <div class="card-footer">
-                <span class="price-badge gold">299 LE</span>
-                <a class="school-cta" href="https://wa.me/201023278000?text=عايز%20أطلب%20عرض%20الفسحة%202" target="_blank">اطلب الآن</a>
-            </div>
-        </div>
-    </div>
-    <div class="card school-item">
-        <div class="card-img-placeholder school-ph">🥩</div>
-        <div class="card-body">
-            <div class="card-name">عرض الفسحة ٣ <span class="card-name-en">Outing Deal 3</span></div>
-            <p class="card-desc">2 ساندوتش بيف 🥩🍔 + بطاطس وسط فريسكس 🍟</p>
-            <div class="card-footer">
-                <span class="price-badge gold">299 LE</span>
-                <a class="school-cta" href="https://wa.me/201023278000?text=عايز%20أطلب%20عرض%20الفسحة%203" target="_blank">اطلب الآن</a>
-            </div>
-        </div>
-    </div>
-</div>
+
+        <hr class="offer-divider">
+
         <p class="offer-section-title">عروض الروقان الخاصة</p>
         <div class="menu-grid">
             <div class="card offer-hot">
                 <img class="card-img" src="https://i.ibb.co/5xh70cWh/Whats-App-Image-2026-07-25-at-8-21-17-PM.jpg" alt="بوكس زنجر سوبريم">
                 <div class="card-body">
                     <div class="card-name">بوكس زنجر سوبريم <span class="card-name-en">Zinger Supreme Box</span></div>
-                    <p class="card-desc">اتنين ساندوتش سوبريم (فيلية أو زينجر) من اختيار العميل، </p>
+                    <p class="card-desc">اتنين ساندوتش سوبريم (فيلية أو زينجر) من اختيار العميل</p>
                     <div class="card-footer"><span class="price-badge gold">199 LE</span></div>
                 </div>
             </div>
             <div class="card"><img class="card-img" src="https://i.ibb.co/0R89m3TW/Whats-App-Image-2026-05-02-at-10-20-34-PM.jpg" alt="عرض الروقان 1"><div class="card-body"><div class="card-name">عرض الروقان 1</div><p class="card-desc">أرز كبير + 2 قطعة دجاج أو 4 قطعة استربس + صوص + مشروب</p><div class="card-footer"><span class="price-badge gold">185 LE</span></div></div></div>
-            <div class="card"><img class="card-img" src="https://i.ibb.co/Lhzpw1xv/Whats-App-Image-2026-05-02-at-10-20-35-PM.jpg" alt="عرض الروقان 2"><div class="card-body"><div class="card-name">عرض الروقان 2</div><p class="card-desc">قطعة دجاج + ساندوتش تشيكن (عدا المايتي زينجر ) + 1 مشروب</p><div class="card-footer"><span class="price-badge gold">185 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.ibb.co/Lhzpw1xv/Whats-App-Image-2026-05-02-at-10-20-35-PM.jpg" alt="عرض الروقان 2"><div class="card-body"><div class="card-name">عرض الروقان 2</div><p class="card-desc">قطعة دجاج + ساندوتش تشيكن (عدا المايتي زينجر) + 1 مشروب</p><div class="card-footer"><span class="price-badge gold">185 LE</span></div></div></div>
             <div class="card"><img class="card-img" src="https://i.ibb.co/N6XLM8vG/3.jpg" alt="عرض الروقان 3"><div class="card-body"><div class="card-name">عرض الروقان 3</div><p class="card-desc">قطعة دجاج + تويستر تشيكن أو فاهيتا + كول سلو + مشروب</p><div class="card-footer"><span class="price-badge gold">185 LE</span></div></div></div>
             <div class="card"><img class="card-img" src="https://i.ibb.co/ym1RsqgJ/4.jpg" alt="عرض الروقان 4"><div class="card-body"><div class="card-name">عرض الروقان 4</div><p class="card-desc">قطعة دجاج + قطعة كرسبي + خبز + ريزو + 1 مشروب</p><div class="card-footer"><span class="price-badge gold">185 LE</span></div></div></div>
             <div class="card"><img class="card-img" src="https://i.ibb.co/W4y4fHsD/5.jpg" alt="عرض الروقان 5"><div class="card-body"><div class="card-name">عرض الروقان 5</div><p class="card-desc">تويستر تشيكن أو فاهيتا + سوبريم + كول سلو</p><div class="card-footer"><span class="price-badge gold">185 LE</span></div></div></div>
@@ -1352,10 +1456,10 @@ nav button.school-badge:hover {
             <div class="card"><img class="card-img" src="https://i.ibb.co/yBbXK0Fq/image.jpg" alt="عرض الريزو"><div class="card-body"><div class="card-name">عرض الريزو</div><p class="card-desc">طبق ريزو كبير</p><div class="card-footer"><span class="price-badge">70 LE</span></div></div></div>
             <div class="card"><img class="card-img" src="https://i.postimg.cc/ht4hxdzn/twfyr-djaj.jpg" alt="3 قطع دجاج + خبز"><div class="card-body"><div class="card-name">3 قطع دجاج + خبز</div><p class="card-desc">3 قطع دجاج + 1 خبز</p><div class="card-footer"><span class="price-badge">135 LE</span></div></div></div>
             <div class="card"><img class="card-img" src="https://i.postimg.cc/vZ8D9V1p/twfyr-astrybs.jpg" alt="فانتاستيك فايف"><div class="card-body"><div class="card-name">فانتاستيك فايف</div><p class="card-desc">5 قطع استربس + 1 خبز</p><div class="card-footer"><span class="price-badge">135 LE</span></div></div></div>
-            <div class="card"><img class="card-img" src="https://i.postimg.cc/y86W9ZgB/kynj-alrwqan.jpg" alt="ملك الروقان"><div class="card-body"><div class="card-name">ملك الروقان</div><p class="card-desc">ارز كبير (400 ) جرام + 3 قطع استريبس + كب صوص</p><div class="card-footer"><span class="price-badge">135 LE</span></div></div></div>
-            <div class="card"><img class="card-img" src="https://i.ibb.co/Xf4VJ1Xz/image.jpg" alt="كلاسيك الروقان"><div class="card-body"><div class="card-name">كلاسيك الروقان</div><p class="card-desc">ساندوتش تشيكن (من اختيار العميل) *(عدا المايتي زينجر)* + 1 مشروب أو كول سلو</p><div class="card-footer"><span class="price-badge">135 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.postimg.cc/y86W9ZgB/kynj-alrwqan.jpg" alt="ملك الروقان"><div class="card-body"><div class="card-name">ملك الروقان</div><p class="card-desc">ارز كبير (400) جرام + 3 قطع استريبس + كب صوص</p><div class="card-footer"><span class="price-badge">135 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.ibb.co/Xf4VJ1Xz/image.jpg" alt="كلاسيك الروقان"><div class="card-body"><div class="card-name">كلاسيك الروقان</div><p class="card-desc">ساندوتش تشيكن (من اختيار العميل) (عدا المايتي زينجر) + 1 مشروب أو كول سلو</p><div class="card-footer"><span class="price-badge">135 LE</span></div></div></div>
             <div class="card"><img class="card-img" src="https://i.postimg.cc/CxMdDqBg/dbl-rab.jpg" alt="دابل راب"><div class="card-body"><div class="card-name">دابل راب</div><p class="card-desc">2 ساندوتش راب (تويستر عادي أو فاهيتا)</p><div class="card-footer"><span class="price-badge">169 LE</span></div></div></div>
-            <div class="card"><img class="card-img" src="https://i.ibb.co/fGKBstdP/image.jpg" alt="كومبو الروقان"><div class="card-body"><div class="card-name">كومبو الروقان</div><p class="card-desc">ساندوتش برجر (120جرام) + فرايز + مشروب</p><div class="card-footer"><span class="price-badge">175 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.ibb.co/fGKBstdP/image.jpg" alt="كومبو الروقان"><div class="card-body"><div class="card-name">كومبو الروقان</div><p class="card-desc">ساندوتش برجر (120 جرام) + فرايز + مشروب</p><div class="card-footer"><span class="price-badge">175 LE</span></div></div></div>
             <div class="card"><img class="card-img" src="https://i.ibb.co/CRHL9fB/image.jpg" alt="عرض الرايقين"><div class="card-body"><div class="card-name">عرض الرايقين</div><p class="card-desc">6 قطع دجاج + 3 أرز + 3 خبز كايزر</p><div class="card-footer"><span class="price-badge">315 LE</span></div></div></div>
             <div class="card"><img class="card-img" src="https://i.ibb.co/1JqcXscd/image.jpg" alt="ملوك الروقان"><div class="card-body"><div class="card-name">ملوك الروقان</div><p class="card-desc">10 قطع دجاج + 2 أرز + كول سلو فاملي + 5 خبز + مشروب لتر</p><div class="card-footer"><span class="price-badge">575 LE</span></div></div></div>
             <div class="card"><img class="card-img" src="https://i.ibb.co/67Z27j0y/image.png" alt="يا دلعوا"><div class="card-body"><div class="card-name">يادلعوا</div><p class="card-desc">أربع قطع استريبس بالإضافة إلى بطاطس وخبز وصوص كب</p><div class="card-footer"><span class="price-badge">119 LE</span></div></div></div>
@@ -1446,7 +1550,7 @@ nav button.school-badge:hover {
     <section id="family-meals" class="section">
         <h2 class="section-title">👨‍👩‍👧‍👦 الوجبات العائلية</h2>
         <div class="menu-grid">
-            <div class="card"><img class="card-img" src="https://i.postimg.cc/763mLNW9/Copy-of-3-Z7-A7087.png" alt="Family 10 PC"><div class="card-body"><div class="card-name">وجبة عائلية 10 قطع <span class="card-name-en">5 PC Family Meal</span></div><p class="card-desc">5 قطع دجاج + 5 قطع استريبس + 5 كايزر</p><div class="card-footer"><span class="price-badge gold">549 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.postimg.cc/763mLNW9/Copy-of-3-Z7-A7087.png" alt="Family 10 PC"><div class="card-body"><div class="card-name">وجبة عائلية 10 قطع <span class="card-name-en">10 PC Family Meal</span></div><p class="card-desc">5 قطع دجاج + 5 قطع استريبس + 5 كايزر</p><div class="card-footer"><span class="price-badge gold">549 LE</span></div></div></div>
             <div class="card"><img class="card-img" src="https://i.postimg.cc/763mLNW9/Copy-of-3-Z7-A7087.png" alt="Family 9 PC"><div class="card-body"><div class="card-name">وجبة عائلية 9 قطع <span class="card-name-en">9 PC Family Meal</span></div><p class="card-desc">9 قطع دجاج + فرايز فاملي + 3 كايزر + كول سلو فاملي + لتر مشروب</p><div class="card-footer"><span class="price-badge gold">599 LE</span></div></div></div>
             <div class="card"><img class="card-img" src="https://i.postimg.cc/763mLNW9/Copy-of-3-Z7-A7087.png" alt="Family 12 PC"><div class="card-body"><div class="card-name">وجبة عائلية 12 قطعة <span class="card-name-en">12 PC Family Meal</span></div><p class="card-desc">12 قطع دجاج + فرايز فاملي + 4 كايزر + كول سلو فاملي + لتر مشروب</p><div class="card-footer"><span class="price-badge gold">699 LE</span></div></div></div>
             <div class="card"><img class="card-img" src="https://i.postimg.cc/763mLNW9/Copy-of-3-Z7-A7087.png" alt="Family 15 PC"><div class="card-body"><div class="card-name">وجبة عائلية 15 قطعة <span class="card-name-en">15 PC Family Meal</span></div><p class="card-desc">15 قطع دجاج + فرايز فاملي + 5 كايزر + كول سلو فاملي + لتر مشروب</p><div class="card-footer"><span class="price-badge gold">799 LE</span></div></div></div>
@@ -1472,8 +1576,8 @@ nav button.school-badge:hover {
             <div class="card"><img class="card-img" src="https://i.postimg.cc/zvKszhj9/kwl-slw-sghyr.png" alt="Coleslaw Small"><div class="card-body"><div class="card-name">كول سلو صغير <span class="card-name-en">Coleslaw Small</span></div><div class="card-footer"><span class="price-badge">25 LE</span></div></div></div>
             <div class="card"><div class="card-img-placeholder">🥗</div><div class="card-body"><div class="card-name">كول سلو عائلي <span class="card-name-en">Coleslaw Family</span></div><div class="card-footer"><span class="price-badge">70 LE</span></div></div></div>
             <div class="card"><img class="card-img" src="https://i.postimg.cc/zvpYJfrP/image.jpg" alt="Fries Medium"><div class="card-body"><div class="card-name">بطاطس متوسطة <span class="card-name-en">Fries Medium</span></div><div class="card-footer"><span class="price-badge">40 LE</span></div></div></div>
-            <div class="card"><img class="card-img" src="https://i.postimg.cc/1XyZhqLN/image.jpg" alt="Friscas Fries"><div class="card-body"><div class="card-name">فريسكاس بطاطس متوسطة <span class="card-name-en">Friscas Fries Medium</span></div><div class="card-footer"><span class="price-badge">50 LE</span></div></div></div>
-            <div class="card"><img class="card-img" src="https://i.postimg.cc/1XyZhqLN/image.jpg" alt="Friscas Fries"><div class="card-body"><div class="card-name">فريسكاس بطاطس عائلية <span class="card-name-en">Friscas Fries Family</span></div><div class="card-footer"><span class="price-badge">80 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.postimg.cc/1XyZhqLN/image.jpg" alt="Friscas Fries Medium"><div class="card-body"><div class="card-name">فريسكاس بطاطس متوسطة <span class="card-name-en">Friscas Fries Medium</span></div><div class="card-footer"><span class="price-badge">50 LE</span></div></div></div>
+            <div class="card"><img class="card-img" src="https://i.postimg.cc/1XyZhqLN/image.jpg" alt="Friscas Fries Family"><div class="card-body"><div class="card-name">فريسكاس بطاطس عائلية <span class="card-name-en">Friscas Fries Family</span></div><div class="card-footer"><span class="price-badge">80 LE</span></div></div></div>
             <div class="card"><img class="card-img" src="https://i.postimg.cc/RVVzgw7Q/12.jpg" alt="ناجتس 6"><div class="card-body"><div class="card-name">ناجتس 6 قطع <span class="card-name-en">Nuggets 6pc</span></div><div class="card-footer"><span class="price-badge">70 LE</span></div></div></div>
             <div class="card"><img class="card-img" src="https://i.postimg.cc/RVVzgw7Q/12.jpg" alt="ناجتس 12"><div class="card-body"><div class="card-name">ناجتس 12 قطعة <span class="card-name-en">Nuggets 12pc</span></div><div class="card-footer"><span class="price-badge">110 LE</span></div></div></div>
             <div class="card"><img class="card-img" src="https://i.postimg.cc/4ywRJ3gz/5.jpg" alt="أعواد شيدر 5"><div class="card-body"><div class="card-name">أعواد شيدر 5 قطع <span class="card-name-en">Cheddar Sticks 5pc</span></div><div class="card-footer"><span class="price-badge">90 LE</span></div></div></div>
@@ -1520,7 +1624,7 @@ nav button.school-badge:hover {
         <h2 class="section-title">ℹ️ عن Red Roosters</h2>
         <div class="info-card"><h3>الجودة أولاً</h3><p>نقدم أشهى وألذ وجبات الدجاج المقلي والساندوتشات وبرجر الفاخر بأعلى جودة وأسعار لا تقبل المنافسة.</p></div>
         <div class="info-card"><h3>ليه ريد روستر؟</h3><ul><li>جودة لا مثيل لها في تحضير الدجاج.</li><li>تنوع كبير في المنيو لتلبية جميع الأذواق.</li><li>أسرع خدمة توصيل وأفضل معاملة للعملاء.</li><li>عروض حصرية ومميزة بشكل مستمر.</li></ul></div>
-        <div class="info-card"><h3>تواصل معنا</h3><div class="contact-grid"><div class="contact-card"><div class="contact-card-icon">📞</div><h4>الخط الساخن (للتوصيل)</h4><a href="tel:0237721525">0237721525</a></div><div class="contact-card"><div class="contact-card-icon">💬</div><h4>واتساب لخدمة أسرع</h4><a href="https://wa.me/201023278000" target="_blank" class="whatsapp">01023278000</a></div><div class="contact-card"><div class="contact-card-icon">📘</div><h4>تابعنا على فيسبوك</h4><a href="https://www.facebook.com/redrooster.eg/" target="_blank" class="facebook">صفحتنا</a></div></div></div>
+        <div class="info-card"><h3>تواصل معنا</h3><div class="contact-grid"><div class="contact-card"><div class="contact-card-icon">📞</div><h4>الخط الساخن (للتوصيل)</h4><a href="tel:0237721525">0237721525</a></div><div class="contact-card"><div class="contact-card-icon">💬</div><h4>واتساب لخدمة أسرع</h4><a href="https://wa.me/201023278000" target="_blank" rel="noopener" class="whatsapp">01023278000</a></div><div class="contact-card"><div class="contact-card-icon">📘</div><h4>تابعنا على فيسبوك</h4><a href="https://www.facebook.com/redrooster.eg/" target="_blank" rel="noopener" class="facebook">صفحتنا</a></div></div></div>
     </section>
 
     <!-- BRANCHES -->
@@ -1550,7 +1654,7 @@ nav button.school-badge:hover {
 </div>
 
 <footer>
-    <p>&copy; 2025 <strong>Red Roosters</strong> — جميع الحقوق محفوظة</p>
+    <p>&copy; 2026 <strong>Red Roosters</strong> — جميع الحقوق محفوظة</p>
 </footer>
 
 <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="للأعلى">↑</button>
