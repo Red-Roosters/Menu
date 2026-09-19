@@ -731,7 +731,70 @@
         .scroll-top { position: fixed; bottom: 24px; left: 24px; width: 44px; height: 44px; background: var(--red); color: white; border: none; border-radius: 50%; font-size: 1.2rem; cursor: pointer; box-shadow: var(--shadow-md); opacity: 0; transform: translateY(20px); transition: all 0.3s; display: flex; align-items: center; justify-content: center; }
         .scroll-top.visible { opacity: 1; transform: translateY(0); }
         .scroll-top:hover { background: var(--red-dark); transform: translateY(-2px); }
+/* ── BACK TO SCHOOL ── */
+nav button.school-badge {
+    background: linear-gradient(135deg, #1E40AF, #2563EB);
+    color: var(--white);
+}
+nav button.school-badge:hover {
+    background: linear-gradient(135deg, #FFC627, #F5A623);
+    color: #1E3A8A;
+    transform: scale(1.05);
+}
+.mobile-nav button.school-badge { background: linear-gradient(135deg, #1E40AF, #2563EB); color: var(--white); }
+.cat-card.school-cat { background: linear-gradient(135deg, #EEF4FF, #FFF8DB); border: 2px solid rgba(37,99,235,0.25); }
+.cat-card.school-cat:hover { border-color: #2563EB; }
 
+.school-banner {
+    background: linear-gradient(135deg, #0F1F5C 0%, #1E40AF 55%, #2563EB 100%);
+    border-radius: 24px;
+    padding: 40px;
+    text-align: center;
+    margin-bottom: 36px;
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+}
+.school-banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        repeating-linear-gradient(0deg, rgba(255,255,255,0.05) 0 1px, transparent 1px 32px),
+        repeating-linear-gradient(90deg, rgba(255,255,255,0.05) 0 1px, transparent 1px 32px);
+}
+.school-banner::after { content: '🎒'; position: absolute; font-size: 11rem; opacity: 0.1; top: -25px; left: -20px; }
+.school-banner-inner { position: relative; z-index: 1; }
+.school-banner h2 { font-family: 'Tajawal', sans-serif; font-size: 2.4rem; font-weight: 900; margin-bottom: 12px; text-shadow: 0 2px 12px rgba(0,0,0,0.3); }
+.school-banner p { font-size: 1.05rem; opacity: 0.92; max-width: 640px; margin: 0 auto 22px; }
+.school-chips { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+.school-chip { padding: 8px 22px; border-radius: 50px; font-weight: 900; font-size: 1rem; background: #FFC627; color: #1E3A8A; }
+.school-chip.alt { background: #fff; color: #1E40AF; }
+
+.card.school-item { border: 2px solid rgba(37,99,235,0.25); position: relative; }
+.card.school-item::before {
+    content: '🎒 Back to School';
+    position: absolute; top: 12px; right: 12px;
+    background: linear-gradient(135deg, #1E40AF, #2563EB);
+    color: #fff; font-size: 0.72rem; font-weight: 900;
+    padding: 4px 12px; border-radius: 50px; z-index: 10; letter-spacing: 0.5px;
+}
+.card.school-item:hover { border-color: #2563EB; box-shadow: 0 12px 40px rgba(37,99,235,0.2); }
+.card-img-placeholder.school-ph { background: linear-gradient(135deg, #E8F0FF, #FFF3C4); }
+.price-badge.school { background: linear-gradient(135deg, #1E40AF, #2563EB); }
+.school-cta {
+    background: linear-gradient(135deg, #00C853, #00897B);
+    color: #fff; padding: 8px 18px; border-radius: 50px;
+    font-family: 'Cairo', sans-serif; font-size: 0.9rem; font-weight: 700;
+    text-decoration: none; display: inline-flex; align-items: center; gap: 6px;
+    transition: all 0.25s;
+}
+.school-cta:hover { background: linear-gradient(135deg, #00E676, #00BFA5); transform: translateY(-2px); }
+
+@media (max-width: 640px) {
+    .school-banner { padding: 28px 20px; }
+    .school-banner h2 { font-size: 1.7rem; }
+}
         /* ── RESPONSIVE ── */
         @media (max-width: 900px) {
             nav { display: none; }
@@ -790,6 +853,7 @@
                 <li><button onclick="showSection('home')" class="active">الرئيسية</button></li>
                 <li><button onclick="showSection('new-items')" class="new-badge">✨ جديد</button></li>
                 <li><button onclick="showSection('siniya')" class="siniya-badge">🥘 صواني ريد روستر</button></li>
+                <li><button onclick="showSection('back-to-school')" class="school-badge">🎒 Back to School</button></li>
                 <li><button onclick="showSection('offers')">العروض 🎉</button></li>
                 <li><button onclick="showSection('nashville')" class="highlight">🔥 ناشڤيل</button></li>
                 <li><button onclick="showSection('beef-sandwiches')">برجر اللحم</button></li>
@@ -817,6 +881,7 @@
         <button onclick="showSection('home'); closeMobileNav()">🏠 الرئيسية</button>
         <button class="new-badge" onclick="showSection('new-items'); closeMobileNav()">✨ جديد ريد روستر</button>
         <button class="siniya-badge" onclick="showSection('siniya'); closeMobileNav()">🥘 صواني ريد روستر</button>
+        <button class="school-badge" onclick="showSection('back-to-school'); closeMobileNav()">🎒 عروض Back to School</button> 
         <button onclick="showSection('offers'); closeMobileNav()">🎉 العروض الحصرية</button>
         <button class="highlight" onclick="showSection('nashville'); closeMobileNav()">🔥 منيو ناشڤيل</button>
         <button onclick="showSection('beef-sandwiches'); closeMobileNav()">🍔 برجر اللحم البقري</button>
@@ -858,6 +923,11 @@
                 <span class="cat-icon">🥘</span>
                 <h3>صواني ريد روستر</h3>
                 <p>حفلة قرمشة لا تُنسى!</p>
+            </div>
+            <div class="cat-card school-cat" onclick="showSection('back-to-school')">
+                <span class="cat-icon">🎒</span>
+                <h3>Back to School</h3>
+                <p>عروض 99 و 299 جنيه</p>
             </div>
             <div class="cat-card new-cat" onclick="showSection('new-items')">
                 <span class="cat-icon">✨</span>
@@ -1128,10 +1198,137 @@
             </div>
         </div>
     </section>
+<!-- 🎒 BACK TO SCHOOL -->
+<section id="back-to-school" class="section">
+    <h2 class="section-title">🎒 Back to School</h2>
 
+    <div class="school-banner">
+        <div class="school-banner-inner">
+            <h2>Back to School… وهنبدأها بعروض تفرّحك! 🔥</h2>
+            <p>رجوع المدارس محتاج أكلة تظبط المود 😋🍗 حضّرنا لك عروض الـ99 جنيه وعروض الـ299 جنيه</p>
+            <div class="school-chips">
+                <span class="school-chip">عروض الـ 99 جنيه</span>
+                <span class="school-chip alt">عروض الـ 299 جنيه</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- >>> ابدأ نسخ البلوك المشترك (الخطوة 5) <<< -->
+    <!-- الصق هنا بلوك "عروض الـ99 والـ299" -->
+    <!-- >>> نهاية <<< -->
+
+    <div class="info-banner" style="margin-top:32px;">
+        <div class="info-banner-icon">🔥</div>
+        <div class="info-banner-text">
+            <h4>اختار عرضك… وسيب علينا الروقان!</h4>
+            <p>Red Rooster… لقمة تظبط يومك ❤️🍗</p>
+        </div>
+    </div>
+</section><!-- 🎒 BACK TO SCHOOL -->
+<section id="back-to-school" class="section">
+    <h2 class="section-title">🎒 Back to School</h2>
+
+    <div class="school-banner">
+        <div class="school-banner-inner">
+            <h2>Back to School… وهنبدأها بعروض تفرّحك! 🔥</h2>
+            <p>رجوع المدارس محتاج أكلة تظبط المود 😋🍗 حضّرنا لك عروض الـ99 جنيه وعروض الـ299 جنيه</p>
+            <div class="school-chips">
+                <span class="school-chip">عروض الـ 99 جنيه</span>
+                <span class="school-chip alt">عروض الـ 299 جنيه</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- >>> ابدأ نسخ البلوك المشترك (الخطوة 5) <<< -->
+    <!-- الصق هنا بلوك "عروض الـ99 والـ299" -->
+    <!-- >>> نهاية <<< -->
+
+    <div class="info-banner" style="margin-top:32px;">
+        <div class="info-banner-icon">🔥</div>
+        <div class="info-banner-text">
+            <h4>اختار عرضك… وسيب علينا الروقان!</h4>
+            <p>Red Rooster… لقمة تظبط يومك ❤️🍗</p>
+        </div>
+    </div>
+</section>
     <!-- OFFERS -->
     <section id="offers" class="section">
         <h2 class="section-title">🎉 العروض الحصرية</h2>
+        <p class="offer-section-title">🎒 عروض Back to School — 99 جنيه</p>
+<div class="menu-grid">
+    <div class="card school-item">
+        <div class="card-img-placeholder school-ph">🌯</div>
+        <div class="card-body">
+            <div class="card-name">عرض اللانش بوكس ١ <span class="card-name-en">Lunch Box 1</span></div>
+            <p class="card-desc">ساندوتش تويستر 🌯 + قطعة دجاج 🍗 + بطاطس سمول 🍟</p>
+            <div class="card-footer">
+                <span class="price-badge school">99 LE</span>
+                <a class="school-cta" href="https://wa.me/201023278000?text=عايز%20أطلب%20عرض%20اللانش%20بوكس%201" target="_blank">اطلب الآن</a>
+            </div>
+        </div>
+    </div>
+    <div class="card school-item">
+        <div class="card-img-placeholder school-ph">🍚</div>
+        <div class="card-body">
+            <div class="card-name">عرض اللانش بوكس ٢ <span class="card-name-en">Lunch Box 2</span></div>
+            <p class="card-desc">ريزو 🍚 + قطعة دجاج 🍗 + بطاطس سمول 🍟</p>
+            <div class="card-footer">
+                <span class="price-badge school">99 LE</span>
+                <a class="school-cta" href="https://wa.me/201023278000?text=عايز%20أطلب%20عرض%20اللانش%20بوكس%202" target="_blank">اطلب الآن</a>
+            </div>
+        </div>
+    </div>
+    <div class="card school-item">
+        <div class="card-img-placeholder school-ph">🔥</div>
+        <div class="card-body">
+            <div class="card-name">عرض اللانش بوكس ٣ <span class="card-name-en">Lunch Box 3</span></div>
+            <p class="card-desc">أرز مبهر 🍚 + قطعة دجاج 🍗 + قطعة كريسبي 🍗</p>
+            <div class="card-footer">
+                <span class="price-badge school">99 LE</span>
+                <a class="school-cta" href="https://wa.me/201023278000?text=عايز%20أطلب%20عرض%20اللانش%20بوكس%203" target="_blank">اطلب الآن</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr class="offer-divider">
+
+<p class="offer-section-title">🎒 عروض Back to School — 299 جنيه</p>
+<div class="menu-grid">
+    <div class="card school-item">
+        <div class="card-img-placeholder school-ph">🍗</div>
+        <div class="card-body">
+            <div class="card-name">عرض الفسحة ١ <span class="card-name-en">Outing Deal 1</span></div>
+            <p class="card-desc">7 قطع دجاج 🍗 + بطاطس وسط 🍟 + 2 كايزر 🍔 + 2 كول سلو صغير 🥗</p>
+            <div class="card-footer">
+                <span class="price-badge gold">299 LE</span>
+                <a class="school-cta" href="https://wa.me/201023278000?text=عايز%20أطلب%20عرض%20الفسحة%201" target="_blank">اطلب الآن</a>
+            </div>
+        </div>
+    </div>
+    <div class="card school-item">
+        <div class="card-img-placeholder school-ph">🥪</div>
+        <div class="card-body">
+            <div class="card-name">عرض الفسحة ٢ <span class="card-name-en">Outing Deal 2</span></div>
+            <p class="card-desc">ساندوتش تويستر 🌯 + ساندوتش سوبريم 🥪 + ساندوتش تشيكن 🍔 + بطاطس وسط 🍟 + 2 كول سلو صغير 🥗</p>
+            <div class="card-footer">
+                <span class="price-badge gold">299 LE</span>
+                <a class="school-cta" href="https://wa.me/201023278000?text=عايز%20أطلب%20عرض%20الفسحة%202" target="_blank">اطلب الآن</a>
+            </div>
+        </div>
+    </div>
+    <div class="card school-item">
+        <div class="card-img-placeholder school-ph">🥩</div>
+        <div class="card-body">
+            <div class="card-name">عرض الفسحة ٣ <span class="card-name-en">Outing Deal 3</span></div>
+            <p class="card-desc">2 ساندوتش بيف 🥩🍔 + بطاطس وسط فريسكس 🍟</p>
+            <div class="card-footer">
+                <span class="price-badge gold">299 LE</span>
+                <a class="school-cta" href="https://wa.me/201023278000?text=عايز%20أطلب%20عرض%20الفسحة%203" target="_blank">اطلب الآن</a>
+            </div>
+        </div>
+    </div>
+</div>
         <p class="offer-section-title">عروض الروقان الخاصة</p>
         <div class="menu-grid">
             <div class="card offer-hot">
